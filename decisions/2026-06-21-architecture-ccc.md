@@ -1,0 +1,1 @@
+/home/debian/workspace/hermes-vault/20-decisions/2026-06-21-architecture-ccc.md

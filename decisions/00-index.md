@@ -1,0 +1,1 @@
+/home/debian/workspace/hermes-vault/20-decisions/00-index.md

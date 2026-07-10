@@ -1,0 +1,1 @@
+/home/debian/workspace/hermes-vault/20-decisions/2026-07-02-strategie-custos-multicanal.md

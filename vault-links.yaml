@@ -1,0 +1,27 @@
+type: Index
+title: Vault Obsidian vers Bundle OKF
+owner: vagus
+updated_at: 2026-07-10
+vault_root: /home/debian/workspace/hermes-vault
+bundle_root: /home/debian/hermes-cortex
+links:
+  - vault: "00-master-index.md"    bundle: "index.md"
+  - vault: "10-custos/"            bundle: "projects/custos/"
+  - vault: "11-kleia-up/"          bundle: "projects/kleia-up/"
+  - vault: "12-lof/"               bundle: "projects/lof/"
+  - vault: "13-brightbean/"        bundle: "projects/brightbean/"
+  - vault: "14-framedeck/"         bundle: "projects/framedeck/"
+  - vault: "15-app-solo/"          bundle: "projects/app-solo/"
+  - vault: "16-social-media/"      bundle: "projects/social-media/"
+  - vault: "17-finances/"          bundle: "projects/finances/"
+  - vault: "18-cron-jobs/"         bundle: "projects/cron-jobs/"
+  - vault: "19-sandrina/"          bundle: "projects/sandrina/"
+  - vault: "20-decisions/"         bundle: "decisions/"
+  - vault: "21-post-mortems/"      bundle: "playbooks/post-mortems/"
+  - vault: "22-workflows/"         bundle: "playbooks/"
+  - vault: "30-patterns/"          bundle: "patterns/"
+  - vault: "31-reflexions/"        bundle: "critiques/reflexions/"
+  - vault: "32-critiques/"         bundle: "critiques/"
+  - vault: "90-references/"        bundle: "references/"
+  - vault: "01-kabbalah/"          bundle: "projects/custos/"
+    protected: true

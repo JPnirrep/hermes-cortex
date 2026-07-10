@@ -1,0 +1,28 @@
+type: Bundle
+title: CUSTOS Kabbalistique
+description: Connaissance kabbalistique pour themes personnalises.
+status: PROTECTED
+version: 1.0
+owner: JP
+last_backup: 2026-07-10
+vault_path: /home/debian/workspace/hermes-vault/01-kabbalah/
+file_count: 97
+protection_rules:
+  - "NE PAS modifier sans accord explicite de JP"
+  - "Toute modification precedee d un backup"
+  - "Backup automatique chaque dimanche"
+sections:
+  01: "Torah et Cabale - 7 fichiers"
+  02: "Fondements"
+  03: "Techniques"
+  04: "Archetypes - 22 lettres"
+  05: "Sefirot - 10 sefirot"
+  06: "Cycles"
+  07: "Analyse"
+  08: "Correspondances"
+  09: "Pratiques"
+  10: "Templates"
+  11: "Outils - scripts Python"
+  12: "CUSTOS - business model, ethique, workflow"
+  13: "Clients - exemples JP Perrin"
+  14: "Agents specialises"
