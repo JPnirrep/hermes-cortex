@@ -1,0 +1,11 @@
+rag-env/
+rag-index.db
+rag-index.db-wal
+rag-index.db-shm
+__pycache__/
+*.pyc
+.DS_Store
+*.bak
+*.tmp
+logs/runs-summary.jsonl
+logs/snapshots-summary.jsonl
