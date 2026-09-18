@@ -1,5 +1,6 @@
 ---
 type: Rule
+id: bf0c298f3e7d
 title: Laicite Absolue
 tags: [regle, laicite, irrevocable]
 timestamp: 2026-07-10

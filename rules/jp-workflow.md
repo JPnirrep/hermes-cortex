@@ -1,5 +1,6 @@
 ---
 type: Playbook
+id: fe0d247be58d
 title: Workflow JP
 tags: [workflow, jp, regle]
 timestamp: 2026-07-10

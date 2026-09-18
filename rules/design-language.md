@@ -1,5 +1,6 @@
 ---
 type: Rule
+id: 97de90435363
 title: Design Language
 tags: [regle, design, charte]
 timestamp: 2026-07-10

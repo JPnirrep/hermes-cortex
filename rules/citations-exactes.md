@@ -1,5 +1,6 @@
 ---
 type: Rule
+id: 6accef0c4547
 title: Citations Exactes
 tags: [regle, citation, qualite]
 timestamp: 2026-07-10

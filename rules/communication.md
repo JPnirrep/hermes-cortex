@@ -1,5 +1,6 @@
 ---
 type: Rule
+id: 842a9888d981
 title: Communication Token-Lean
 tags: [regle, communication, style]
 timestamp: 2026-07-10

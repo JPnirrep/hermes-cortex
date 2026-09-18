@@ -1,0 +1,162 @@
+# deny-rules.yaml — Policy fail-closed Vagus OS
+# Gate de sécurité évalué AVANT chaque action agent (script: scripts/deny-check.py).
+# Mode : fail-closed. Toute action qui matche une règle deny = refus.
+# Deny évalué avant allow. Une règle cassée refuse, elle n'ouvre pas.
+# Action non couverte = ALLOW en mode normal, STRICT_DENY en mode --strict.
+# Verdicts : ALLOW / WARN / DENY / SIGNAL (refus + signaler à JP, ne pas corriger).
+type: Rule
+title: Deny-Rules Vagus OS — Policy fail-closed
+description: Gate de sécurité évalué avant chaque action agent. Deny avant allow, fail-closed.
+timestamp: 2026-08-23
+tags: [securite, policy, gateway, argos, fail-closed, audit]
+links:
+  - ../rules/laicite.md
+  - ../rules/jp-workflow.md
+  - ../rules/invariant-model-visible-logged.md
+related_skills:
+  - landlock-sandboxing
+  - prism-pipeline-operations
+  - cost-zero-cron-operations
+  - protocole-brief-avant-prod
+  - redaction-custos
+  - garde-fous-tokens
+  - vagus-context-guardian
+
+deny:
+  # ── Sécurité / Souveraineté ────────────────────────────────
+  - id: D1a
+    desc: "Écriture/lecture directe d'un fichier de secrets (.env, token, credentials)"
+    source: "Règle Vagus — souveraineté ; garde-fous-tokens"
+    match:
+      path_glob: ["**/*.env", "**/.env*", "**/google_token.json", "**/credentials*", "**/secrets*"]
+    verdict: DENY
+
+  - id: D1b
+    desc: "Secret exposé dans un payload/commande/output (clé API, token, credentials)"
+    source: "Règle Vagus — souveraineté ; garde-fous-tokens"
+    match:
+      payload_regex:
+        - "(?i)(api[_-]?key|secret|bearer|password|token|authorization)\\s*[\"']?\\s*[=:]\\s*[\"']?[^\\s\"'<>{}]{8,}"
+        - "(?i)\\bbearer\\s+[a-z0-9._-]{16,}"
+        - "(?i)\\b(sk|pk)_(live|test)_[a-zA-Z0-9]{10,}"
+        - "(?i)xkeysib-[a-zA-Z0-9]{10,}"
+        - "(?i)sk-[a-zA-Z0-9]{20,}"
+        - "(?i)ghp_[a-zA-Z0-9]{20,}"
+    verdict: DENY
+
+  - id: D2
+    desc: "vault/01-kabbalah (HERMES-PROTECTED) — intouchable sans validation JP (H5)"
+    source: "H5 CUSTOS — signaler, ne pas corriger"
+    match:
+      path_glob: ["**/vault/01-kabbalah/**"]
+    verdict: SIGNAL
+
+  - id: D3
+    desc: "Écriture dans un autre profil Hermes sans directive explicite"
+    source: "Cross-profile write guard"
+    match:
+      tool_glob: ["write_file", "patch", "skill_manage", "memory"]
+      path_glob: ["**/.hermes/profiles/*/**"]
+      path_not_glob: ["**/.hermes/profiles/vagus/**"]
+    verdict: DENY
+
+  - id: D4
+    desc: "Exécution de code non fiable sans sandbox Landlock"
+    source: "landlock-sandboxing ; P3 sandbox-run"
+    match:
+      tool_glob: ["terminal", "execute_code"]
+      payload_regex: ["(?i)(curl|wget).*(\\||>).*(sh|bash|python)", "(?i)chmod\\s+777", "(?i)rm\\s+-rf\\s+/"]
+    verdict: DENY
+
+  # ── Coût / Infra ───────────────────────────────────────────
+  - id: C1
+    desc: "Appel API sans cache PRISM"
+    source: "prism-pipeline-operations ; couche-intelligence-locale"
+    match:
+      tool_glob: ["web_extract", "web_search"]
+      payload_regex: ["(?i)(?=.*api)(?=.*(call|request|fetch))"]
+    verdict: WARN
+
+  - id: C2
+    desc: "Cron non cost-zéro (agent LLM sans no_agent)"
+    source: "cost-zero-cron-operations"
+    match:
+      tool_glob: ["cronjob"]
+      payload_regex: ["(?i)(create|schedule)"]
+    verdict: WARN
+
+  # ── Contenu livrable ───────────────────────────────────────
+  - id: T1
+    desc: "Vocabulaire religieux/ésotérique/mystique dans un livrable — laïcité irrévocable"
+    source: "rules/laicite.md"
+    match:
+      payload_regex:
+        - "(?i)(alchimie|kabbale|esoter|mystiq|spirituel|chakr|divin|priere|benediction|sacerdoce|prophet)"
+    verdict: DENY
+
+  - id: T2
+    desc: "CTA KLEIA-UP « RéservEZ » (E/Z majuscules interdit — seul « Réservez » passe)"
+    source: "Mémoire — plaquette KLEIA-UP"
+    match:
+      tool_glob: ["write_file", "patch", "image_generate"]
+      path_glob: ["**/kleia*", "**/KLEIA*"]
+      payload_regex: ["(?i:r[eé]serv[eé])Z"]
+    verdict: DENY
+
+  - id: T3
+    desc: "Photo Sandrina mains derrière le dos (prise de parole)"
+    source: "Mémoire — posture photo Sandrina"
+    match:
+      tool_glob: ["image_generate", "vision_analyze"]
+      payload_regex: ["(?i)(mains?|hands).*(derriere|dos|back)"]
+    verdict: WARN
+
+  - id: T4
+    desc: "Pattern 3-temps / jargon clinique dans une rédaction JP"
+    source: "Mémoire — style auteur JP"
+    match:
+      tool_glob: ["write_file", "patch"]
+      path_glob: ["**/custos/**", "**/livre*/**", "**/temoignage*"]
+      payload_regex: ["(?i)(pattern.{0,20}(3|trois)|triptyque|clinique)"]
+    verdict: WARN
+
+  # ── Process métier ─────────────────────────────────────────
+  - id: P1
+    desc: "Thème CUSTOS sans fiche YAML préalable"
+    source: "Mémoire — CUSTOS ; redaction-custos"
+    match:
+      tool_glob: ["write_file", "patch"]
+      path_glob: ["**/custos/themes/**"]
+    verdict: WARN
+
+  - id: P2
+    desc: "Symbolique Sepharial dans un livrable (usage interne praticien uniquement)"
+    source: "Mémoire — CUSTOS ; laïcité"
+    match:
+      path_glob: ["**/custos/livrables/**", "**/livrables/**", "**/deliverables/**"]
+      payload_regex: ['(?i)(sepharial|sephar|arcane|tarot|lame\s+[0-9]+|symbolique\s+interne)']
+    verdict: DENY
+
+  - id: P3
+    desc: "Production visuelle sans brief validé (protocole O.R.D.)"
+    source: "protocole-brief-avant-prod ; protocole-ord-qualite"
+    match:
+      tool_glob: ["image_generate"]
+      path_glob: ["**/couv*", "**/plaquette*", "**/visuel*"]
+    verdict: WARN
+
+allow:
+  - id: A1
+    desc: "Écriture dans le cortex (espace de travail Hermes)"
+    match:
+      path_glob: ["**/hermes-cortex/**", "**/.hermes/profiles/vagus/**"]
+
+  - id: A2
+    desc: "Écriture dans les projets/workspace (hors zones deny)"
+    match:
+      path_glob: ["**/workspace/**", "**/projects/**", "**/vaults/**"]
+
+  - id: A3
+    desc: "Lecture libre partout (la lecture n'expose rien si D1b surveille l'output)"
+    match:
+      tool_glob: ["read_file", "search_files", "skill_view", "session_search"]
