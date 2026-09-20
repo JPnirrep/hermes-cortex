@@ -1,45 +1,9 @@
 meta:
-  generated_at: '2026-09-18T04:00:14.500884'
+  generated_at: '2026-09-19T04:00:29.761721'
   window_hours: 24
-  sessions_scan: 6
-  candidates: 7
+  sessions_scan: 0
+  candidates: 0
   duplicates_found: 0
-candidates:
-- session: 20260917_083825_c831
-  time: 09-17 09:25
-  phrase: il faut surtout prendre ce qui est philosophiquement le plus interressant
-    notamment le gain d'inférence et de tokien car le verbage coute tres cher.
-- session: 20260917_093742_be98
-  time: 09-17 09:37
-  phrase: '; (3) fiabilité réelle des confidences LLM : verbalized confidence vs logit-based
-    vs structured, miscalibration connue, techniques de calibration (self-consistency,
-    semantic entropy, temperature scaling) applicables via API sans logprobs ; (4)
-    quelles classes de décisions se prêtent au typé (routing'
-- session: 20260917_093742_63f6
-  time: 09-17 09:37
-  phrase: 'Chercher activement les PREUVES D''ÉCHEC du plan : (1) miscalibration documentée
-    des LLM : papers montrant que verbalized/structured confidence est peu fiable
-    ou systématiquement overconfident (ex: ''LLMs mostly know what they don''t know''
-    vs contradicteurs, calibration des modèles instruct vs base, ef'
-- session: 20260917_094322_6bb7
-  time: 09-17 09:43
-  phrase: 'Scanner 2025-2026 : diffusion LLMs (LLaDA, Mercury d''Inception, Gemini
-    Diffusion si infos, JetFormer...), petits modèles à sortie structurée/native function-calling,
-    modèles 0.5-3B récents bons pour classification/décision (Qwen3 0.6-1.7B, Gemma
-    3 1B, SmolLM3, Phi-4-mini...) avec licences et emprein'
-- session: 20260917_093742_8f86
-  time: 09-17 09:43
-  phrase: '[Thu 2026-09-17 09:43:48 CEST] [IMPORTANT: Background process proc_30a625941339
-    completed normally (exit code 0).'
-- session: 20260917_103101_8d36
-  time: 09-17 10:31
-  phrase: 'Termine en 5 lignes : quel mécanisme de compression est le plus solide
-    pour un pipeline décision typée.'
-- session: 20260917_093742_8f86
-  time: 09-17 10:41
-  phrase: 'Le **token-budget explicite façon TALE** est le mécanisme le plus solide
-    : pur prompt, zéro infra, API-agnostique, −67% tokens pour une perte marginale,
-    et sa granularité par question colle naturellement à un pipeline typé (budgets
-    par classe de décision : trivial/moyen/complexe).'
+candidates: []
 duplicates: []
 note: Le script propose, ne modifie rien. Appliquer en session (H2).
