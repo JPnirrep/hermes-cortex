@@ -1,59 +1,71 @@
 meta:
-  generated_at: '2026-09-14T04:00:57.816550'
+  generated_at: '2026-09-21T04:00:08.021751'
   window_days: 90
-  skill_count_installed: 132
-  skill_count_used: 52
+  skill_count_installed: 162
+  skill_count_used: 55
 tools_top:
 - - terminal
-  - 2025
+  - 2453
 - - read_file
-  - 320
+  - 337
 - - patch
-  - 278
+  - 320
 - - write_file
-  - 253
-- - search_files
-  - 166
+  - 281
+- - execute_code
+  - 251
 - - skill_view
-  - 164
+  - 197
+- - search_files
+  - 168
+- - web_search
+  - 157
 - - session_search
   - 132
-- - execute_code
-  - 87
-- - web_search
-  - 76
 - - skill_manage
-  - 72
+  - 73
 - - web_extract
-  - 40
+  - 65
 - - cronjob
   - 31
+- - delegate_task
+  - 30
 - - clarify
   - 28
 - - memory
-  - 23
-- - vision_analyze
-  - 23
+  - 27
 skills:
+  benchmark-outillage-externe:
+    usage: 13
+    sessions: 10
+    class: CHAUD
+  youtube-transcription:
+    usage: 12
+    sessions: 7
+    class: CHAUD
+  multi-sources-research:
+    usage: 12
+    sessions: 8
+    class: CHAUD
   analyse-transactionnelle-custos:
     usage: 12
     sessions: 3
+    class: CHAUD
+  deep-tech-research-analysis:
+    usage: 12
+    sessions: 7
     class: CHAUD
   custos-kabbalistique:
     usage: 11
     sessions: 5
     class: CHAUD
-  benchmark-outillage-externe:
+  web-research-workflow:
     usage: 11
-    sessions: 8
+    sessions: 7
     class: CHAUD
   cost-zero-cron-operations:
     usage: 9
     sessions: 6
-    class: CHAUD
-  youtube-transcription:
-    usage: 9
-    sessions: 5
     class: CHAUD
   debat-multi-agent-structure:
     usage: 9
@@ -63,6 +75,10 @@ skills:
     usage: 8
     sessions: 5
     class: CHAUD
+  hermes-agent:
+    usage: 8
+    sessions: 6
+    class: CHAUD
   redaction-custos:
     usage: 8
     sessions: 4
@@ -70,14 +86,6 @@ skills:
   coding-standards-vagus:
     usage: 8
     sessions: 1
-    class: CHAUD
-  deep-tech-research-analysis:
-    usage: 7
-    sessions: 5
-    class: CHAUD
-  hermes-agent:
-    usage: 6
-    sessions: 5
     class: CHAUD
   custos-orientation-professionnelle:
     usage: 6
@@ -91,6 +99,10 @@ skills:
     usage: 6
     sessions: 3
     class: CHAUD
+  session-classifier:
+    usage: 6
+    sessions: 5
+    class: CHAUD
   merge-guard-dual-sync:
     usage: 6
     sessions: 1
@@ -103,10 +115,6 @@ skills:
     usage: 5
     sessions: 2
     class: CHAUD
-  web-research-workflow:
-    usage: 5
-    sessions: 4
-    class: CHAUD
   audit-securite-repository:
     usage: 5
     sessions: 2
@@ -115,19 +123,11 @@ skills:
     usage: 5
     sessions: 2
     class: CHAUD
-  session-classifier:
-    usage: 5
-    sessions: 4
-    class: CHAUD
   couche-intelligence-locale:
     usage: 5
     sessions: 2
     class: CHAUD
   custos-theme-production:
-    usage: 4
-    sessions: 3
-    class: TIEDE
-  multi-sources-research:
     usage: 4
     sessions: 3
     class: TIEDE
@@ -171,6 +171,10 @@ skills:
     usage: 3
     sessions: 1
     class: TIEDE
+  google-workspace:
+    usage: 2
+    sessions: 2
+    class: TIEDE
   kleia-landing-pages:
     usage: 2
     sessions: 1
@@ -191,6 +195,14 @@ skills:
     usage: 2
     sessions: 1
     class: TIEDE
+  SKILL.md:
+    usage: 2
+    sessions: 1
+    class: TIEDE
+  lof-cr:
+    usage: 2
+    sessions: 1
+    class: TIEDE
   theme-verificateur:
     usage: 1
     sessions: 1
@@ -200,10 +212,6 @@ skills:
     sessions: 1
     class: TIEDE
   mermaid-html-diagrams:
-    usage: 1
-    sessions: 1
-    class: TIEDE
-  google-workspace:
     usage: 1
     sessions: 1
     class: TIEDE
@@ -243,15 +251,19 @@ skills:
     usage: 1
     sessions: 1
     class: TIEDE
+  narrative-nonfiction:
+    usage: 1
+    sessions: 1
+    class: TIEDE
 crons:
-  ee581b72b5f1:
-    runs: 264
-    last_status: completed
   baf0e8d3594c:
-    runs: 544
+    runs: 536
     last_status: running
   34073eda1bec:
-    runs: 68
+    runs: 67
+    last_status: completed
+  ee581b72b5f1:
+    runs: 266
     last_status: completed
   9639d6016313:
     runs: 22
@@ -267,9 +279,6 @@ crons:
     last_status: completed
   410854cf3e18:
     runs: 6
-    last_status: completed
-  1176d5cf5ce5:
-    runs: 1
     last_status: completed
   a1b2c3d4e5f6:
     runs: 6
@@ -292,19 +301,19 @@ crons:
   5728c2d37bd5:
     runs: 5
     last_status: completed
+  fa0e667fb879:
+    runs: 5
+    last_status: completed
+  c5da719cf72d:
+    runs: 5
+    last_status: completed
   37be492898da:
     runs: 5
     last_status: completed
   129183e20ce0:
     runs: 1
     last_status: completed
-  fdbbb3c3ad21:
-    runs: 1
-    last_status: completed
   42887598d6cd:
-    runs: 1
-    last_status: completed
-  fa0e667fb879:
     runs: 1
     last_status: completed
   fe8686c3158b:
@@ -312,12 +321,15 @@ crons:
     last_status: running
 skills_frozen:
 - agenda-copilot
+- ajout-musique-libre-droit
 - analyse-adaptation-hsp
 - analyse-forme-livrables
 - analyse-style-sandrina
 - analyse-tempo-exercices
+- ascii-art
 - astronomical-ephemeris
 - audio-transcription-cr
+- bidirectional-skill-sync
 - blackboard-engine
 - blocked-page-recovery
 - book-cover-design
@@ -326,13 +338,17 @@ skills_frozen:
 - box
 - cloud-data-migration
 - coherence-titre-message
+- comfyui
 - commercialisation-agent-ia
 - competitor-news-monitor
 - compilation-retours-beta
 - computer-use
 - connexion-social-token
 - consistent-character-generation
+- crash-test-pc
+- crash-test-vps
 - data-sourcing
+- delegation-fanout-research
 - deny-rules-gateway
 - deterministic-agent-architecture
 - docker-traefik-deploy
@@ -342,13 +358,21 @@ skills_frozen:
 - document-rag-ingestion
 - document-translation-pipeline
 - docx
+- excalidraw
 - framedeck-operations
 - github
+- github-auth
+- github-code-review
+- github-issue-to-pr
+- github-issues
+- github-pr-workflow
+- github-repo-management
 - grounded-citations
 - grounded-structured-extraction
 - handoff-sanitization
 - hermes-config-management
 - hermes-vault-governance
+- huggingface-hub
 - image-layer-decomposition
 - iterative-narrative-production
 - kleia-up
@@ -356,22 +380,29 @@ skills_frozen:
 - landlock-sandboxing
 - langextract-grounded-extraction
 - livrables-depuis-rapport
+- livre-kdp-production
 - llm-model-benchmarking
 - lof-canva-automation
-- lof-cr
 - lof-prod-workflow
 - lof-social-publishing
 - marche-francais-benchmark
+- media-recovery
+- merge-reconciler
 - mermaid-diagram-rendering
+- montage-video-automatise
+- montage-video-rs
 - narration-imagee-themes
 - narration-theme-personnages
 - narrative-document-production
-- narrative-nonfiction
 - ocr-and-documents
+- openhue
 - passation-projet
 - pdf
 - pdf-to-email
+- podcast-archiving
+- podcast-rss-recovery
 - prediction-instrumentation
+- pretext
 - protocole-ord-qualite
 - recit-editing-workflow
 - redaction-theme-8-regles
@@ -381,8 +412,12 @@ skills_frozen:
 - self-hosted-deployment
 - session-librarian
 - session-overflow-protocol
+- showreel-production
+- sketch
+- slm-local-benchmarking
 - sourced-answer-engine
 - strategic-business-creation
+- touchdesigner-mcp
 - vagus-os-orchestration
 - vagus-pipeline-transcription
 - vagus-quant-system
@@ -390,5 +425,7 @@ skills_frozen:
 - vagus-ui-ux
 - vagus-whatsapp-gateway-setup
 - validation-scientifique-sandrina
+- vps-resource-guard
+- windows-ssh-tunnel
 - xlsx
 - youtube-corpus-building

@@ -1,0 +1,495 @@
+generated_at: "2026-09-21T08:00:08"
+window_days: 7
+totals:
+  n: 32
+  in: 2482396
+  out: 549650
+  cache: 19199040
+  cwrite: 0
+  cost: 0.002346576
+  replay_in: 448926
+  replay_out: 137274
+  drift_in_pct: -81.9
+  calib: 5.53
+seuils:
+  ratio_asst_user: 15
+  stale_h: 4
+  input_palier: 1000000
+  cost_paliers:
+    - 2.0
+    - 5.0
+    - 10.0
+  tool_terminal_pct: 50.0
+per_session:
+  - id: "20260915_194101_8c10bd"
+    source: "cli"
+    model: "deepseek-v4-flash"
+    started_at: "2026-09-15T19:41:03.642331"
+    messages: "(1, 1, 0)"
+    ratio_asst_user: 1.0
+    input: 15022
+    output: 9
+    cache_read: 3072
+    cost_usd: 0.0023
+    replay_in: 9
+    replay_out: 4
+    terminal_pct: 0.0
+    flags: []
+  - id: "20260915_194129_481de6"
+    source: "cli"
+    model: "deepseek-v4-flash"
+    started_at: "2026-09-15T19:41:31.654616"
+    messages: "(1, 1, 0)"
+    ratio_asst_user: 1.0
+    input: 162
+    output: 1
+    cache_read: 17920
+    cost_usd: 0.0001
+    replay_in: 3
+    replay_out: 1
+    terminal_pct: 0.0
+    flags: []
+  - id: "20260915_202130_a73bcb"
+    source: "cli"
+    model: "glm-5.3-flash"
+    started_at: "2026-09-15T20:21:32.243477"
+    messages: "(1, 1, 0)"
+    ratio_asst_user: 1.0
+    input: 17536
+    output: 40
+    cache_read: 0
+    cost_usd: 0
+    replay_in: 8
+    replay_out: 3
+    terminal_pct: 0.0
+    flags: []
+  - id: "20260915_232710_8c0adfb3"
+    source: "telegram"
+    model: "glm-5.3-flash"
+    started_at: "2026-09-15T23:27:10.802273"
+    messages: "(2, 16, 20)"
+    ratio_asst_user: 8.0
+    input: 61898
+    output: 12190
+    cache_read: 511424
+    cost_usd: 0
+    replay_in: 31554
+    replay_out: 4495
+    terminal_pct: 0.0
+    flags:
+      - "stale>4h"
+  - id: "20260915_233548_fbf7ecce"
+    source: "telegram"
+    model: "glm-5.3-flash"
+    started_at: "2026-09-15T23:35:48.780634"
+    messages: "(1, 25, 25)"
+    ratio_asst_user: 25.0
+    input: 29807
+    output: 5634
+    cache_read: 689344
+    cost_usd: 0
+    replay_in: 11365
+    replay_out: 3617
+    terminal_pct: 8.0
+    flags:
+      - "ratio_asst_user>15"
+      - "stale>4h"
+  - id: "20260915_235357_89606c86"
+    source: "telegram"
+    model: "glm-5.3-flash"
+    started_at: "2026-09-15T23:53:57.408895"
+    messages: "(4, 12, 10)"
+    ratio_asst_user: 3.0
+    input: 132862
+    output: 45418
+    cache_read: 947968
+    cost_usd: 0
+    replay_in: 2472
+    replay_out: 8930
+    terminal_pct: 50.0
+    flags:
+      - "stale>4h"
+  - id: "20260917_083825_c831b8de"
+    source: "telegram"
+    model: "glm-5.3-flash"
+    started_at: "2026-09-17T08:38:25.293531"
+    messages: "(4, 9, 6)"
+    ratio_asst_user: 2.2
+    input: 193267
+    output: 38318
+    cache_read: 1032576
+    cost_usd: 0
+    replay_in: 12253
+    replay_out: 10628
+    terminal_pct: 0.0
+    flags: []
+  - id: "20260917_093742_8c054a"
+    source: "subagent"
+    model: "glm-5.3-flash"
+    started_at: "2026-09-17T09:37:43.126544"
+    messages: "(1, 8, 18)"
+    ratio_asst_user: 8.0
+    input: 54862
+    output: 18327
+    cache_read: 213632
+    cost_usd: 0
+    replay_in: 35907
+    replay_out: 5161
+    terminal_pct: 0.0
+    flags: []
+  - id: "20260917_093742_8f862f"
+    source: "telegram"
+    model: "glm-5.3-flash"
+    started_at: "2026-09-17T09:37:43.199986"
+    messages: "(6, 61, 60)"
+    ratio_asst_user: 10.2
+    input: 564302
+    output: 118487
+    cache_read: 6578752
+    cost_usd: 0
+    replay_in: 17867
+    replay_out: 13756
+    terminal_pct: 65.0
+    flags:
+      - "stale>4h"
+      - "terminal>50%%"
+  - id: "20260917_093742_0a8952"
+    source: "subagent"
+    model: "glm-5.3-flash"
+    started_at: "2026-09-17T09:37:43.206504"
+    messages: "(1, 44, 48)"
+    ratio_asst_user: 44.0
+    input: 90160
+    output: 11288
+    cache_read: 1801536
+    cost_usd: 0
+    replay_in: 42224
+    replay_out: 11232
+    terminal_pct: 0.0
+    flags:
+      - "ratio_asst_user>15"
+  - id: "20260917_093742_be98ac"
+    source: "subagent"
+    model: "glm-5.3-flash"
+    started_at: "2026-09-17T09:37:43.225713"
+    messages: "(1, 7, 12)"
+    ratio_asst_user: 7.0
+    input: 53003
+    output: 8433
+    cache_read: 95424
+    cost_usd: 0
+    replay_in: 17115
+    replay_out: 2409
+    terminal_pct: 0.0
+    flags: []
+  - id: "20260917_093742_63f64d"
+    source: "subagent"
+    model: "glm-5.3-flash"
+    started_at: "2026-09-17T09:37:43.252382"
+    messages: "(1, 10, 9)"
+    ratio_asst_user: 10.0
+    input: 44903
+    output: 14012
+    cache_read: 245824
+    cost_usd: 0
+    replay_in: 20992
+    replay_out: 4699
+    terminal_pct: 0.0
+    flags: []
+  - id: "20260917_094322_fe9242"
+    source: "subagent"
+    model: "glm-5.3-flash"
+    started_at: "2026-09-17T09:43:23.033273"
+    messages: "(1, 7, 18)"
+    ratio_asst_user: 7.0
+    input: 58117
+    output: 19406
+    cache_read: 104576
+    cost_usd: 0
+    replay_in: 15751
+    replay_out: 1606
+    terminal_pct: 5.6
+    flags: []
+  - id: "20260917_094322_76e3cd"
+    source: "subagent"
+    model: "glm-5.3-flash"
+    started_at: "2026-09-17T09:43:23.039138"
+    messages: "(1, 8, 11)"
+    ratio_asst_user: 8.0
+    input: 64562
+    output: 17957
+    cache_read: 225536
+    cost_usd: 0
+    replay_in: 37345
+    replay_out: 5019
+    terminal_pct: 0.0
+    flags: []
+  - id: "20260917_094322_d60320"
+    source: "subagent"
+    model: "glm-5.3-flash"
+    started_at: "2026-09-17T09:43:23.049647"
+    messages: "(1, 4, 5)"
+    ratio_asst_user: 4.0
+    input: 56545
+    output: 19741
+    cache_read: 17216
+    cost_usd: 0
+    replay_in: 18585
+    replay_out: 959
+    terminal_pct: 0.0
+    flags: []
+  - id: "20260917_094322_6bb764"
+    source: "subagent"
+    model: "glm-5.3-flash"
+    started_at: "2026-09-17T09:43:23.061882"
+    messages: "(1, 9, 27)"
+    ratio_asst_user: 9.0
+    input: 59187
+    output: 15941
+    cache_read: 164480
+    cost_usd: 0
+    replay_in: 15573
+    replay_out: 3576
+    terminal_pct: 0.0
+    flags: []
+  - id: "20260917_101937_9d42d3"
+    source: "subagent"
+    model: "glm-5.3-flash"
+    started_at: "2026-09-17T10:19:37.899682"
+    messages: "(1, 15, 18)"
+    ratio_asst_user: 15.0
+    input: 82261
+    output: 12109
+    cache_read: 329280
+    cost_usd: 0
+    replay_in: 10485
+    replay_out: 4024
+    terminal_pct: 55.6
+    flags:
+      - "terminal>50%%"
+  - id: "20260917_101937_afd65d"
+    source: "subagent"
+    model: "glm-5.3-flash"
+    started_at: "2026-09-17T10:19:37.930495"
+    messages: "(1, 4, 6)"
+    ratio_asst_user: 4.0
+    input: 22511
+    output: 4096
+    cache_read: 59904
+    cost_usd: 0
+    replay_in: 4804
+    replay_out: 1684
+    terminal_pct: 0.0
+    flags: []
+  - id: "20260917_101937_9d0f62"
+    source: "subagent"
+    model: "glm-5.3-flash"
+    started_at: "2026-09-17T10:19:37.935592"
+    messages: "(1, 5, 6)"
+    ratio_asst_user: 5.0
+    input: 106942
+    output: 16023
+    cache_read: 1728
+    cost_usd: 0
+    replay_in: 6231
+    replay_out: 3097
+    terminal_pct: 0.0
+    flags: []
+  - id: "20260917_101937_26ad2a"
+    source: "subagent"
+    model: "glm-5.3-flash"
+    started_at: "2026-09-17T10:19:37.948210"
+    messages: "(1, 7, 10)"
+    ratio_asst_user: 7.0
+    input: 77310
+    output: 11015
+    cache_read: 135744
+    cost_usd: 0
+    replay_in: 19720
+    replay_out: 2918
+    terminal_pct: 0.0
+    flags: []
+  - id: "20260917_101937_96f55a"
+    source: "subagent"
+    model: "glm-5.3-flash"
+    started_at: "2026-09-17T10:19:37.949850"
+    messages: "(1, 5, 5)"
+    ratio_asst_user: 5.0
+    input: 29591
+    output: 11100
+    cache_read: 86400
+    cost_usd: 0
+    replay_in: 9674
+    replay_out: 3180
+    terminal_pct: 0.0
+    flags: []
+  - id: "20260917_101937_f3a7ed"
+    source: "subagent"
+    model: "glm-5.3-flash"
+    started_at: "2026-09-17T10:19:37.958585"
+    messages: "(1, 4, 3)"
+    ratio_asst_user: 4.0
+    input: 20527
+    output: 12297
+    cache_read: 35008
+    cost_usd: 0
+    replay_in: 4360
+    replay_out: 1594
+    terminal_pct: 0.0
+    flags: []
+  - id: "20260917_101937_fd622f"
+    source: "subagent"
+    model: "glm-5.3-flash"
+    started_at: "2026-09-17T10:19:37.962571"
+    messages: "(1, 5, 4)"
+    ratio_asst_user: 5.0
+    input: 25279
+    output: 4816
+    cache_read: 81024
+    cost_usd: 0
+    replay_in: 7054
+    replay_out: 1670
+    terminal_pct: 75.0
+    flags:
+      - "terminal>50%%"
+  - id: "20260917_101937_dd647c"
+    source: "subagent"
+    model: "glm-5.3-flash"
+    started_at: "2026-09-17T10:19:38.002794"
+    messages: "(1, 6, 6)"
+    ratio_asst_user: 6.0
+    input: 63044
+    output: 14697
+    cache_read: 41088
+    cost_usd: 0
+    replay_in: 5682
+    replay_out: 2509
+    terminal_pct: 0.0
+    flags: []
+  - id: "20260917_103101_8d3655"
+    source: "subagent"
+    model: "glm-5.3-flash"
+    started_at: "2026-09-17T10:31:01.244429"
+    messages: "(1, 6, 5)"
+    ratio_asst_user: 6.0
+    input: 87373
+    output: 7195
+    cache_read: 56832
+    cost_usd: 0
+    replay_in: 8140
+    replay_out: 2749
+    terminal_pct: 0.0
+    flags: []
+  - id: "20260917_103101_888e14"
+    source: "subagent"
+    model: "glm-5.3-flash"
+    started_at: "2026-09-17T10:31:01.252710"
+    messages: "(1, 3, 4)"
+    ratio_asst_user: 3.0
+    input: 36217
+    output: 16909
+    cache_read: 1152
+    cost_usd: 0
+    replay_in: 2536
+    replay_out: 1026
+    terminal_pct: 25.0
+    flags: []
+  - id: "20260917_224827_1de0fb33"
+    source: "telegram"
+    model: "glm-5.3-flash"
+    started_at: "2026-09-17T22:48:27.299033"
+    messages: "(1, 8, 7)"
+    ratio_asst_user: 8.0
+    input: 56912
+    output: 3796
+    cache_read: 180864
+    cost_usd: 0
+    replay_in: 14253
+    replay_out: 1728
+    terminal_pct: 71.4
+    flags:
+      - "stale>4h"
+      - "terminal>50%%"
+  - id: "20260918_132632_062e9983"
+    source: "telegram"
+    model: "glm-5.3-flash"
+    started_at: "2026-09-18T13:26:32.799475"
+    messages: "(2, 17, 16)"
+    ratio_asst_user: 8.5
+    input: 64895
+    output: 9663
+    cache_read: 519232
+    cost_usd: 0
+    replay_in: 15500
+    replay_out: 3701
+    terminal_pct: 75.0
+    flags:
+      - "stale>4h"
+      - "terminal>50%%"
+  - id: "20260918_134707_cc13023e"
+    source: "telegram"
+    model: "glm-5.3-flash"
+    started_at: "2026-09-18T13:47:07.102002"
+    messages: "(2, 21, 21)"
+    ratio_asst_user: 10.5
+    input: 121927
+    output: 28036
+    cache_read: 1452928
+    cost_usd: 0
+    replay_in: 2888
+    replay_out: 10164
+    terminal_pct: 85.7
+    flags:
+      - "stale>4h"
+      - "terminal>50%%"
+  - id: "20260918_160813_75562daa"
+    source: "telegram"
+    model: "glm-5.3-flash"
+    started_at: "2026-09-18T16:08:13.110288"
+    messages: "(2, 49, 50)"
+    ratio_asst_user: 24.5
+    input: 70848
+    output: 33607
+    cache_read: 2339520
+    cost_usd: 0
+    replay_in: 30042
+    replay_out: 11648
+    terminal_pct: 60.0
+    flags:
+      - "ratio_asst_user>15"
+      - "stale>4h"
+      - "terminal>50%%"
+  - id: "20260918_231229_74d3a534"
+    source: "telegram"
+    model: "glm-5.3-flash"
+    started_at: "2026-09-18T23:12:29.183583"
+    messages: "(1, 5, 4)"
+    ratio_asst_user: 5.0
+    input: 42483
+    output: 2862
+    cache_read: 78400
+    cost_usd: 0
+    replay_in: 1552
+    replay_out: 447
+    terminal_pct: 100.0
+    flags:
+      - "stale>4h"
+      - "terminal>50%%"
+  - id: "20260919_133444_1e459c62"
+    source: "telegram"
+    model: "glm-5.3-flash"
+    started_at: "2026-09-19T13:34:44.099204"
+    messages: "(1, 26, 28)"
+    ratio_asst_user: 26.0
+    input: 78081
+    output: 16227
+    cache_read: 1150656
+    cost_usd: 0
+    replay_in: 26982
+    replay_out: 9040
+    terminal_pct: 57.1
+    flags:
+      - "ratio_asst_user>15"
+      - "stale>4h"
+      - "terminal>50%%"
+flagged_count: 13
