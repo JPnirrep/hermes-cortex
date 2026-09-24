@@ -1,0 +1,14 @@
+# Sources analyse Jev/TypeSafe — 23/09/2026
+- Vidéo: https://www.youtube.com/watch?v=pmnq5e5Xp4s (Real Python, publiée 22/09/2026, 9.8k vues)
+- Titre réel YT: "Jev + OpenRouter in Python: Classify Inputs in Seconds"
+- Chapitrage créateur: extrait via ytInitialData (20 chapitres, 0:00→16:05)
+- PyPI typesafe-sdk 0.7.1 : https://pypi.org/pypi/typesafe-sdk/json
+- Doc primitives (Noul/Choice/Score): https://docs.typesafe.ai/primitives.md
+- Noul + criteria: https://docs.typesafe.ai/primitives/noul.md
+- Confidence: https://docs.typesafe.ai/confidence.md
+- System One: https://docs.typesafe.ai/concepts/system-one.md
+- Models + pricing jev-1.13: https://docs.typesafe.ai/models.md ($42/Btok input, output gratuit)
+- Jaggedness jev-1.13 (9 failure modes): https://docs.typesafe.ai/model-jaggedness/jev-1.13.md
+- Cookbook SDE cascade (jev-1.12 comme vérificateur): https://docs.typesafe.ai/cookbooks/sde_cascade.md
+- Blog annonce System One (15/09/2026, Diogo Almeida, ex-OpenAI): https://typesafe.ai/blog/introducing-system-one-models-and-jev
+- Transcript littéral: NON OBTENU (IP cloud bloquée, RequestBlocked; proxies Cloudflare)
