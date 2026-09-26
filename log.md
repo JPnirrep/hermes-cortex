@@ -106,3 +106,129 @@ Session: vérif sync hermes cli PC. Trouvé: (1) cron 4h hermes-cortex cassé de
 2026-09-18 : Fin de tache JP. Etat : tunnel 2222 toujours DOWN (attente relance cote Windows/OMP via procedure envoyee 16h22), proxy 8790 OK. Aucune nouvelle decision cette session.
 2026-09-19 : CR video Krzs8GeiWTc (Generative UI in Python, Jeremiah Lowin Prefect) — transcript verbatim impossible (IP cloud bloquee), reconstitution multi-sources (ytInitialData + BigGo timestamped + blog jlowin.dev + PyPI). Livrable: /home/debian/workspace/CR_video_generative_ui_python.md. Pattern nouveau: CR_video_<slug>.md. Chiffre cle: Python UI -70% vs JSON sur le wire; anti-pattern upload via contexte agent.
 2026-09-20 : Normalisation des IDs de modèle DeepSeek sur PC + VPS — 2 IDs valides seulement (`deepseek-flash` = DeepSeek-V4.1-Flash, `deepseek-v4-pro`) ; `v4-flash`/`vision-exp`/`chat`/`reasoner` retirés (encore routés), `v3`/`r1` morts (HTTP 400). Corrigé : configs des 2 hôtes (profil défaut PC, config VPS, profils vagus + sandrina, presets vagus-ai, moa, provider vision), 2 cron jobs pinnés sur l'ID retiré, prism/telegram_bot.py, ~300 occurrences dans les skills. Référence créée : `vagus-os-orchestration/references/deepseek-model-ids.md` (mapping + preuves reproductibles + tarifs + piège du thinking par défaut qui renvoie une réponse vide). Gateway VPS redémarré — c'est une unité SYSTEMD USER (`systemctl --user restart hermes-gateway-vagus.service`), pas une unité système ; il tourne `--profile vagus` donc sur glm-5.3-flash. Scripts kleia-up réparés : 16 copies (troncatures `json.l...n` dans verify_api.py + rédactions `***` injectées par write_file dans dev-lessons-verify_admin_crud.py). Framedeck décommissionné : aucun code ni service sur VPS et PC, API `framedeck.kleia-up.fr` en 404 depuis le 04/06 ; 682 Mo récupérés (dérivés supprimés, 13 rendus bruts conservés), certificat Let's Encrypt supprimé, STATUS.md posé, skill `framedeck-operations` marquée décommissionnée sur 8 copies. Incident à retenir : mon script de réécriture batch avait un motif `\s*$` qui avalait les sauts de ligne → 5 configs YAML fusionnées, détectées par validation `yaml.safe_load`, restaurées depuis les backups automatiques puis refaites ; piège documenté dans `hermes-config-management` (section 3bis). (session: 20260920_112135_61a4c2)
+
+## 2026-09-25 — Laya (ConvAI) : audit repo + mesures réelles, verdict GO conditionnel (session: telegram-5225)
+Demande JP : « creuse la repo github et regarde ce que nous pouvons faire gratuitement » (suite session 24/09 23h47).
+REPO CANON : `NandhaKishorM/laya` (23 407⭐, Apache-2.0, créé 18/09/26, 112 fichiers py, 6461 LOC, 60+ tests).
+  - ARGOS provenance : Nandakishor déclare company=@ConvAI-Innovations, site convaiinnovations.com, compte 2019, 85 repos (CV vision réel) => légitime, PAS un repackaging. L'org ConvAI-Innovations ne contient PAS le repo (compte perso).
+MESURES RÉELLES SUR VPS (CPU Haswell 6 cœurs, 0 GPU, 11 Go) — venv isolé, ~5,6 Go torch :
+  - pip install laya 0.3.20 : OK via --trusted-host (piège SSL déjà connu §skill).
+  - Latence : 609 ms / 3 questions (doc court) = 203 ms/question. Banc Noul interne : 115 ms/question (12 cas).
+  - type_acc : 7/8 (87,5%) sur nos questions de décision — vs qwen0.6B 74,6%, DeepSeek 100% (852 ms).
+  - Chemin binaire CRITIQUE : Laya 203 ms CPU 0€ local vs DeepSeek 852 ms payant réseau => x4 plus rapide, coût nul.
+  - Serveur HTTP : routes réelles `/health` + `/v1/systemone` (API JEV-COMPATIBLE, output_tokens=0). HTTP 200 en 275 ms. TestClient OK. health => 3 checkpoints chargés, device cpu.
+  - MCP server dispo (laya[mcp]) : outils laya_predict/laya_route/laya_status => branchement Hermes natif possible.
+BIAIS/BUG DÉCOUVERT (documenté par EUX, pas par nous) : le checkpoint shippe `choice:11+` temperature = 0.1006, HORS plage [0.5, 5] => clampé à 0.5, bucket NON CALIBRÉ. Le commentaire du code : « a caller gating on confidence is told a coin flip is a certainty ». README admet : « Both checkpoints are over-confident as shipped », ECE 0.466 -> 0.081 SEULEMENT après refit. `laya-multilingual` n'a AUCUNE température fittée.
+  - « Laya is a fast base to specialise, not a zero-shot decision engine » (0.362 vs 0.318 hasard).
+CALIBRATION VÉRIFIÉE PAR NOUS (12 cas étiquetés, jeu du banc Noul) :
+  - accuracy 83,3% (10/12) ; ECE(answer_confidence) = 0.073 — BON ; ECE(confidence=1-entropie) = 0.192 — MAUVAIS.
+    => Le README dit vrai : il faut gater sur `answer_confidence`, PAS sur `confidence`. Écart confirmé empiriquement.
+  - LES 2 ERREURS ONT conf 0.463 et 0.454 => le modèle ne se trompe pas en étant sûr. Signal exploitable.
+  - GATING mesuré : seuil 0.7 => 100% accuracy sur 75% de couverture. C'est exactement le pattern de routage PRISM/local→DeepSeek.
+  - `agent.temperature` est MUTABLE à chaud (attribut public) => chantier calibration par bucket faisable gratuitement sur nos labels.
+VERDICT : GO conditionnel — adoptable gratuitement (Apache-2.0, 100% local CPU, 0€, API Jev-compatible).
+  Conditions : (1) réentraîner/fitter la calibration sur nos labels avant tout gating ; (2) ne PAS utiliser zero-shot sur Choice >20 options (Banking77 0.425 vs 0.870) ; (3) éviter labels booléens true/false/yes/no.
+  Cible 1 : gate de routage PRISM (local Laya confiant -> traité à 0€ ; sinon escalade DeepSeek). Gain estimé : ~75% du trafic routé à coût nul.
+  Cible 2 : QC laïcité / classification CUSTOS en local.
+[DETTE] le venv laya (5,6 Go) est dans cache/scratch (purgé 72h) => si on garde, déplacer vers ~/laya-env. Disque VPS 77% (23 Go libres) : marge suffisante mais à surveiller.
+[DETTE] bug CLI serve : `--host/--port` non pris en compte (config par env LAYA_HOST/LAYA_PORT uniquement) — piège à documenter.
+
+## 2026-09-25 — Laya GO : gate passif en prod, dettes scratch soldées (session: 2dcaf10e7d27)
+GO JP (WebUI) sur le plan « adopter Laya T=1 sans refit, gate answer_confidence ≥ 0,7, 2 semaines de shadow puis refit ».
+  - Sauvetage scratch : venv 5,6 Go → /home/debian/laya-env (import vérifié), clone → /home/debian/laya-src, scripts → ~/r4-bench/.
+  - Cron « Laya Shadow Gate » 0204450ee7e2 (every 4h, no_agent, deliver local) : 1 noul/job actif « ce tir livrera-t-il une sortie ? », labels réels via executions.db (delivery_outcome), données → r4-bench/results/laya_shadow_labels.jsonl.
+  - Boucle fermée vérifiée : tir manuel succeeded, stdout silencieux (suppressed), selftest labeler OK, 28 prédictions/run, coût 0.
+  - Piège consigné (skill hermes-cron-ops §Pattern 11) : le runner cron ignore le shebang (ModuleNotFoundError) → greffe sys.path venv au début du script ; stderr HF sale → HF_HUB_DISABLE_PROGRESS_BARS=1 sinon failed récurrent.
+  - L'ombre ne se shadow pas elle-même (exclusion laya-shadow-gate.py, label autoréférentiel).
+  - Dette predict-cron-check soldée : infra-graph.json.jobs-sig (sig anti-drift) n'était écrit par personne depuis le 14/09 → écriture branchée sur build-infra-graph.py ; checker re-testé [SILENT].
+  - ARGOS : 98,6% des tirs = suppressed → gate accuracy non informative, seule la calibration (ECE/Brier) sur labels minoritaires fera foi au refit (~09/10/26).
+  - Question JP (vocal) : Laya pour « lire le contexte à donner au LLM » → NON (classeur, pas lecteur ; zero-shot hasard). Usage pertinent = gate de suffisance de contexte, 2e chantier de labels, prévu avec JP.
+[DETTE soldée] laya-shadow-gate.py : comparaison SQL lexicographique entre predicted_at UTC (Z) et executions.started_at +02:00 → fausse de l'offset. Fix : parsing ISO timezone-aware + comparaison Python. Constaté AVANT tout label (grâce 2h pas encore écoulée), aucune donnée polluée. Piège consigné dans skill typed-decision-calibration.
+Audit JEV 25/09 (demande JP « toujours d'actualité ? ») : AUCUN appelant actif VPS (aucun cron, aucun import hors skill), pas de clé OpenRouter sur VPS (transport = PC uniquement), pilot Gmail + econ_guard + tests = travail validé conservé. VERDICT : CONSERVER (complémentaire de Laya : JEV zero-shot payant vs Laya local gratuit à fine-tuner). Statut mis à jour dans skill jev-typesafe §Statut.
+
+## 2026-09-25 — Réponse JP « comment ça fonctionne sans que je le dise ? » : boucle auto-fermée Laya (session: 2dcaf10e7d27)
+CONSTAT JP (fondé) : le shadow gate produisait 28 prédictions/4h que PERSONNE ne récoltait, et l'anomalie « 0 label » n'aurait été vue que si JP la demandait. Dispositif aveugle = inutile.
+CORRECTIF — 2e cron « Laya Shadow Report » d67016cc6ba0 (4h, no_agent, deliver telegram:6722033496:4684) :
+  - laya-shadow-report.py : lit le JSONL, calcule complétion + ECE/couverture-accuracy (publie les métriques UNIQUEMENT à partir de 30 labels réels, pas de chiffre creux), écrit un rapport machine laya_shadow_report.json (lu par le gate de suffisance, sans intervention humaine) + journal d'événements.
+  - DÉTECTION D'ÉCHEC SILENCIEUX testée en conditions réelles : 3 alertes fonctionnelles — [CADENCE] (pas de prédiction depuis >8h = tir manqué), [BACKFILL] (>50 prédictions mûres non labellisées = labeler en panne), [MESURE] (0 label pour N prédictions). Test sur état artificiellement cassé : alertes déclenchées, état restauré.
+  - stdout vide = silence ; seules les anomalies parlent.
+INCIDENT livraison corrigé : deliver=origin avait hérité de l'origine WebUI (plateforme inconnue du scheduler → delivery_failed, alerte PERDUE). Fix : livraison explicite telegram:6722033496:4684. Vérifié : last_status=ok, output écrit, dernier_delivery_error=None.
+LEÇON (à généraliser) : un cron d'alerte créé DEPUIS le WebUI hérite de l'origine webui → silencieux par conception. Tout cron d'alerte doit viser une plateforme explicite, et être testé par un tir réel avec relecture de last_status + output/.
+
+## 2026-09-25 — Chantier gate de suffisance de contexte : mécanique livrée, Laya RÉCUSÉ en zero-shot (session: 2dcaf10e7d27)
+GO JP. Livré : scripts/laya-adequacy-gate.py (collect | predict | report | selftest) — mécanique de verdict ALIGNÉE sur la doctrine existante (gate-acceptation-skills-vagus + gate-semantique-non-testable) : corpus réel exigé, égalité = rejet strict, p-value NON APPLICABLE à paires uniformes (jamais p=1.0 simulée), tolérance flottante 1e-9. selftest 10/10 verts (un vrai bug de motif attrapé : « perte uniforme » manquant sur rejet à égalité).
+Décision opérationnelle : conf >= 0,7 ET p(suffisant) >= 0,5 -> lancer ; < 0,5 -> demander_info ; conf < 0,7 -> escalade.
+RÉSULTAT DÉCISIF (test adversarial) : contexte long et bien habillé, CA + charges mais SALAIRES MANQUANTS -> Laya juge « suffisant » à 0,951 avec confiance 0,951 => il se fait convaincre par l'apparence (volume, ton), pas par les faits. Un contexte court mais complet passe aussi (0,917). Les 3 premiers cas « réussis » n'étaient que des évidences grossières écrites par moi-même = performance de ma part, pas de Laya.
+CONSÉQUENCE : Laya NON ADOPTÉ en zero-shot pour ce gate (cohérent avec l'avertissement des auteurs : « a fast base to specialise, not a zero-shot decision engine »). Le gate attend un fine-tune sur labels réels ; corpus ouvert (laya_adequacy.jsonl), 2 cas adversariaux enregistrés comme tests de non-régression.
+
+## 2026-09-25 — Stratégies d'efficience PC + VPS (A+B) mises en place (session: 2dcaf10e7d27)
+DÉCOUVERTE MAJEURE (mesurée, pas supposée) : le poste de coût n'était PAS le volume d'appels.
+Part cache globale = 92,3 % (le cache fonctionne). Le vrai poste = deux fuites invisibles :
+  1. fallback_providers nº1 = glm-5.3-flash (provider INTERDIT depuis le 04/09) sur VPS **et** PC.
+  2. MoA aggregator = glm-5.3-flash → 60 appels à 10 051 tokens d'input NON cachés (603 K tokens
+     dans la session en cours), registre Hermes à 0 $ (cost_source='none').
+CORRECTIONS : fallback VPS+PC → deepseek-flash/v4-pro ; aggregator MoA → deepseek-v4-pro.
+  GLM ne subsiste que dans providers.*.models (liste inerte, pas un chemin d'exécution).
+CLÉ OPENROUTER : validée par appel réel 200 (typesafe/jev-1.13, 515 ms, $0,0000148/appel).
+  Solde: plafond 10 $, 9,9949 $ restants. Posée dans .env (perms 600), valeur jamais journalisée.
+LIVRABLES :
+  scripts/routeur-delegation.py — routage mesuré (6 tâches SLM / 5 tâches distantes), défaut prudent.
+  scripts/efficience-gate.py — 3 contrôles (provider interdit / fuite input / transports), silencieux.
+  cron « Efficience Gate » (every 6h, no_agent, telegram) — testé : succeeded, delivery ok.
+  C:\Users\JP\efficience-gate-pc.py + tâche planifiée HermesEfficienceGate (6h, State=Ready).
+CHAÎNE D'ALERTE VALIDÉE : gate PARLE sur config piégée (GLM réinjecté) et SE TAIT sur config propre.
+PIÈGE CONFIRMÉ : cron créé depuis le WebUI → deliver=origin hérite {"platform":"webui"} que le
+  scheduler rejette → alerte muette. Toujours forcer telegram:<chat_id>.
+CONSTAT STRUCTUREL : le PC n'a AUCUNE couche locale (11434/18080/8650/8790 tous muets). Sa stratégie
+  = cloud uniquement + gate de surveillance ; les leviers locaux sont VPS-only.
+[DETTE] cost_source='none' pour les providers agrégateurs (cometapi/custom/zai) : le registre
+  Hermes affiche 0 $ alors qu'ils facturent. Contournement = cost-report.py (recalcul). À signaler
+  si un poste de coût doit être arbitré : ne jamais se fier au registre seul.
+
+## 2026-09-25 — Compteur d'efficience branché (session: 2dcaf10e7d27)
+LIVRABLE : scripts/compteur-efficience.py (statut|rapport|selftest|alerte; défaut=alerte pour cron).
+Cron « Compteur Efficience » d08095ef2eeb (12h, no_agent, telegram) — tir réel succeeded/ok.
+SOURCE DE VÉRITÉ : ~/.local/state/drafts.log (appels SLM réellement servis, audité par verify-greffier).
+CHAÎNON AJOUTÉ : slm_local.generate(with_usage=True) remonte l'usage RÉEL de llama-server
+  (prompt_tokens/completion_tokens) ; tags-local.py le journalise. Le compteur privilégie la
+  MESURE et marque l'estimation par caractères quand elle seule est disponible.
+PREMIER RÉSULTAT HONNÊTE : 14 appels SLM, économie 0,0003 $ (borne basse) à 0,0019 $ (peak ×3).
+  → L'enjeu du routage local est MARGINAL en euros, pas un poste de coût. Le dire, ne pas l'enjoliver.
+BI-MODE VALIDÉ : silencieux quand le routage travaille ; alerte « SILENCE 7 JOURS » quand le SLM
+  n'est plus appelé (testé en vieillissant les dates). Un compteur qui ne signale pas son propre
+  silence ne mesure rien.
+PIÈGE CORRIGÉ : ligne 1 de drafts.log = résidu de test connu (JSON collé, 29/08) → alerte
+  permanente ingérable. Classée connue, exclue de l'alerte, reste visible via `statut`.
+CONSTAT STRUCTUREL MAJEUR : 0 cron avec agent LLM, 29 en no_agent → les crons ne coûtent RIEN.
+  Tout le coût vient des sessions interactives. Le levier « déporter les crons vers le SLM » est vide.
+LIMITE DITE : state.db ne trace pas le TYPE de tâche par appel → impossible de chiffrer la part
+  « triviale » de l'input non caché. Ne pas inventer ce pourcentage.
+
+## 2026-09-25 — FIN DE SESSION : bilan consolidé (session: 2dcaf10e7d27)
+DÉCISIONS STRUCTURANTES (les 3 qui comptent) :
+ 1. Laya ADOPTÉ en gate de routage (NON en pré-lecture de contexte, NON en juge de suffisance).
+    Verdict appuyé par test adversarial : 0,951 de confiance sur un contexte où manquaient les
+    salaires → il juge l'APPARENCE de suffisance. Refit ~09/10 sur labels réels.
+ 2. JEV CONSERVÉ — non par attachement mais parce que Laya ne le remplace pas : Laya exige un
+    fine-tune par tâche, JEV est zero-shot immédiat à 4 c/1000 décisions. Clé OpenRouter posée
+    dans le .env (validée 200, plafond 10 $). Les deux sont complémentaires, pas concurrents.
+ 3. Le poste de coût n'était PAS le volume (cache global 92,3 % = sain) mais DEUX FUITES INVISIBLES :
+    glm-5.3-flash en fallback nº1 et en agrégateur MoA, SUR LES DEUX HÔTES, alors qu'il est interdit
+    depuis le 04/09 — 1,23 M de tokens d'input non cachés à 0 $ au registre (cost_source='none').
+    Corrigé VPS + PC. C'est la trouvaille de la session.
+
+LIVRABLES EN PRODUCTION (4 crons, tous 0 €, last_status=ok) :
+  Laya Shadow Gate 0204450ee7e2 (4h) · Laya Shadow Report d67016cc6ba0 (4h, alerte) ·
+  Efficience Gate c37ee43d3236 (6h, alerte) · Compteur Efficience d08095ef2eeb (12h, alerte).
+SCRIPTS : laya-shadow-gate/report, laya-adequacy-gate, efficience-gate, routeur-delegation,
+ compteur-efficience. PC : efficience-gate-pc.py + tâche planifiée HermesEfficienceGate (Ready).
+MÉTHODE (transférable) : tester un dispositif DANS LES DEUX SENS — il doit parler sur état cassé
+ ET se taire sur état propre. Un gate qu'on n'a testé que d'un côté n'est pas vérifié.
+RESULTAT HONNÊTE À RETENIR : le gain du routage local est MARGINAL (0,0003-0,0019 $ / 14 appels)
+ et les crons sont déjà tous gratuits (0 agent LLM / 29 no_agent) → le levier local n'est pas le
+ gisement. Ne pas re-vendre ce levier comme une optimisation majeure.
+LIMITES DITES : (a) state.db ne trace pas le TYPE de tâche → impossible de chiffrer la part
+ déportable ; (b) le PC n'a aucune couche locale (structurel, pas une panne).
+[DETTE] cost_source='none' pour les providers agrégateurs : le registre Hermes affiche 0 $ là où
+ le coût se concentre. Ne jamais arbitrer un coût sur le registre seul.
+[DETTE H8] drafts.log ligne 1 = résidu de test du 29/08 (JSON collé) — connu, exclu du calcul.

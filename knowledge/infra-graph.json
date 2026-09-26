@@ -1,22 +1,22 @@
 {
  "meta": {
-  "generated_at": "2026-09-14T12:44:00+02:00",
+  "generated_at": "2026-09-25T12:07:25+02:00",
   "generator": "build-infra-graph.py",
   "source": "inférence locale (cron/systemd/scripts/docker/ports/crontab)",
-  "node_count": 231,
-  "edge_count": 141,
+  "node_count": 254,
+  "edge_count": 153,
   "vault_scan": false,
   "kinds": {
-   "script": 76,
-   "file": 7,
-   "dir": 13,
-   "port": 20,
+   "script": 91,
+   "file": 8,
+   "dir": 18,
+   "port": 19,
    "secret": 11,
-   "cron": 31,
+   "cron": 29,
    "channel": 2,
    "service": 42,
-   "container": 20,
-   "cron_sys": 9
+   "container": 16,
+   "cron_sys": 18
   },
   "relations": {
    "file:/home/debian/.hermes/profiles/vagus/cron/jobs.json": 2,
@@ -26,24 +26,28 @@
    "dir:/home/debian/workspace/custos": 1,
    "dir:/home/debian/.hermes/profiles/vagus/sessions/": 1,
    "file:/home/debian/.hermes/profiles/vagus/state.db": 6,
-   "secret:GMAIL_APP_PASSWORD": 2,
-   "secret:SMTP_PASS": 3,
-   "secret:EMAIL_JP": 3,
-   "secret:GMAIL_USER": 2,
    "secret:SMTP_USER": 3,
-   "dir:/home/debian/transcripts/output": 2,
-   "dir:/home/debian/transcripts/raw": 2,
+   "secret:GMAIL_USER": 2,
+   "secret:GMAIL_APP_PASSWORD": 2,
+   "secret:EMAIL_JP": 3,
+   "secret:SMTP_PASS": 3,
    "file:/home/debian/transcripts/queues/numerologie.yaml": 3,
    "file:/home/debian/transcripts/youtube_cookies.txt": 1,
-   "secret:DEEPSEEK_API_KEY": 4,
-   "port:8789": 3,
+   "dir:/home/debian/transcripts/output": 2,
+   "dir:/home/debian/transcripts/raw": 2,
+   "secret:DEEPSEEK_API_KEY": 3,
+   "port:8789": 2,
+   "file:/home/debian/.hermes/profiles/vagus/agent-hooks/session-digest.sh": 1,
+   "dir:/home/debian/laya-env/lib/python3.11/site-packages": 1,
+   "dir:/home/debian/.hermes/profiles/vagus": 3,
+   "dir:/home/debian/laya_models": 1,
    "dir:/home/debian/workspace/LOF": 1,
    "file:/home/debian/.hermes/profiles/vagus/.env": 3,
-   "secret:INCEPTION_API_KEY": 2,
    "secret:PROMPT_USER": 1,
+   "secret:INCEPTION_API_KEY": 2,
    "file:/home/debian/workspace/hermes-vault/state_meta.json": 3,
-   "file:/home/debian/omp-optimization/gen_answers_b_all.sh": 1,
    "dir:/home/debian/omp-optimization": 1,
+   "file:/home/debian/omp-optimization/gen_answers_b_all.sh": 1,
    "dir:/home/debian/hermes-cortex": 1,
    "dir:/home/debian/workspace/hermes-vault/sandboxes/quarantine": 1,
    "dir:/home/debian/transcripts/raw/N005/": 1,
@@ -53,6 +57,8 @@
    "secret:SSH_USER": 1,
    "dir:/home/debian/projets/investissement/vagus_quant": 1,
    "port:8650": 2,
+   "dir:/home/debian/.hermes/kanban/boards/": 1,
+   "dir:/home/debian/hermes-shared": 3,
    "port:18080": 2,
    "script:healthcheck.sh": 1,
    "script:daily-report.sh": 1,
@@ -62,7 +68,7 @@
    "script:taste-smart.sh": 1,
    "script:db-maintenance.sh": 1,
    "script:custos-purge-rgpd.sh": 1,
-   "channel:origin": 11,
+   "channel:origin": 9,
    "script:argos-watchman.sh": 1,
    "script:omp-eval.sh": 1,
    "script:vagus-cleanup.sh": 1,
@@ -80,10 +86,9 @@
    "script:hygiene-hebdo.sh": 1,
    "script:watch-slmlocal.sh": 1,
    "script:verify-greffier.py": 1,
-   "script:envoyer-rapport-etat.sh": 1,
    "script:vigie-wikiskill.py": 1,
    "script:predict-cron-check.py": 1,
-   "script:envoyer-rapport-prediction.sh": 1,
+   "script:laya-shadow-gate.py": 1,
    "script:watch_cortex.sh": 1,
    "script:headroom-fallback-proxy.py": 1,
    "port:9119": 1,
@@ -99,7 +104,6 @@
    "port:5678": 1,
    "port:80": 1,
    "port:443": 1,
-   "port:7233": 1,
    "port:14322": 1,
    "port:5001": 1,
    "script:batch_buffer.py": 1,
@@ -107,8 +111,16 @@
    "script:backup-brightbean.sh": 1,
    "script:transcribe-cron.sh": 1,
    "script:backup-custos.sh": 1,
-   "script:sync-skills-push.sh": 1,
-   "script:rag_index.py": 1
+   "script:rag_index.py": 1,
+   "script:resource-guard.py": 1,
+   "script:sync-skills-vps.sh": 1,
+   "script:bench_noul.py": 1,
+   "script:digest_cron.sh": 1,
+   "script:tunnel-watchdog.sh": 1,
+   "script:envoi_rapport.py": 1,
+   "script:model-arbitrage.sh": 1,
+   "script:sync-shared.sh": 1,
+   "script:kanban-snapshot.py": 1
   }
  },
  "nodes": [
@@ -186,38 +198,11 @@
    "ports": "0.0.0.0:5678->5678/tcp, [::]:5678->5678/tcp"
   },
   {
-   "id": "container:postiz-redis",
-   "kind": "container",
-   "name": "postiz-redis",
-   "image": "redis:7.2",
-   "ports": "6379/tcp"
-  },
-  {
    "id": "container:shared-postgres",
    "kind": "container",
    "name": "shared-postgres",
    "image": "postgres:16-alpine",
    "ports": "127.0.0.1:5433->5432/tcp"
-  },
-  {
-   "id": "container:temporal",
-   "kind": "container",
-   "name": "temporal",
-   "image": "temporalio/auto-setup:1.28.1",
-   "ports": "6933-6935/tcp, 6939/tcp, 7234-7235/tcp, 7239/tcp, 0.0.0.0:7233->7233/tcp, [::]:7233->7233/tcp"
-  },
-  {
-   "id": "container:temporal-admin-tools",
-   "kind": "container",
-   "name": "temporal-admin-tools",
-   "image": "temporalio/admin-tools:1.28.1-tctl-1.18.4-cli-1.4.1"
-  },
-  {
-   "id": "container:temporal-elasticsearch",
-   "kind": "container",
-   "name": "temporal-elasticsearch",
-   "image": "elasticsearch:7.17.27",
-   "ports": "9200/tcp, 9300/tcp"
   },
   {
    "id": "container:transparence-citoyenne-api-1",
@@ -269,7 +254,7 @@
    "no_agent": true,
    "deliver": "local",
    "last_status": "ok",
-   "last_run_at": "2026-09-14T02:00:33.544904+02:00",
+   "last_run_at": "2026-09-25T02:00:07.394576+02:00",
    "failure_streak": 0
   },
   {
@@ -282,7 +267,7 @@
    "no_agent": true,
    "deliver": "local",
    "last_status": "ok",
-   "last_run_at": "2026-09-14T03:00:34.520445+02:00",
+   "last_run_at": "2026-09-25T03:00:07.248938+02:00",
    "failure_streak": 0
   },
   {
@@ -308,7 +293,7 @@
    "no_agent": true,
    "deliver": "local",
    "last_status": "ok",
-   "last_run_at": "2026-09-14T12:21:26.507710+02:00",
+   "last_run_at": "2026-09-25T11:44:07.080555+02:00",
    "failure_streak": 0,
    "role": "audit"
   },
@@ -322,7 +307,7 @@
    "no_agent": true,
    "deliver": "local",
    "last_status": "ok",
-   "last_run_at": "2026-09-13T05:00:15.272978+02:00",
+   "last_run_at": "2026-09-20T05:00:50.742197+02:00",
    "failure_streak": 0
   },
   {
@@ -335,9 +320,22 @@
    "no_agent": true,
    "deliver": "local",
    "last_status": "ok",
-   "last_run_at": "2026-09-14T11:28:18.576292+02:00",
+   "last_run_at": "2026-09-25T11:59:07.026975+02:00",
    "failure_streak": 0,
    "role": "audit"
+  },
+  {
+   "id": "cron:Laya Shadow Gate",
+   "kind": "cron",
+   "name": "Laya Shadow Gate",
+   "job_id": "0204450ee7e2",
+   "schedule": "every 240m",
+   "enabled": true,
+   "no_agent": true,
+   "deliver": "local",
+   "last_status": "ok",
+   "last_run_at": "2026-09-25T11:56:15.172426+02:00",
+   "failure_streak": 0
   },
   {
    "id": "cron:Newsletter Kleia-up - Rappel vendredi",
@@ -349,7 +347,7 @@
    "no_agent": true,
    "deliver": "telegram",
    "last_status": "delivery_failed",
-   "last_run_at": "2026-09-11T14:00:42.959518+02:00",
+   "last_run_at": "2026-09-18T14:00:54.677622+02:00",
    "failure_streak": 0,
    "delivery_error": "no delivery target resolved for deliver=telegram"
   },
@@ -363,7 +361,7 @@
    "no_agent": true,
    "deliver": "None",
    "last_status": "ok",
-   "last_run_at": "2026-09-14T06:00:07.191563+02:00",
+   "last_run_at": "2026-09-25T06:00:09.057439+02:00",
    "failure_streak": 0
   },
   {
@@ -376,7 +374,7 @@
    "no_agent": true,
    "deliver": "local",
    "last_status": "ok",
-   "last_run_at": "2026-09-14T06:00:05.250504+02:00",
+   "last_run_at": "2026-09-25T06:00:07.188424+02:00",
    "failure_streak": 0
   },
   {
@@ -389,33 +387,7 @@
    "no_agent": true,
    "deliver": "local",
    "last_status": "ok",
-   "last_run_at": "2026-09-14T08:00:09.892517+02:00",
-   "failure_streak": 0
-  },
-  {
-   "id": "cron:Rapport etat Vagus - carto/crash/kpi par mail",
-   "kind": "cron",
-   "name": "Rapport etat Vagus - carto/crash/kpi par mail",
-   "job_id": "a32f174b4841",
-   "schedule": "once at 2026-09-08 07:30",
-   "enabled": false,
-   "no_agent": true,
-   "deliver": "origin",
-   "last_status": "ok",
-   "last_run_at": "2026-09-08T07:31:15.727540+02:00",
-   "failure_streak": 0
-  },
-  {
-   "id": "cron:Rapport instrumentation predictive par mail - 07h30",
-   "kind": "cron",
-   "name": "Rapport instrumentation predictive par mail - 07h30",
-   "job_id": "c55165ceaa17",
-   "schedule": "once at 2026-09-14 07:30",
-   "enabled": false,
-   "no_agent": true,
-   "deliver": "origin",
-   "last_status": "ok",
-   "last_run_at": "2026-09-14T07:30:44.777767+02:00",
+   "last_run_at": "2026-09-25T08:00:07.088483+02:00",
    "failure_streak": 0
   },
   {
@@ -428,7 +400,7 @@
    "no_agent": true,
    "deliver": "local",
    "last_status": "ok",
-   "last_run_at": "2026-09-14T07:00:07.754268+02:00",
+   "last_run_at": "2026-09-21T07:00:07.815200+02:00",
    "model": "mercury-2",
    "provider": "inception",
    "failure_streak": 0
@@ -443,7 +415,7 @@
    "no_agent": true,
    "deliver": "local",
    "last_status": "ok",
-   "last_run_at": "2026-09-14T06:30:06.406593+02:00",
+   "last_run_at": "2026-09-21T06:30:07.978365+02:00",
    "model": "mercury-2",
    "provider": "inception",
    "failure_streak": 0
@@ -458,7 +430,7 @@
    "no_agent": true,
    "deliver": "origin",
    "last_status": "delivery_failed",
-   "last_run_at": "2026-09-14T06:00:29.265183+02:00",
+   "last_run_at": "2026-09-25T06:00:08.398198+02:00",
    "failure_streak": 0,
    "delivery_error": "unknown platform 'webui'",
    "role": "audit"
@@ -473,7 +445,7 @@
    "no_agent": true,
    "deliver": "origin",
    "last_status": "delivery_failed",
-   "last_run_at": "2026-09-14T06:00:29.089217+02:00",
+   "last_run_at": "2026-09-21T06:00:09.291639+02:00",
    "failure_streak": 0,
    "delivery_error": "configured thread_id 1710 for telegram:6722033496 was not found; delivered without thread_id"
   },
@@ -487,8 +459,8 @@
    "no_agent": false,
    "deliver": "local",
    "last_status": "ok",
-   "last_run_at": "2026-09-14T05:00:02.638153+02:00",
-   "model": "deepseek-v4-flash",
+   "last_run_at": "2026-09-25T05:00:07.166779+02:00",
+   "model": "deepseek-flash",
    "provider": "deepseek",
    "failure_streak": 0
   },
@@ -502,22 +474,9 @@
    "no_agent": true,
    "deliver": "origin",
    "last_status": "delivery_failed",
-   "last_run_at": "2026-09-14T08:00:48.938680+02:00",
+   "last_run_at": "2026-09-21T08:00:09.998396+02:00",
    "failure_streak": 0,
    "delivery_error": "unknown platform 'webui'"
-  },
-  {
-   "id": "cron:kleia-blog-correction-nuit",
-   "kind": "cron",
-   "name": "kleia-blog-correction-nuit",
-   "job_id": "1176d5cf5ce5",
-   "schedule": "once at 2026-09-09 02:30",
-   "enabled": false,
-   "no_agent": false,
-   "deliver": "local",
-   "last_status": "ok",
-   "last_run_at": "2026-09-09T02:46:19.816047+02:00",
-   "failure_streak": 0
   },
   {
    "id": "cron:memory-consolidator-daily",
@@ -529,7 +488,7 @@
    "no_agent": true,
    "deliver": "local",
    "last_status": "ok",
-   "last_run_at": "2026-09-14T04:00:57.706813+02:00",
+   "last_run_at": "2026-09-25T04:00:07.152391+02:00",
    "failure_streak": 0
   },
   {
@@ -542,7 +501,7 @@
    "no_agent": true,
    "deliver": "local",
    "last_status": "ok",
-   "last_run_at": "2026-09-14T04:00:57.864156+02:00",
+   "last_run_at": "2026-09-21T04:00:08.089070+02:00",
    "failure_streak": 0
   },
   {
@@ -555,7 +514,7 @@
    "no_agent": true,
    "deliver": "origin",
    "last_status": "ok",
-   "last_run_at": "2026-09-14T07:00:39.726544+02:00",
+   "last_run_at": "2026-09-25T07:00:08.198949+02:00",
    "failure_streak": 0
   },
   {
@@ -568,7 +527,7 @@
    "no_agent": true,
    "deliver": "origin",
    "last_status": "ok",
-   "last_run_at": "2026-09-14T02:00:33.737607+02:00",
+   "last_run_at": "2026-09-25T02:00:07.206709+02:00",
    "failure_streak": 0
   },
   {
@@ -581,7 +540,7 @@
    "no_agent": true,
    "deliver": "local",
    "last_status": "ok",
-   "last_run_at": "2026-09-14T12:00:23.474436+02:00",
+   "last_run_at": "2026-09-25T12:00:07.225038+02:00",
    "failure_streak": 0
   },
   {
@@ -594,7 +553,7 @@
    "no_agent": true,
    "deliver": "local",
    "last_status": "ok",
-   "last_run_at": "2026-09-14T12:30:32.794768+02:00",
+   "last_run_at": "2026-09-25T12:00:12.076423+02:00",
    "failure_streak": 0
   },
   {
@@ -607,8 +566,8 @@
    "no_agent": false,
    "deliver": "local",
    "last_status": "ok",
-   "last_run_at": "2026-09-14T06:30:06.480516+02:00",
-   "model": "deepseek-v4-flash",
+   "last_run_at": "2026-09-25T06:30:07.068273+02:00",
+   "model": "deepseek-flash",
    "provider": "deepseek",
    "failure_streak": 0
   },
@@ -636,7 +595,7 @@
    "no_agent": true,
    "deliver": "local",
    "last_status": "ok",
-   "last_run_at": "2026-09-14T09:00:13.474450+02:00",
+   "last_run_at": "2026-09-21T09:00:12.085124+02:00",
    "failure_streak": 0
   },
   {
@@ -649,7 +608,7 @@
    "no_agent": true,
    "deliver": "origin",
    "last_status": "ok",
-   "last_run_at": "2026-09-14T10:15:15.368908+02:00",
+   "last_run_at": "2026-09-25T10:47:07.113998+02:00",
    "failure_streak": 0,
    "role": "audit"
   },
@@ -663,7 +622,7 @@
    "no_agent": true,
    "deliver": "origin",
    "last_status": "ok",
-   "last_run_at": "2026-09-14T07:00:07.916088+02:00",
+   "last_run_at": "2026-09-25T07:00:07.756478+02:00",
    "failure_streak": 0
   },
   {
@@ -676,8 +635,43 @@
    "no_agent": true,
    "deliver": "origin",
    "last_status": "ok",
-   "last_run_at": "2026-09-14T12:33:28.254345+02:00",
+   "last_run_at": "2026-09-25T11:58:07.122875+02:00",
    "failure_streak": 0
+  },
+  {
+   "id": "cron_sys:/home/debian/.hermes/profiles/sandrina/work/digest_cron.sh",
+   "kind": "cron_sys",
+   "name": "/home/debian/.hermes/profiles/sandrina/work/digest_cron.sh",
+   "schedule": "35 7 * * *",
+   "command": "/home/debian/.hermes/profiles/sandrina/work/digest_cron.sh >> /home/debian/.hermes/profiles/sandrina/work/digests/.log 2>&1"
+  },
+  {
+   "id": "cron_sys:/home/debian/.hermes/profiles/vagus/scripts/kanban-snapshot.py",
+   "kind": "cron_sys",
+   "name": "/home/debian/.hermes/profiles/vagus/scripts/kanban-snapshot.py",
+   "schedule": "*/10 * * * *",
+   "command": "SHARED_DIR=/home/debian/hermes-shared /usr/bin/python3 /home/debian/.hermes/profiles/vagus/scripts/kanban-snapshot.py --quiet"
+  },
+  {
+   "id": "cron_sys:/home/debian/.hermes/profiles/vagus/scripts/model-arbitrage.sh",
+   "kind": "cron_sys",
+   "name": "/home/debian/.hermes/profiles/vagus/scripts/model-arbitrage.sh",
+   "schedule": "0 * * * *",
+   "command": "HERMES_HOME=/home/debian/.hermes/profiles/vagus /home/debian/.hermes/profiles/vagus/scripts/model-arbitrage.sh >> /home/debian/.hermes/profiles/vagus/logs/model-arbitrage.log 2>&1"
+  },
+  {
+   "id": "cron_sys:/home/debian/.hermes/profiles/vagus/scripts/sync-shared.sh",
+   "kind": "cron_sys",
+   "name": "/home/debian/.hermes/profiles/vagus/scripts/sync-shared.sh",
+   "schedule": "*/10 * * * *",
+   "command": "SHARED_DIR=/home/debian/hermes-shared /bin/bash /home/debian/.hermes/profiles/vagus/scripts/sync-shared.sh --quiet"
+  },
+  {
+   "id": "cron_sys:/home/debian/finances-2026-09/envoi_rapport.py",
+   "kind": "cron_sys",
+   "name": "/home/debian/finances-2026-09/envoi_rapport.py",
+   "schedule": "5 8 22 9 *",
+   "command": "/usr/bin/python3 /home/debian/finances-2026-09/envoi_rapport.py >> /home/debian/finances-2026-09/envoi.log 2>&1"
   },
   {
    "id": "cron_sys:/home/debian/scripts/backup-brightbean.sh",
@@ -694,11 +688,25 @@
    "command": "/home/debian/scripts/backup-custos.sh"
   },
   {
-   "id": "cron_sys:/home/debian/tools/sync-skills-push.sh",
+   "id": "cron_sys:/home/debian/scripts/resource-guard.py",
    "kind": "cron_sys",
-   "name": "/home/debian/tools/sync-skills-push.sh",
+   "name": "/home/debian/scripts/resource-guard.py",
+   "schedule": "0 2,4 * * *",
+   "command": "/home/debian/scripts/resource-guard.py >> /home/debian/.hermes/context/resource-guard.log 2>&1"
+  },
+  {
+   "id": "cron_sys:/home/debian/tools/sync-skills-vps.sh",
+   "kind": "cron_sys",
+   "name": "/home/debian/tools/sync-skills-vps.sh",
    "schedule": "0 * * * *",
-   "command": "/home/debian/tools/sync-skills-push.sh >/tmp/sync-skills-cron.log 2>&1"
+   "command": "/home/debian/tools/sync-skills-vps.sh >> /tmp/sync-skills-cron.log 2>&1"
+  },
+  {
+   "id": "cron_sys:/home/debian/tools/tunnel-watchdog.sh",
+   "kind": "cron_sys",
+   "name": "/home/debian/tools/tunnel-watchdog.sh",
+   "schedule": "*/5 * * * *",
+   "command": "/home/debian/tools/tunnel-watchdog.sh >> /home/debian/.local/state/tunnel-watchdog.log 2>&1"
   },
   {
    "id": "cron_sys:/home/debian/transcripts/fetch-audio.sh",
@@ -729,11 +737,18 @@
    "command": "cd /home/debian/workspace/LOF && python3 batch_buffer.py >> logs/batch_buffer.log 2>&1"
   },
   {
+   "id": "cron_sys:bench_noul.py",
+   "kind": "cron_sys",
+   "name": "bench_noul.py",
+   "schedule": "10 13 * * *",
+   "command": "cd /home/debian/r4-bench && /usr/bin/python3 bench_noul.py --full >> /home/debian/r4-bench/results/cron.log 2>&1"
+  },
+  {
    "id": "cron_sys:cd /home/debian/hermes-cortex && git add",
    "kind": "cron_sys",
    "name": "cd /home/debian/hermes-cortex && git add",
    "schedule": "0 4 * * *",
-   "command": "cd /home/debian/hermes-cortex && git add -A && git diff --cached --quiet || (git commit -m \"Daily sync $(date +%Y-%m-%d)\" && git push)"
+   "command": "cd /home/debian/hermes-cortex && git add -A && git diff --cached --quiet || (git commit -m \"Daily sync $(date +\\%Y-\\%m-\\%d)\" && git push)"
   },
   {
    "id": "cron_sys:rag-env/rag_index.py",
@@ -741,6 +756,25 @@
    "name": "rag-env/rag_index.py",
    "schedule": "0 5 * * *",
    "command": "cd /home/debian/hermes-cortex && source rag-env/bin/activate && python3 rag-env/rag_index.py >> /home/debian/.local/state/cortex-watch.log 2>&1"
+  },
+  {
+   "id": "cron_sys:rm -rf /home/debian/backups/d3-skills-20",
+   "kind": "cron_sys",
+   "name": "rm -rf /home/debian/backups/d3-skills-20",
+   "schedule": "05 19 25 09 *",
+   "command": "rm -rf /home/debian/backups/d3-skills-20260923 && crontab -l | grep -v d3-skills-20260923 | crontab -"
+  },
+  {
+   "id": "dir:/home/debian/.hermes/kanban/boards/",
+   "kind": "dir",
+   "name": "/home/debian/.hermes/kanban/boards/",
+   "path": "/home/debian/.hermes/kanban/boards/"
+  },
+  {
+   "id": "dir:/home/debian/.hermes/profiles/vagus",
+   "kind": "dir",
+   "name": "/home/debian/.hermes/profiles/vagus",
+   "path": "/home/debian/.hermes/profiles/vagus"
   },
   {
    "id": "dir:/home/debian/.hermes/profiles/vagus/sessions/",
@@ -759,6 +793,24 @@
    "kind": "dir",
    "name": "/home/debian/hermes-cortex",
    "path": "/home/debian/hermes-cortex"
+  },
+  {
+   "id": "dir:/home/debian/hermes-shared",
+   "kind": "dir",
+   "name": "/home/debian/hermes-shared",
+   "path": "/home/debian/hermes-shared"
+  },
+  {
+   "id": "dir:/home/debian/laya-env/lib/python3.11/site-packages",
+   "kind": "dir",
+   "name": "/home/debian/laya-env/lib/python3.11/site-packages",
+   "path": "/home/debian/laya-env/lib/python3.11/site-packages"
+  },
+  {
+   "id": "dir:/home/debian/laya_models",
+   "kind": "dir",
+   "name": "/home/debian/laya_models",
+   "path": "/home/debian/laya_models"
   },
   {
    "id": "dir:/home/debian/omp-optimization",
@@ -826,6 +878,12 @@
    "name": "/home/debian/.hermes/profiles/vagus/.env",
    "path": "/home/debian/.hermes/profiles/vagus/.env",
    "note": "clés seulement, valeurs jamais lues"
+  },
+  {
+   "id": "file:/home/debian/.hermes/profiles/vagus/agent-hooks/session-digest.sh",
+   "kind": "file",
+   "name": "/home/debian/.hermes/profiles/vagus/agent-hooks/session-digest.sh",
+   "path": "/home/debian/.hermes/profiles/vagus/agent-hooks/session-digest.sh"
   },
   {
    "id": "file:/home/debian/.hermes/profiles/vagus/cron/jobs.json",
@@ -898,12 +956,6 @@
    "kind": "port",
    "name": "5678",
    "address": "0.0.0.0:5678"
-  },
-  {
-   "id": "port:7233",
-   "kind": "port",
-   "name": "7233",
-   "address": "0.0.0.0:7233"
   },
   {
    "id": "port:80",
@@ -988,7 +1040,7 @@
    "kind": "script",
    "name": "argos-watchman.sh",
    "path": "/home/debian/.hermes/profiles/vagus/scripts/argos-watchman.sh",
-   "executable": false,
+   "executable": true,
    "size": 2442,
    "derived": false
   },
@@ -1015,7 +1067,7 @@
    "kind": "script",
    "name": "backup-notification.sh",
    "path": "/home/debian/.hermes/profiles/vagus/scripts/backup-notification.sh",
-   "executable": false,
+   "executable": true,
    "size": 1701,
    "derived": false
   },
@@ -1032,6 +1084,11 @@
    "id": "script:batch_buffer.py",
    "kind": "script",
    "name": "batch_buffer.py"
+  },
+  {
+   "id": "script:bench_noul.py",
+   "kind": "script",
+   "name": "bench_noul.py"
   },
   {
    "id": "script:bootstrap.py",
@@ -1091,6 +1148,15 @@
    "derived": false
   },
   {
+   "id": "script:cost-report.py",
+   "kind": "script",
+   "name": "cost-report.py",
+   "path": "/home/debian/.hermes/profiles/vagus/scripts/cost-report.py",
+   "executable": true,
+   "size": 9595,
+   "derived": false
+  },
+  {
    "id": "script:custos-purge-rgpd.sh",
    "kind": "script",
    "name": "custos-purge-rgpd.sh",
@@ -1104,7 +1170,7 @@
    "kind": "script",
    "name": "daily-report.sh",
    "path": "/home/debian/.hermes/profiles/vagus/scripts/daily-report.sh",
-   "executable": false,
+   "executable": true,
    "size": 1794,
    "derived": false
   },
@@ -1122,7 +1188,7 @@
    "kind": "script",
    "name": "db-maintenance.sh",
    "path": "/home/debian/.hermes/profiles/vagus/scripts/db-maintenance.sh",
-   "executable": false,
+   "executable": true,
    "size": 425,
    "derived": false
   },
@@ -1134,6 +1200,18 @@
    "executable": true,
    "size": 2968,
    "derived": false
+  },
+  {
+   "id": "script:digest_cron.sh",
+   "kind": "script",
+   "name": "digest_cron.sh",
+   "path": "/home/debian/.hermes/profiles/sandrina/work/digest_cron.sh"
+  },
+  {
+   "id": "script:envoi_rapport.py",
+   "kind": "script",
+   "name": "envoi_rapport.py",
+   "path": "/home/debian/finances-2026-09/envoi_rapport.py"
   },
   {
    "id": "script:envoyer-rapport-etat.py",
@@ -1176,7 +1254,7 @@
    "kind": "script",
    "name": "envoyer-rapport-nuit.sh",
    "path": "/home/debian/.hermes/profiles/vagus/scripts/envoyer-rapport-nuit.sh",
-   "executable": false,
+   "executable": true,
    "size": 394,
    "derived": false
   },
@@ -1235,15 +1313,6 @@
    "derived": false
   },
   {
-   "id": "script:headroom-fallback-proxy.py.bak-20260904",
-   "kind": "script",
-   "name": "headroom-fallback-proxy.py.bak-20260904",
-   "path": "/home/debian/.hermes/profiles/vagus/scripts/headroom-fallback-proxy.py.bak-20260904",
-   "executable": false,
-   "size": 9381,
-   "derived": false
-  },
-  {
    "id": "script:healthcheck.sh",
    "kind": "script",
    "name": "healthcheck.sh",
@@ -1253,12 +1322,30 @@
    "derived": false
   },
   {
+   "id": "script:hook-approve.py",
+   "kind": "script",
+   "name": "hook-approve.py",
+   "path": "/home/debian/.hermes/profiles/vagus/scripts/hook-approve.py",
+   "executable": true,
+   "size": 2513,
+   "derived": false
+  },
+  {
    "id": "script:hygiene-hebdo.sh",
    "kind": "script",
    "name": "hygiene-hebdo.sh",
    "path": "/home/debian/.hermes/profiles/vagus/scripts/hygiene-hebdo.sh",
-   "executable": false,
+   "executable": true,
    "size": 593,
+   "derived": false
+  },
+  {
+   "id": "script:kanban-snapshot.py",
+   "kind": "script",
+   "name": "kanban-snapshot.py",
+   "path": "/home/debian/.hermes/profiles/vagus/scripts/kanban-snapshot.py",
+   "executable": true,
+   "size": 8851,
    "derived": false
   },
   {
@@ -1277,6 +1364,15 @@
    "path": "/home/debian/.hermes/profiles/vagus/scripts/kleia_backup.sh",
    "executable": true,
    "size": 90,
+   "derived": false
+  },
+  {
+   "id": "script:laya-shadow-gate.py",
+   "kind": "script",
+   "name": "laya-shadow-gate.py",
+   "path": "/home/debian/.hermes/profiles/vagus/scripts/laya-shadow-gate.py",
+   "executable": true,
+   "size": 8442,
    "derived": false
   },
   {
@@ -1328,6 +1424,15 @@
    "path": "/home/debian/.hermes/profiles/vagus/scripts/merge_guard.py",
    "executable": false,
    "size": 6806,
+   "derived": false
+  },
+  {
+   "id": "script:model-arbitrage.sh",
+   "kind": "script",
+   "name": "model-arbitrage.sh",
+   "path": "/home/debian/.hermes/profiles/vagus/scripts/model-arbitrage.sh",
+   "executable": true,
+   "size": 4911,
    "derived": false
   },
   {
@@ -1384,7 +1489,16 @@
    "name": "predict-cron-check.py",
    "path": "/home/debian/.hermes/profiles/vagus/scripts/predict-cron-check.py",
    "executable": true,
-   "size": 3821,
+   "size": 5062,
+   "derived": false
+  },
+  {
+   "id": "script:pricing.json",
+   "kind": "script",
+   "name": "pricing.json",
+   "path": "/home/debian/.hermes/profiles/vagus/scripts/pricing.json",
+   "executable": false,
+   "size": 2667,
    "derived": false
   },
   {
@@ -1429,6 +1543,12 @@
    "name": "rag_index.py"
   },
   {
+   "id": "script:resource-guard.py",
+   "kind": "script",
+   "name": "resource-guard.py",
+   "path": "/home/debian/scripts/resource-guard.py"
+  },
+  {
    "id": "script:resume-local.py",
    "kind": "script",
    "name": "resume-local.py",
@@ -1453,6 +1573,15 @@
    "path": "/home/debian/.hermes/prism/server.py"
   },
   {
+   "id": "script:session-digest.py",
+   "kind": "script",
+   "name": "session-digest.py",
+   "path": "/home/debian/.hermes/profiles/vagus/scripts/session-digest.py",
+   "executable": true,
+   "size": 7391,
+   "derived": false
+  },
+  {
    "id": "script:slm_local.py",
    "kind": "script",
    "name": "slm_local.py",
@@ -1462,10 +1591,19 @@
    "derived": false
   },
   {
-   "id": "script:sync-skills-push.sh",
+   "id": "script:sync-shared.sh",
    "kind": "script",
-   "name": "sync-skills-push.sh",
-   "path": "/home/debian/tools/sync-skills-push.sh"
+   "name": "sync-shared.sh",
+   "path": "/home/debian/.hermes/profiles/vagus/scripts/sync-shared.sh",
+   "executable": true,
+   "size": 2245,
+   "derived": false
+  },
+  {
+   "id": "script:sync-skills-vps.sh",
+   "kind": "script",
+   "name": "sync-skills-vps.sh",
+   "path": "/home/debian/tools/sync-skills-vps.sh"
   },
   {
    "id": "script:synthese-hebdo-mercury.sh",
@@ -1481,7 +1619,7 @@
    "kind": "script",
    "name": "synthese-hebdo.sh",
    "path": "/home/debian/.hermes/profiles/vagus/scripts/synthese-hebdo.sh",
-   "executable": false,
+   "executable": true,
    "size": 1859,
    "derived": false
   },
@@ -1508,7 +1646,7 @@
    "kind": "script",
    "name": "taste-smart.sh",
    "path": "/home/debian/.hermes/profiles/vagus/scripts/taste-smart.sh",
-   "executable": false,
+   "executable": true,
    "size": 2495,
    "derived": false
   },
@@ -1573,6 +1711,12 @@
    "derived": false
   },
   {
+   "id": "script:tunnel-watchdog.sh",
+   "kind": "script",
+   "name": "tunnel-watchdog.sh",
+   "path": "/home/debian/tools/tunnel-watchdog.sh"
+  },
+  {
    "id": "script:vagus-cleanup.sh",
    "kind": "script",
    "name": "vagus-cleanup.sh",
@@ -1586,7 +1730,7 @@
    "kind": "script",
    "name": "vagus-pulse.sh",
    "path": "/home/debian/.hermes/profiles/vagus/scripts/vagus-pulse.sh",
-   "executable": false,
+   "executable": true,
    "size": 632,
    "derived": false
   },
@@ -1606,6 +1750,33 @@
    "path": "/home/debian/.hermes/profiles/vagus/scripts/vigie-wikiskill.py",
    "executable": false,
    "size": 4009,
+   "derived": false
+  },
+  {
+   "id": "script:vps-kanban-archive.sh",
+   "kind": "script",
+   "name": "vps-kanban-archive.sh",
+   "path": "/home/debian/.hermes/profiles/vagus/scripts/vps-kanban-archive.sh",
+   "executable": true,
+   "size": 1539,
+   "derived": false
+  },
+  {
+   "id": "script:vps-kanban-wire.sh",
+   "kind": "script",
+   "name": "vps-kanban-wire.sh",
+   "path": "/home/debian/.hermes/profiles/vagus/scripts/vps-kanban-wire.sh",
+   "executable": true,
+   "size": 936,
+   "derived": false
+  },
+  {
+   "id": "script:vps-shared-setup.sh",
+   "kind": "script",
+   "name": "vps-shared-setup.sh",
+   "path": "/home/debian/.hermes/profiles/vagus/scripts/vps-shared-setup.sh",
+   "executable": true,
+   "size": 3617,
    "derived": false
   },
   {
@@ -2019,11 +2190,6 @@
    "to": "port:5678"
   },
   {
-   "from": "container:temporal",
-   "rel": "listens_on",
-   "to": "port:7233"
-  },
-  {
    "from": "cron:Backup Notification",
    "rel": "depends_on",
    "to": "script:backup-notification.sh"
@@ -2054,6 +2220,11 @@
    "to": "script:healthcheck.sh"
   },
   {
+   "from": "cron:Laya Shadow Gate",
+   "rel": "depends_on",
+   "to": "script:laya-shadow-gate.py"
+  },
+  {
    "from": "cron:Newsletter Kleia-up - Rappel vendredi",
    "rel": "delivers_to",
    "to": "channel:telegram"
@@ -2077,26 +2248,6 @@
    "from": "cron:Rapport Quotidien",
    "rel": "depends_on",
    "to": "script:daily-report.sh"
-  },
-  {
-   "from": "cron:Rapport etat Vagus - carto/crash/kpi par mail",
-   "rel": "delivers_to",
-   "to": "channel:origin"
-  },
-  {
-   "from": "cron:Rapport etat Vagus - carto/crash/kpi par mail",
-   "rel": "depends_on",
-   "to": "script:envoyer-rapport-etat.sh"
-  },
-  {
-   "from": "cron:Rapport instrumentation predictive par mail - 07h30",
-   "rel": "delivers_to",
-   "to": "channel:origin"
-  },
-  {
-   "from": "cron:Rapport instrumentation predictive par mail - 07h30",
-   "rel": "depends_on",
-   "to": "script:envoyer-rapport-prediction.sh"
   },
   {
    "from": "cron:Synthese Hebdo (Mercury2)",
@@ -2236,6 +2387,31 @@
    "to": "script:watch-slmlocal.sh"
   },
   {
+   "from": "cron_sys:/home/debian/.hermes/profiles/sandrina/work/digest_cron.sh",
+   "rel": "depends_on",
+   "to": "script:digest_cron.sh"
+  },
+  {
+   "from": "cron_sys:/home/debian/.hermes/profiles/vagus/scripts/kanban-snapshot.py",
+   "rel": "depends_on",
+   "to": "script:kanban-snapshot.py"
+  },
+  {
+   "from": "cron_sys:/home/debian/.hermes/profiles/vagus/scripts/model-arbitrage.sh",
+   "rel": "depends_on",
+   "to": "script:model-arbitrage.sh"
+  },
+  {
+   "from": "cron_sys:/home/debian/.hermes/profiles/vagus/scripts/sync-shared.sh",
+   "rel": "depends_on",
+   "to": "script:sync-shared.sh"
+  },
+  {
+   "from": "cron_sys:/home/debian/finances-2026-09/envoi_rapport.py",
+   "rel": "depends_on",
+   "to": "script:envoi_rapport.py"
+  },
+  {
    "from": "cron_sys:/home/debian/scripts/backup-brightbean.sh",
    "rel": "depends_on",
    "to": "script:backup-brightbean.sh"
@@ -2246,9 +2422,19 @@
    "to": "script:backup-custos.sh"
   },
   {
-   "from": "cron_sys:/home/debian/tools/sync-skills-push.sh",
+   "from": "cron_sys:/home/debian/scripts/resource-guard.py",
    "rel": "depends_on",
-   "to": "script:sync-skills-push.sh"
+   "to": "script:resource-guard.py"
+  },
+  {
+   "from": "cron_sys:/home/debian/tools/sync-skills-vps.sh",
+   "rel": "depends_on",
+   "to": "script:sync-skills-vps.sh"
+  },
+  {
+   "from": "cron_sys:/home/debian/tools/tunnel-watchdog.sh",
+   "rel": "depends_on",
+   "to": "script:tunnel-watchdog.sh"
   },
   {
    "from": "cron_sys:/home/debian/transcripts/fetch-audio.sh",
@@ -2269,6 +2455,11 @@
    "from": "cron_sys:batch_buffer.py",
    "rel": "depends_on",
    "to": "script:batch_buffer.py"
+  },
+  {
+   "from": "cron_sys:bench_noul.py",
+   "rel": "depends_on",
+   "to": "script:bench_noul.py"
   },
   {
    "from": "cron_sys:rag-env/rag_index.py",
@@ -2421,14 +2612,24 @@
    "to": "secret:DEEPSEEK_API_KEY"
   },
   {
-   "from": "script:headroom-fallback-proxy.py.bak-20260904",
+   "from": "script:hook-approve.py",
    "rel": "consumes",
-   "to": "port:8789"
+   "to": "file:/home/debian/.hermes/profiles/vagus/agent-hooks/session-digest.sh"
   },
   {
-   "from": "script:headroom-fallback-proxy.py.bak-20260904",
-   "rel": "requires_secret",
-   "to": "secret:DEEPSEEK_API_KEY"
+   "from": "script:laya-shadow-gate.py",
+   "rel": "consumes",
+   "to": "dir:/home/debian/.hermes/profiles/vagus"
+  },
+  {
+   "from": "script:laya-shadow-gate.py",
+   "rel": "consumes",
+   "to": "dir:/home/debian/laya-env/lib/python3.11/site-packages"
+  },
+  {
+   "from": "script:laya-shadow-gate.py",
+   "rel": "consumes",
+   "to": "dir:/home/debian/laya_models"
   },
   {
    "from": "script:lof-pipeline.sh",
@@ -2609,6 +2810,36 @@
    "from": "script:verify-greffier.py",
    "rel": "consumes",
    "to": "port:8650"
+  },
+  {
+   "from": "script:vps-kanban-archive.sh",
+   "rel": "consumes",
+   "to": "dir:/home/debian/.hermes/kanban/boards/"
+  },
+  {
+   "from": "script:vps-kanban-archive.sh",
+   "rel": "consumes",
+   "to": "dir:/home/debian/.hermes/profiles/vagus"
+  },
+  {
+   "from": "script:vps-kanban-archive.sh",
+   "rel": "consumes",
+   "to": "dir:/home/debian/hermes-shared"
+  },
+  {
+   "from": "script:vps-kanban-wire.sh",
+   "rel": "consumes",
+   "to": "dir:/home/debian/.hermes/profiles/vagus"
+  },
+  {
+   "from": "script:vps-kanban-wire.sh",
+   "rel": "consumes",
+   "to": "dir:/home/debian/hermes-shared"
+  },
+  {
+   "from": "script:vps-shared-setup.sh",
+   "rel": "consumes",
+   "to": "dir:/home/debian/hermes-shared"
   },
   {
    "from": "script:watch-slmlocal.sh",

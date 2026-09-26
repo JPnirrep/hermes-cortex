@@ -457,6 +457,25 @@ def main():
             json.dump(d, f, ensure_ascii=False, indent=1)
         print(f"écrit : {OUT_YAML}")
         print(f"écrit : {OUT_JSON}")
+        # Signature anti-drift lue par predict-cron-check.py (champs volatils
+        # exclus). Écrite ICI pour que chaque rebuild rafraîchisse la référence
+        # — sinon le checker alerte sur un jobs-sig périmé (dette 14/09→25/09).
+        VOLATILE = {"last_run_at", "last_status", "last_error",
+                    "last_delivery_error", "last_delivery_unverified",
+                    "last_dispatch", "fire_claim", "run_claim",
+                    "monitor_state", "next_run_at", "paused_at"}
+        JOBS_FILE = "/home/debian/.hermes/profiles/vagus/cron/jobs.json"
+        if os.path.exists(JOBS_FILE):
+            def _norm(o):
+                if isinstance(o, dict):
+                    return {k: _norm(v) for k, v in sorted(o.items()) if k not in VOLATILE}
+                if isinstance(o, list):
+                    return [_norm(x) for x in o]
+                return o
+            sig = json.dumps(_norm(json.load(open(JOBS_FILE))), sort_keys=True, ensure_ascii=False)
+            with open(OUT_JSON + ".jobs-sig", "w") as f:
+                f.write(sig)
+            print(f"écrit : {OUT_JSON}.jobs-sig")
 
 
 if __name__ == "__main__":
