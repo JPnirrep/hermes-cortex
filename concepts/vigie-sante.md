@@ -1,5 +1,6 @@
 ---
 type: concept
+id: 5aa84819565c
 name: vigie-sante
 timestamp: 2026-08-30
 tags: [vigie, sante, chirurgien, ia-souveraine, business-plan, orchestration]

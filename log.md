@@ -232,3 +232,45 @@ LIMITES DITES : (a) state.db ne trace pas le TYPE de tâche → impossible de ch
 [DETTE] cost_source='none' pour les providers agrégateurs : le registre Hermes affiche 0 $ là où
  le coût se concentre. Ne jamais arbitrer un coût sur le registre seul.
 [DETTE H8] drafts.log ligne 1 = résidu de test du 29/08 (JSON collé) — connu, exclu du calcul.
+
+## 2026-09-26 — PAPERCLIP : rapport à deux publics (session: 20260926_210141_cace87a7)
+
+SUITE DE LA SESSION 20:52 (audit repo paperclipai/paperclip). JP a répondu aux 2 questions
+en suspens : « Les deux publics ET le rapport en HTML exportable en PDF » → un seul document
+adressé aux décideurs ET aux profils techniques, pas deux supports.
+
+LIVRABLE : /home/debian/workspace/rapport-paperclip-kleia/
+  rapport-paperclip-kleia-up.html (28 Ko) + .pdf (1,48 Mo, 11 pages A4)
+  Charte KLEIA-UP V4 (burgundy #8B1D3D / gold #C5A028 / cream #F9F9F6), Syne, logo détouré PIL.
+  URL public : http://135.125.53.215:8080/rapport-paperclip-kleia-up.html
+
+STRUCTURE : verdict · présentation · état réel · rôle = INTÉGRATEUR pas opérateur · débat
+contradictoire (4 objections dont le coût) · plan 7 jours avec critères d'arrêt/succès · sources.
+
+DÉCISION DE FOND (à retenir) : positionnement = Paperclip est une BRIQUE D'INFRASTRUCTURE, pas
+un produit à revendre. KLEIA-UP construit une méthode d'orchestration d'agents, outillée et
+souveraine, dont Paperclip est un composant possible. Ne jamais vendre l'outil ; vendre la méthode.
+
+FAITS VÉRIFIÉS : repo HEAD 01d9a12 = origin/master (0 écart), 503 commits en v2026.916.0,
+50 commits/30j, 2 adaptateurs Hermes natifs + 2 guides d'onboarding + scripts smoke + logos
+de marque. Article Hostinger = publi-rédactionnel, contredit par le code, écarté.
+
+[OUTIL] Chrome headless --print-to-pdf IGNORE le format A4 (force Letter 612x792). Solution
+  éprouvée : pilotage CDP via make-pdf.py (websocket-client + --remote-allow-origins=*),
+  paperWidth 8.27/paperHeight 11.69. Vérifier avec pdfinfo, pas à l'œil.
+[OUTIL] Les sauts de page forcés (page-break) laissent des pages à 55 % de blanc → retirés,
+  pagination naturelle + .keep + break-inside:avoid sur .step. 12 pages → 11, densité homogène.
+[REUTIL] /home/debian/workspace/rapport-paperclip-kleia/make-pdf.py : script CDP générique
+  HTML→PDF A4 réutilisable pour tout rapport.
+
+2026-09-26 : Analyse OpenMuse (CopilotKit, MIT, alpha 15/09/26, 17 800 LOC TS) → NON adopté
+  comme produit (mono-utilisateur "one owner", dépendance dure CopilotKit Intelligence hors
+  licence MIT = incompatible souveraineté DeepSeek+SLM, stack TS/Hono vs FastAPI existant).
+  3 patterns retenus et consignés : concepts/pattern-action-review.md (b7567e5a023e),
+  concepts/pattern-lease-receipt.md (2687ca605876), concepts/pattern-pglite-services-legers.md
+  (aea4de9e84ec). RAG réindexé, requête de contrôle OK. (session: 5483)
+[DETTE] concepts/jev-typesafe-sources-2026-09-23.md → pas de frontmatter (signalé par
+  add_ids.py). Impact : pas d'id stable, non citable par id. À corriger : ajouter le
+  frontmatter type/id/owner/timestamp. Non corrigé sans validation (contenu tiers JEV).
+[DETTE] Pattern PGlite vs PGlite dans multi-process : à re-évaluer si un service Vagus
+  passe en workers séparés (PGlite ne peut pas être ouvert par 2 processus).
