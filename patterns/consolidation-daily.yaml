@@ -1,18 +1,9 @@
 meta:
-  generated_at: '2026-09-26T04:00:07.152437'
+  generated_at: '2026-09-27T04:00:07.111015'
   window_hours: 24
-  sessions_scan: 2
-  candidates: 2
+  sessions_scan: 0
+  candidates: 0
   duplicates_found: 0
-candidates:
-- session: 2dcaf10e7d27
-  time: 09-25 12:17
-  phrase: 'point d''étape
-
-    Jev est il toujours d''actualité maintenant.'
-- session: 20260925_140029_e037
-  time: 09-25 14:00
-  phrase: '"So, several things in what you just said, apparently we have some security
-    files important.'
+candidates: []
 duplicates: []
 note: Le script propose, ne modifie rien. Appliquer en session (H2).
