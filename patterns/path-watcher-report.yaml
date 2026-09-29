@@ -1,75 +1,67 @@
 meta:
-  generated_at: '2026-09-21T04:00:08.021751'
+  generated_at: '2026-09-28T04:00:11.250729'
   window_days: 90
-  skill_count_installed: 162
-  skill_count_used: 55
+  skill_count_installed: 181
+  skill_count_used: 65
 tools_top:
 - - terminal
-  - 2453
+  - 2880
 - - read_file
-  - 337
+  - 365
 - - patch
-  - 320
+  - 349
 - - write_file
-  - 281
-- - execute_code
-  - 251
+  - 311
 - - skill_view
-  - 197
+  - 209
+- - execute_code
+  - 195
 - - search_files
-  - 168
-- - web_search
-  - 157
+  - 174
 - - session_search
   - 132
 - - skill_manage
-  - 73
+  - 89
+- - web_search
+  - 84
 - - web_extract
-  - 65
-- - cronjob
-  - 31
-- - delegate_task
-  - 30
+  - 48
+- - tool_call
+  - 39
 - - clarify
-  - 28
+  - 35
 - - memory
-  - 27
+  - 35
+- - vision_analyze
+  - 34
 skills:
-  benchmark-outillage-externe:
-    usage: 13
+  youtube-transcription:
+    usage: 15
     sessions: 10
     class: CHAUD
-  youtube-transcription:
-    usage: 12
-    sessions: 7
-    class: CHAUD
-  multi-sources-research:
-    usage: 12
-    sessions: 8
+  benchmark-outillage-externe:
+    usage: 14
+    sessions: 11
     class: CHAUD
   analyse-transactionnelle-custos:
     usage: 12
     sessions: 3
     class: CHAUD
-  deep-tech-research-analysis:
-    usage: 12
-    sessions: 7
-    class: CHAUD
   custos-kabbalistique:
     usage: 11
     sessions: 5
     class: CHAUD
-  web-research-workflow:
-    usage: 11
-    sessions: 7
-    class: CHAUD
   cost-zero-cron-operations:
-    usage: 9
-    sessions: 6
+    usage: 10
+    sessions: 7
     class: CHAUD
   debat-multi-agent-structure:
     usage: 9
     sessions: 5
+    class: CHAUD
+  deep-tech-research-analysis:
+    usage: 9
+    sessions: 6
     class: CHAUD
   session-maintenance:
     usage: 8
@@ -83,25 +75,29 @@ skills:
     usage: 8
     sessions: 4
     class: CHAUD
+  vagus-context-guardian:
+    usage: 8
+    sessions: 3
+    class: CHAUD
   coding-standards-vagus:
     usage: 8
     sessions: 1
     class: CHAUD
-  custos-orientation-professionnelle:
-    usage: 6
-    sessions: 2
+  session-classifier:
+    usage: 7
+    sessions: 6
     class: CHAUD
-  vagus-context-guardian:
+  couche-intelligence-locale:
+    usage: 7
+    sessions: 4
+    class: CHAUD
+  custos-orientation-professionnelle:
     usage: 6
     sessions: 2
     class: CHAUD
   custos-data-discipline:
     usage: 6
     sessions: 3
-    class: CHAUD
-  session-classifier:
-    usage: 6
-    sessions: 5
     class: CHAUD
   merge-guard-dual-sync:
     usage: 6
@@ -115,6 +111,10 @@ skills:
     usage: 5
     sessions: 2
     class: CHAUD
+  web-research-workflow:
+    usage: 5
+    sessions: 4
+    class: CHAUD
   audit-securite-repository:
     usage: 5
     sessions: 2
@@ -123,21 +123,21 @@ skills:
     usage: 5
     sessions: 2
     class: CHAUD
-  couche-intelligence-locale:
+  hermes-cron-ops:
     usage: 5
-    sessions: 2
+    sessions: 3
     class: CHAUD
   custos-theme-production:
+    usage: 4
+    sessions: 3
+    class: TIEDE
+  multi-sources-research:
     usage: 4
     sessions: 3
     class: TIEDE
   co-editing-testimony:
     usage: 4
     sessions: 1
-    class: TIEDE
-  hermes-cron-ops:
-    usage: 4
-    sessions: 2
     class: TIEDE
   garde-fous-tokens:
     usage: 3
@@ -163,6 +163,10 @@ skills:
     usage: 3
     sessions: 1
     class: TIEDE
+  html-document-generation:
+    usage: 3
+    sessions: 3
+    class: TIEDE
   ompa-quality-eval-workflow:
     usage: 3
     sessions: 1
@@ -170,6 +174,10 @@ skills:
   omp-quality-eval-workflow:
     usage: 3
     sessions: 1
+    class: TIEDE
+  kleia-up:
+    usage: 3
+    sessions: 3
     class: TIEDE
   google-workspace:
     usage: 2
@@ -191,6 +199,10 @@ skills:
     usage: 2
     sessions: 1
     class: TIEDE
+  prism-pipeline-operations:
+    usage: 2
+    sessions: 2
+    class: TIEDE
   vagus-plugin-architecture:
     usage: 2
     sessions: 1
@@ -202,6 +214,18 @@ skills:
   lof-cr:
     usage: 2
     sessions: 1
+    class: TIEDE
+  gate-acceptation-skills-vagus:
+    usage: 2
+    sessions: 2
+    class: TIEDE
+  hermes-config-management:
+    usage: 2
+    sessions: 2
+    class: TIEDE
+  tag:je:
+    usage: 2
+    sessions: 2
     class: TIEDE
   theme-verificateur:
     usage: 1
@@ -235,14 +259,6 @@ skills:
     usage: 1
     sessions: 1
     class: TIEDE
-  prism-pipeline-operations:
-    usage: 1
-    sessions: 1
-    class: TIEDE
-  html-document-generation:
-    usage: 1
-    sessions: 1
-    class: TIEDE
   architecture-rapport-strategique:
     usage: 1
     sessions: 1
@@ -255,24 +271,48 @@ skills:
     usage: 1
     sessions: 1
     class: TIEDE
+  retrouver-artefact-session:
+    usage: 1
+    sessions: 1
+    class: TIEDE
+  audio-transcription-cr:
+    usage: 1
+    sessions: 1
+    class: TIEDE
+  typed-decision-calibration:
+    usage: 1
+    sessions: 1
+    class: TIEDE
+  jev-typesafe:
+    usage: 1
+    sessions: 1
+    class: TIEDE
+  seo-geo-content-structure:
+    usage: 1
+    sessions: 1
+    class: TIEDE
+  web-content-seo-geo:
+    usage: 1
+    sessions: 1
+    class: TIEDE
 crons:
   baf0e8d3594c:
-    runs: 536
+    runs: 511
     last_status: running
-  34073eda1bec:
-    runs: 67
-    last_status: completed
   ee581b72b5f1:
-    runs: 266
+    runs: 246
+    last_status: completed
+  34073eda1bec:
+    runs: 63
     last_status: completed
   9639d6016313:
-    runs: 22
+    runs: 21
     last_status: completed
   8cfedec3ba36:
-    runs: 22
+    runs: 21
     last_status: completed
   4f94aa326b77:
-    runs: 22
+    runs: 21
     last_status: completed
   7838695fd220:
     runs: 6
@@ -285,7 +325,7 @@ crons:
     last_status: completed
   104c8ad85215:
     runs: 6
-    last_status: completed
+    last_status: running
   4db42924e917:
     runs: 5
     last_status: completed
@@ -310,7 +350,25 @@ crons:
   37be492898da:
     runs: 5
     last_status: completed
+  0204450ee7e2:
+    runs: 17
+    last_status: completed
+  d67016cc6ba0:
+    runs: 17
+    last_status: completed
+  c37ee43d3236:
+    runs: 11
+    last_status: completed
   129183e20ce0:
+    runs: 1
+    last_status: completed
+  d08095ef2eeb:
+    runs: 6
+    last_status: completed
+  41cf92c2f128:
+    runs: 1
+    last_status: completed
+  2c5efbee740a:
     runs: 1
     last_status: completed
   42887598d6cd:
@@ -328,7 +386,7 @@ skills_frozen:
 - analyse-tempo-exercices
 - ascii-art
 - astronomical-ephemeris
-- audio-transcription-cr
+- audit-claims-performance-ia
 - bidirectional-skill-sync
 - blackboard-engine
 - blocked-page-recovery
@@ -337,6 +395,8 @@ skills_frozen:
 - book-launch-audit
 - box
 - cloud-data-migration
+- cloud-quota-reclaim
+- cloud-storage-inventory
 - coherence-titre-message
 - comfyui
 - commercialisation-agent-ia
@@ -370,12 +430,12 @@ skills_frozen:
 - grounded-citations
 - grounded-structured-extraction
 - handoff-sanitization
-- hermes-config-management
+- hermes-kanban-operations
+- hermes-shared-state
 - hermes-vault-governance
 - huggingface-hub
 - image-layer-decomposition
 - iterative-narrative-production
-- kleia-up
 - knowledge-workspace-architecture
 - landlock-sandboxing
 - langextract-grounded-extraction
@@ -399,21 +459,28 @@ skills_frozen:
 - passation-projet
 - pdf
 - pdf-to-email
+- personal-finance-analysis
 - podcast-archiving
 - podcast-rss-recovery
 - prediction-instrumentation
 - pretext
 - protocole-ord-qualite
+- provider-model-verification
 - recit-editing-workflow
 - redaction-theme-8-regles
 - reddit-reading
 - relecture-themes-custos
 - rss-feeds
 - self-hosted-deployment
+- service-decommissioning
+- session-cost-reporting
+- session-handoff
 - session-librarian
 - session-overflow-protocol
+- shell-regression-harnesses
 - showreel-production
 - sketch
+- skill-catalog-hygiene
 - slm-local-benchmarking
 - sourced-answer-engine
 - strategic-business-creation
@@ -425,7 +492,9 @@ skills_frozen:
 - vagus-ui-ux
 - vagus-whatsapp-gateway-setup
 - validation-scientifique-sandrina
+- veille-etat-externe
 - vps-resource-guard
+- windows-process-loop-diagnosis
 - windows-ssh-tunnel
 - xlsx
 - youtube-corpus-building

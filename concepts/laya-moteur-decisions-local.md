@@ -9,6 +9,12 @@ links:
   - rules/prediction-avant-action.md
 ---
 
+> ⚠️ **DÉCOMMISSIONNÉ le 28/09/2026** — mesuré et rejeté sur décisions réelles.
+> 603 labels : ECE **0,80**, accuracy au seuil 0,7 = **16,8 %** (constante = 83,9 %), Brier 0,777
+> vs 0,135 pour la baseline. Les 0,073/100%-à-70% du 25/09 étaient un artefact d'un jeu
+> dégénéré (28 labels, ~1 négatif). Voir `concepts/laya-decommission-2026-09-28.md`.
+> Empreinte supprimée : 8 Go (venv 5,6 + modèles 2,3 + src). Archive : `~/backups/laya-decommission-20260928/`.
+
 # Laya — moteur de décisions typées local (ConvAI Innovations)
 
 ## Ce que c'est
