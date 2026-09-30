@@ -8,4 +8,4 @@ owner: JP
 ---
 Arreter generation si explore/change approche
 Priorite scripts/testes (batch_prod.py)
-API keys: DeepSeek, Gemini, Mercury2
+API keys autorisees: DeepSeek, OpenRouter. INTERDITS (decision JP 04/09/26): Gemini, Mercury, GLM.
