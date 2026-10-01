@@ -1,16 +1,16 @@
-generated_at: "2026-09-28T08:00:11"
+generated_at: "2026-10-01T19:45:10"
 window_days: 7
 totals:
-  n: 13
-  in: 1975885
-  out: 290864
-  cache: 36671296
-  cwrite: 0
-  cost: 0.355308036
-  replay_in: 377234
-  replay_out: 233042
-  drift_in_pct: -80.9
-  calib: 5.24
+  n: 63
+  in: 10133112
+  out: 1639252
+  cache: 212780199
+  cwrite: 107223
+  cost: 2.274359896
+  replay_in: 2739914
+  replay_out: 1467754
+  drift_in_pct: -73.0
+  calib: 3.7
 seuils:
   ratio_asst_user: 15
   stale_h: 4
@@ -21,6 +21,171 @@ seuils:
     - 10.0
   tool_terminal_pct: 50.0
 per_session:
+  - id: "e20055b50eec"
+    source: "webui"
+    model: "openai/gpt-5.5"
+    started_at: "2026-09-30T16:09:19.643667"
+    messages: "(16, 52, 60)"
+    ratio_asst_user: 3.2
+    input: 522945
+    output: 44054
+    cache_read: 3126912
+    cost_usd: 0.2485
+    replay_in: 33879
+    replay_out: 26485
+    terminal_pct: 20.0
+    flags:
+      - "stale>4h"
+  - id: "83161175e7de"
+    source: "webui"
+    model: "deepseek-flash"
+    started_at: "2026-09-28T19:04:03.326501"
+    messages: "(10, 151, 163)"
+    ratio_asst_user: 15.1
+    input: 142990
+    output: 46204
+    cache_read: 17218944
+    cost_usd: 0.1008
+    replay_in: 81771
+    replay_out: 44584
+    terminal_pct: 50.9
+    flags:
+      - "ratio_asst_user>15"
+      - "terminal>50%%"
+  - id: "20260928_160438_4f0421"
+    source: "webui"
+    model: "deepseek-flash"
+    started_at: "2026-09-28T16:04:38.014665"
+    messages: "(10, 92, 94)"
+    ratio_asst_user: 9.2
+    input: 236000
+    output: 66119
+    cache_read: 8230656
+    cost_usd: 0.0998
+    replay_in: 77886
+    replay_out: 72969
+    terminal_pct: 1.1
+    flags: []
+  - id: "20260929_200140_e05580"
+    source: "webui"
+    model: "deepseek-flash"
+    started_at: "2026-09-29T20:01:40.646051"
+    messages: "(14, 146, 138)"
+    ratio_asst_user: 10.4
+    input: 188516
+    output: 52968
+    cache_read: 13036800
+    cost_usd: 0.0992
+    replay_in: 53583
+    replay_out: 71089
+    terminal_pct: 21.7
+    flags: []
+  - id: "34c2c14ee710"
+    source: "webui"
+    model: "deepseek-flash"
+    started_at: "2026-09-30T15:19:13.727434"
+    messages: "(4, 107, 125)"
+    ratio_asst_user: 26.8
+    input: 121427
+    output: 73874
+    cache_read: 11790464
+    cost_usd: 0.0979
+    replay_in: 62367
+    replay_out: 39449
+    terminal_pct: 53.6
+    flags:
+      - "ratio_asst_user>15"
+      - "terminal>50%%"
+  - id: "8d3ff26b8b9e"
+    source: "webui"
+    model: "deepseek-flash"
+    started_at: "2026-09-29T19:10:18.623292"
+    messages: "(8, 98, 106)"
+    ratio_asst_user: 12.2
+    input: 114178
+    output: 68073
+    cache_read: 10805376
+    cost_usd: 0.0904
+    replay_in: 65375
+    replay_out: 57130
+    terminal_pct: 34.9
+    flags: []
+  - id: "20260928_130130_030591"
+    source: "webui"
+    model: "deepseek-flash"
+    started_at: "2026-09-28T13:01:30.384870"
+    messages: "(10, 124, 129)"
+    ratio_asst_user: 12.4
+    input: 218728
+    output: 38995
+    cache_read: 9968384
+    cost_usd: 0.0861
+    replay_in: 72009
+    replay_out: 61117
+    terminal_pct: 26.4
+    flags: []
+  - id: "20260928_225759_836b50"
+    source: "oneshot"
+    model: "deepseek-flash"
+    started_at: "2026-09-28T22:58:00.571596"
+    messages: "(1, 54, 60)"
+    ratio_asst_user: 54.0
+    input: 98262
+    output: 73158
+    cache_read: 6782592
+    cost_usd: 0.079
+    replay_in: 60332
+    replay_out: 72583
+    terminal_pct: 3.3
+    flags:
+      - "ratio_asst_user>15"
+  - id: "1eaec4f78085"
+    source: "webui"
+    model: "deepseek-flash"
+    started_at: "2026-10-01T18:52:11.811791"
+    messages: "(14, 85, 83)"
+    ratio_asst_user: 6.1
+    input: 125578
+    output: 53444
+    cache_read: 8525824
+    cost_usd: 0.0765
+    replay_in: 85186
+    replay_out: 49806
+    terminal_pct: 38.6
+    flags: []
+  - id: "20260929_090023_f2225445"
+    source: "telegram"
+    model: "deepseek-flash"
+    started_at: "2026-09-29T09:00:23.352041"
+    messages: "(7, 150, 148)"
+    ratio_asst_user: 21.4
+    input: 514916
+    output: 46176
+    cache_read: 7611392
+    cost_usd: 0.0761
+    replay_in: 33457
+    replay_out: 37343
+    terminal_pct: 82.4
+    flags:
+      - "ratio_asst_user>15"
+      - "stale>4h"
+      - "terminal>50%%"
+  - id: "20260929_132149_f224531d"
+    source: "telegram"
+    model: "deepseek-flash"
+    started_at: "2026-09-29T13:21:49.611504"
+    messages: "(4, 27, 20)"
+    ratio_asst_user: 6.8
+    input: 232540
+    output: 43883
+    cache_read: 4222976
+    cost_usd: 0.0739
+    replay_in: 16334
+    replay_out: 14220
+    terminal_pct: 80.0
+    flags:
+      - "stale>4h"
+      - "terminal>50%%"
   - id: "20260925_133639_9a68c0"
     source: "webui"
     model: "deepseek-flash"
@@ -53,6 +218,80 @@ per_session:
     terminal_pct: 58.5
     flags:
       - "terminal>50%%"
+  - id: "20260930_155513_b3d150"
+    source: "webui"
+    model: "deepseek-flash"
+    started_at: "2026-09-30T15:55:13.131614"
+    messages: "(4, 95, 101)"
+    ratio_asst_user: 23.8
+    input: 189166
+    output: 32960
+    cache_read: 5175424
+    cost_usd: 0.0637
+    replay_in: 36300
+    replay_out: 37398
+    terminal_pct: 48.5
+    flags:
+      - "ratio_asst_user>15"
+      - "stale>4h"
+  - id: "20260929_202302_d610e0"
+    source: "webui"
+    model: "deepseek-flash"
+    started_at: "2026-09-29T20:23:02.943408"
+    messages: "(13, 113, 102)"
+    ratio_asst_user: 8.7
+    input: 142039
+    output: 29707
+    cache_read: 5855232
+    cost_usd: 0.0567
+    replay_in: 31305
+    replay_out: 50508
+    terminal_pct: 13.7
+    flags:
+      - "stale>4h"
+  - id: "75ee624211b4"
+    source: "webui"
+    model: "deepseek-flash"
+    started_at: "2026-09-28T12:43:37.649971"
+    messages: "(3, 43, 54)"
+    ratio_asst_user: 14.3
+    input: 136526
+    output: 35110
+    cache_read: 4984576
+    cost_usd: 0.0565
+    replay_in: 99009
+    replay_out: 31328
+    terminal_pct: 38.9
+    flags: []
+  - id: "20261001_185956_093eea"
+    source: "subagent"
+    model: "deepseek-flash"
+    started_at: "2026-10-01T18:59:57.110601"
+    messages: "(4, 55, 54)"
+    ratio_asst_user: 13.8
+    input: 120635
+    output: 38867
+    cache_read: 3049472
+    cost_usd: 0.0506
+    replay_in: 97031
+    replay_out: 45110
+    terminal_pct: 14.8
+    flags: []
+  - id: "20260930_000005_1de829"
+    source: "oneshot"
+    model: "deepseek-flash"
+    started_at: "2026-09-30T00:00:06.417585"
+    messages: "(1, 31, 43)"
+    ratio_asst_user: 31.0
+    input: 127401
+    output: 31502
+    cache_read: 3799936
+    cost_usd: 0.0494
+    replay_in: 86904
+    replay_out: 29039
+    terminal_pct: 0.0
+    flags:
+      - "ratio_asst_user>15"
   - id: "20260926_210141_cace87a7"
     source: "telegram"
     model: "deepseek-flash"
@@ -85,6 +324,21 @@ per_session:
     flags:
       - "stale>4h"
       - "terminal>50%%"
+  - id: "20260928_125215_c60e5d"
+    source: "subagent"
+    model: "deepseek-flash"
+    started_at: "2026-09-28T12:52:15.835771"
+    messages: "(1, 35, 43)"
+    ratio_asst_user: 35.0
+    input: 106933
+    output: 25544
+    cache_read: 3257088
+    cost_usd: 0.0411
+    replay_in: 70529
+    replay_out: 20382
+    terminal_pct: 0.0
+    flags:
+      - "ratio_asst_user>15"
   - id: "20260925_140029_e0375428"
     source: "telegram"
     model: "deepseek-flash"
@@ -101,6 +355,107 @@ per_session:
     flags:
       - "stale>4h"
       - "terminal>50%%"
+  - id: "20261001_193003_5ad8dc"
+    source: "subagent"
+    model: "deepseek-flash"
+    started_at: "2026-10-01T19:30:03.976240"
+    messages: "(4, 44, 69)"
+    ratio_asst_user: 11.0
+    input: 110038
+    output: 12808
+    cache_read: 2853632
+    cost_usd: 0.0328
+    replay_in: 109776
+    replay_out: 18366
+    terminal_pct: 0.0
+    flags: []
+  - id: "20260928_132408_5331ab2f"
+    source: "telegram"
+    model: "deepseek-flash"
+    started_at: "2026-09-28T13:24:08.733287"
+    messages: "(4, 39, 34)"
+    ratio_asst_user: 9.8
+    input: 79933
+    output: 18236
+    cache_read: 1991936
+    cost_usd: 0.0289
+    replay_in: 6567
+    replay_out: 17953
+    terminal_pct: 0.0
+    flags:
+      - "stale>4h"
+  - id: "20260928_161840_84d2f7"
+    source: "subagent"
+    model: "deepseek-flash"
+    started_at: "2026-09-28T16:18:41.337476"
+    messages: "(1, 29, 35)"
+    ratio_asst_user: 29.0
+    input: 72684
+    output: 21158
+    cache_read: 1766784
+    cost_usd: 0.0289
+    replay_in: 41641
+    replay_out: 19519
+    terminal_pct: 28.6
+    flags:
+      - "ratio_asst_user>15"
+  - id: "20260928_163123_09bf90"
+    source: "webui"
+    model: "deepseek-flash"
+    started_at: "2026-09-28T16:31:23.640190"
+    messages: "(4, 47, 46)"
+    ratio_asst_user: 11.8
+    input: 134931
+    output: 4230
+    cache_read: 1107840
+    cost_usd: 0.0261
+    replay_in: 19443
+    replay_out: 32147
+    terminal_pct: 15.2
+    flags:
+      - "stale>4h"
+  - id: "20260928_233005_26d88e"
+    source: "oneshot"
+    model: "deepseek-flash"
+    started_at: "2026-09-28T23:30:07.134128"
+    messages: "(1, 12, 24)"
+    ratio_asst_user: 12.0
+    input: 104124
+    output: 10693
+    cache_read: 1100288
+    cost_usd: 0.0253
+    replay_in: 73448
+    replay_out: 10259
+    terminal_pct: 25.0
+    flags: []
+  - id: "20261001_193003_116de1"
+    source: "subagent"
+    model: "deepseek-flash"
+    started_at: "2026-10-01T19:30:03.980479"
+    messages: "(3, 11, 24)"
+    ratio_asst_user: 3.7
+    input: 105626
+    output: 12759
+    cache_read: 534400
+    cost_usd: 0.0251
+    replay_in: 116092
+    replay_out: 11609
+    terminal_pct: 0.0
+    flags: []
+  - id: "20260928_125215_31e8ff"
+    source: "subagent"
+    model: "deepseek-flash"
+    started_at: "2026-09-28T12:52:15.818707"
+    messages: "(1, 13, 25)"
+    ratio_asst_user: 13.0
+    input: 90993
+    output: 12896
+    cache_read: 940288
+    cost_usd: 0.0242
+    replay_in: 63674
+    replay_out: 11719
+    terminal_pct: 12.0
+    flags: []
   - id: "20260927_132206_00ea7414"
     source: "telegram"
     model: "deepseek-flash"
@@ -118,21 +473,178 @@ per_session:
       - "ratio_asst_user>15"
       - "stale>4h"
       - "terminal>50%%"
-  - id: "20260923_133943_b4b993ac"
-    source: "telegram"
+  - id: "20261001_193003_6854de"
+    source: "subagent"
     model: "deepseek-flash"
-    started_at: "2026-09-23T13:39:43.471055"
-    messages: "(2, 29, 27)"
-    ratio_asst_user: 14.5
-    input: 66667
-    output: 9052
-    cache_read: 1567104
+    started_at: "2026-10-01T19:30:03.997256"
+    messages: "(5, 22, 35)"
+    ratio_asst_user: 4.4
+    input: 76614
+    output: 11593
+    cache_read: 1056000
+    cost_usd: 0.0216
+    replay_in: 68774
+    replay_out: 18742
+    terminal_pct: 5.7
+    flags: []
+  - id: "20260929_000004_823a6c"
+    source: "oneshot"
+    model: "deepseek-flash"
+    started_at: "2026-09-29T00:00:05.915279"
+    messages: "(1, 13, 30)"
+    ratio_asst_user: 13.0
+    input: 82501
+    output: 11011
+    cache_read: 858240
+    cost_usd: 0.0216
+    replay_in: 52934
+    replay_out: 10353
+    terminal_pct: 3.3
+    flags: []
+  - id: "20260928_161840_e2a791"
+    source: "subagent"
+    model: "deepseek-flash"
+    started_at: "2026-09-28T16:18:41.375078"
+    messages: "(1, 10, 27)"
+    ratio_asst_user: 10.0
+    input: 88257
+    output: 9169
+    cache_read: 593280
+    cost_usd: 0.0205
+    replay_in: 65858
+    replay_out: 9712
+    terminal_pct: 3.7
+    flags: []
+  - id: "20260929_233005_05a7ab"
+    source: "oneshot"
+    model: "deepseek-flash"
+    started_at: "2026-09-29T23:30:07.125126"
+    messages: "(1, 11, 24)"
+    ratio_asst_user: 11.0
+    input: 66155
+    output: 13642
+    cache_read: 659840
     cost_usd: 0.0201
-    replay_in: 31121
-    replay_out: 8483
-    terminal_pct: 25.9
+    replay_in: 37403
+    replay_out: 13033
+    terminal_pct: 8.3
+    flags: []
+  - id: "20260928_160005_066cff"
+    source: "subagent"
+    model: "deepseek-flash"
+    started_at: "2026-09-28T16:00:07.528235"
+    messages: "(1, 16, 19)"
+    ratio_asst_user: 16.0
+    input: 44686
+    output: 17000
+    cache_read: 871296
+    cost_usd: 0.0195
+    replay_in: 27156
+    replay_out: 16866
+    terminal_pct: 36.8
+    flags:
+      - "ratio_asst_user>15"
+  - id: "20260928_125215_e4625e"
+    source: "subagent"
+    model: "deepseek-flash"
+    started_at: "2026-09-28T12:52:15.822493"
+    messages: "(1, 16, 23)"
+    ratio_asst_user: 16.0
+    input: 64571
+    output: 11774
+    cache_read: 644736
+    cost_usd: 0.0187
+    replay_in: 29764
+    replay_out: 10903
+    terminal_pct: 4.3
+    flags:
+      - "ratio_asst_user>15"
+  - id: "20260928_224843_0e260e"
+    source: "webui"
+    model: "deepseek-flash"
+    started_at: "2026-09-28T22:48:43.507068"
+    messages: "(9, 108, 107)"
+    ratio_asst_user: 12.0
+    input: 65953
+    output: 6512
+    cache_read: 1588864
+    cost_usd: 0.0186
+    replay_in: 11667
+    replay_out: 31988
+    terminal_pct: 19.6
     flags:
       - "stale>4h"
+  - id: "20260928_160005_eaff6a"
+    source: "subagent"
+    model: "deepseek-flash"
+    started_at: "2026-09-28T16:00:07.456801"
+    messages: "(1, 20, 25)"
+    ratio_asst_user: 20.0
+    input: 50528
+    output: 12667
+    cache_read: 995200
+    cost_usd: 0.0182
+    replay_in: 26076
+    replay_out: 12614
+    terminal_pct: 28.0
+    flags:
+      - "ratio_asst_user>15"
+  - id: "20260930_004505_60070f"
+    source: "oneshot"
+    model: "deepseek-flash"
+    started_at: "2026-09-30T00:45:06.803683"
+    messages: "(1, 9, 15)"
+    ratio_asst_user: 9.0
+    input: 62739
+    output: 10855
+    cache_read: 552704
+    cost_usd: 0.0176
+    replay_in: 41438
+    replay_out: 9864
+    terminal_pct: 33.3
+    flags: []
+  - id: "20260929_004504_6d9e0e"
+    source: "oneshot"
+    model: "deepseek-flash"
+    started_at: "2026-09-29T00:45:06.352160"
+    messages: "(1, 8, 12)"
+    ratio_asst_user: 8.0
+    input: 56966
+    output: 10565
+    cache_read: 453888
+    cost_usd: 0.0162
+    replay_in: 36808
+    replay_out: 9488
+    terminal_pct: 8.3
+    flags: []
+  - id: "20260928_160005_278157"
+    source: "subagent"
+    model: "deepseek-flash"
+    started_at: "2026-09-28T16:00:07.519923"
+    messages: "(1, 13, 17)"
+    ratio_asst_user: 13.0
+    input: 55204
+    output: 9738
+    cache_read: 573952
+    cost_usd: 0.0158
+    replay_in: 29001
+    replay_out: 9279
+    terminal_pct: 35.3
+    flags: []
+  - id: "20261001_193534_18cc5f"
+    source: "subagent"
+    model: "deepseek-flash"
+    started_at: "2026-10-01T19:35:35.124430"
+    messages: "(1, 8, 22)"
+    ratio_asst_user: 8.0
+    input: 65622
+    output: 7925
+    cache_read: 342656
+    cost_usd: 0.0156
+    replay_in: 61664
+    replay_out: 7829
+    terminal_pct: 0.0
+    flags: []
   - id: "20260926_233714_9a2cc814"
     source: "telegram"
     model: "deepseek-flash"
@@ -149,6 +661,34 @@ per_session:
     flags:
       - "stale>4h"
       - "terminal>50%%"
+  - id: "20260928_161840_89b892"
+    source: "subagent"
+    model: "deepseek-flash"
+    started_at: "2026-09-28T16:18:41.359491"
+    messages: "(2, 11, 14)"
+    ratio_asst_user: 5.5
+    input: 60018
+    output: 4065
+    cache_read: 490112
+    cost_usd: 0.0129
+    replay_in: 49702
+    replay_out: 3307
+    terminal_pct: 7.1
+    flags: []
+  - id: "20260928_125213_ef6adf"
+    source: "subagent"
+    model: "deepseek-flash"
+    started_at: "2026-09-28T12:52:15.838908"
+    messages: "(1, 14, 13)"
+    ratio_asst_user: 14.0
+    input: 43491
+    output: 8068
+    cache_read: 414848
+    cost_usd: 0.0126
+    replay_in: 19443
+    replay_out: 8135
+    terminal_pct: 7.7
+    flags: []
   - id: "20260926_205223_b430ee6d"
     source: "telegram"
     model: "deepseek-flash"
@@ -181,6 +721,78 @@ per_session:
     flags:
       - "stale>4h"
       - "terminal>50%%"
+  - id: "20260928_125215_3ef274"
+    source: "subagent"
+    model: "deepseek-flash"
+    started_at: "2026-09-28T12:52:15.840957"
+    messages: "(2, 9, 7)"
+    ratio_asst_user: 4.5
+    input: 34798
+    output: 8483
+    cache_read: 232192
+    cost_usd: 0.011
+    replay_in: 19381
+    replay_out: 11715
+    terminal_pct: 0.0
+    flags: []
+  - id: "20260928_160005_7b9293"
+    source: "subagent"
+    model: "deepseek-flash"
+    started_at: "2026-09-28T16:00:07.533078"
+    messages: "(1, 7, 8)"
+    ratio_asst_user: 7.0
+    input: 41692
+    output: 5717
+    cache_read: 260224
+    cost_usd: 0.0105
+    replay_in: 24525
+    replay_out: 5614
+    terminal_pct: 37.5
+    flags: []
+  - id: "20260928_160241_012a49"
+    source: "subagent"
+    model: "deepseek-flash"
+    started_at: "2026-09-28T16:02:41.412920"
+    messages: "(1, 5, 5)"
+    ratio_asst_user: 5.0
+    input: 22114
+    output: 9762
+    cache_read: 105088
+    cost_usd: 0.0095
+    replay_in: 1774
+    replay_out: 8414
+    terminal_pct: 40.0
+    flags: []
+  - id: "20260928_125643_43c5f2"
+    source: "subagent"
+    model: "deepseek-flash"
+    started_at: "2026-09-28T12:56:43.828135"
+    messages: "(1, 5, 5)"
+    ratio_asst_user: 5.0
+    input: 26101
+    output: 7262
+    cache_read: 104832
+    cost_usd: 0.0086
+    replay_in: 4932
+    replay_out: 6421
+    terminal_pct: 40.0
+    flags: []
+  - id: "20261001_134339_aa4f8d79"
+    source: "telegram"
+    model: "deepseek-flash"
+    started_at: "2026-10-01T13:43:39.969936"
+    messages: "(2, 36, 35)"
+    ratio_asst_user: 18.0
+    input: 65896
+    output: 18470
+    cache_read: 2008256
+    cost_usd: 0.0081
+    replay_in: 29546
+    replay_out: 14095
+    terminal_pct: 2.9
+    flags:
+      - "ratio_asst_user>15"
+      - "stale>4h"
   - id: "20260925_135628_6979e7c8"
     source: "telegram"
     model: "deepseek-flash"
@@ -197,6 +809,20 @@ per_session:
     flags:
       - "stale>4h"
       - "terminal>50%%"
+  - id: "20260928_162246_589f07"
+    source: "subagent"
+    model: "deepseek-flash"
+    started_at: "2026-09-28T16:22:47.325037"
+    messages: "(1, 4, 3)"
+    ratio_asst_user: 4.0
+    input: 10175
+    output: 4670
+    cache_read: 85760
+    cost_usd: 0.0046
+    replay_in: 3840
+    replay_out: 4280
+    terminal_pct: 0.0
+    flags: []
   - id: "20260924_234725_a8a02e19"
     source: "telegram"
     model: "deepseek-flash"
@@ -228,4 +854,108 @@ per_session:
     terminal_pct: 0.0
     flags:
       - "stale>4h"
-flagged_count: 13
+  - id: "e0969c8a609b"
+    source: "webui"
+    model: "mimo-v2.6-flash"
+    started_at: "2026-09-30T09:08:33.179667"
+    messages: "(7, 56, 68)"
+    ratio_asst_user: 8.0
+    input: 206352
+    output: 81656
+    cache_read: 6598912
+    cost_usd: 0
+    replay_in: 59002
+    replay_out: 22613
+    terminal_pct: 39.7
+    flags: []
+  - id: "20260930_102134_eb88e3"
+    source: "webui"
+    model: "mimo-v2.6-flash"
+    started_at: "2026-09-30T10:21:34.537726"
+    messages: "(11, 84, 93)"
+    ratio_asst_user: 7.6
+    input: 233561
+    output: 60610
+    cache_read: 6459968
+    cost_usd: 0
+    replay_in: 67717
+    replay_out: 40209
+    terminal_pct: 15.1
+    flags: []
+  - id: "6b76c465ccee"
+    source: "webui"
+    model: "mimo-v2.6-flash"
+    started_at: "2026-09-30T10:24:27.053242"
+    messages: "(3, 82, 92)"
+    ratio_asst_user: 27.3
+    input: 882451
+    output: 68621
+    cache_read: 8268608
+    cost_usd: 0
+    replay_in: 55736
+    replay_out: 29658
+    terminal_pct: 53.3
+    flags:
+      - "ratio_asst_user>15"
+      - "stale>4h"
+      - "terminal>50%%"
+  - id: "20260930_122137_d3c1ab"
+    source: "webui"
+    model: "mimo-v2.6-flash"
+    started_at: "2026-09-30T12:21:37.538313"
+    messages: "(7, 72, 82)"
+    ratio_asst_user: 10.3
+    input: 1657742
+    output: 41720
+    cache_read: 4139200
+    cost_usd: 0
+    replay_in: 57350
+    replay_out: 28437
+    terminal_pct: 40.2
+    flags:
+      - "stale>4h"
+      - "input>1M"
+  - id: "20261001_191113_bcbba5"
+    source: "oneshot"
+    model: "claude-opus-4-8"
+    started_at: "2026-10-01T19:11:26.500176"
+    messages: "(1, 1, 0)"
+    ratio_asst_user: 1.0
+    input: 2
+    output: 4
+    cache_read: 0
+    cost_usd: 0
+    replay_in: 5
+    replay_out: 1
+    terminal_pct: 0.0
+    flags: []
+  - id: "20261001_191136_66aeb5"
+    source: "oneshot"
+    model: "claude-opus-4-8"
+    started_at: "2026-10-01T19:11:40.907978"
+    messages: "(4, 4, 0)"
+    ratio_asst_user: 1.0
+    input: 12731
+    output: 24
+    cache_read: 38183
+    cost_usd: 0
+    replay_in: 20
+    replay_out: 4
+    terminal_pct: 0.0
+    flags: []
+  - id: "20261001_192936_218a65"
+    source: "telegram"
+    model: "mimo-v2.6-flash"
+    started_at: "2026-10-01T19:29:36.902574"
+    messages: "(3, 53, 54)"
+    ratio_asst_user: 17.7
+    input: 109865
+    output: 12439
+    cache_read: 1541952
+    cost_usd: 0
+    replay_in: 18387
+    replay_out: 17509
+    terminal_pct: 33.3
+    flags:
+      - "ratio_asst_user>15"
+flagged_count: 33

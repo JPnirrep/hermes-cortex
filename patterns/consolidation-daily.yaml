@@ -1,62 +1,74 @@
 meta:
-  generated_at: '2026-09-30T04:00:11.230259'
+  generated_at: '2026-10-01T04:00:11.649417'
   window_hours: 24
-  sessions_scan: 5
+  sessions_scan: 6
   candidates: 9
-  duplicates_found: 2
+  duplicates_found: 7
 candidates:
-- session: 20260929_090023_f222
-  time: 09-29 10:00
-  phrase: par contre il faut vérifier une fois par mois les mises à jours de n8n et
-    me faire un brief viia telegram
-- session: 8d3ff26b8b9e
-  time: 09-29 19:54
-  phrase: lance l'audit d'usage des skills (lesquels ne servent jamais) ?
-- session: 8d3ff26b8b9e
-  time: 09-29 19:59
-  phrase: 'archive les 52 skills
+- session: e0969c8a609b
+  time: 09-30 09:31
+  phrase: il faut absolument sortir du scope de la stratégie de kleia-up les LMS et
+    les opco.
+- session: e0969c8a609b
+  time: 09-30 10:10
+  phrase: '1: nettoyer
 
-    corrige les deux crons si ils sont nécessaires et que tu peux les exploiter, si
-    non, supprime les
+    2: le cron toujours armé, a quoi il sert'
+- session: 6b76c465ccee
+  time: 09-30 10:24
+  phrase: '## Ce qu''il faut retenir'
+- session: 34c2c14ee710
+  time: 09-30 15:19
+  phrase: Si un souci arrive, je le règle avant même que tu ne le saches.
+- session: e20055b50eec
+  time: 09-30 16:22
+  phrase: 'bof, tu as occulté son role de coach scénique
 
-    point 3: je n''arrive pas à me projeter dans les éco,omies que cela peut représenter'
-- session: 20260929_200140_e055
-  time: 09-29 20:05
-  phrase: "\U0001F3AF DÉCISION\n   Action : BUY\n   Raison : Régime haussier — bullish\
-    \ — allocation 80%"
-- session: 20260929_200140_e055
-  time: 09-29 20:06
-  phrase: "ECHEC  custos-purge-rgpd [delivery_failed] : configured thread_id 1710\
-    \ for telegram:6722033496 was not found; delivered without thread_id\n  ECHEC\
-    \  argos-watchman-daily [delivery_failed] : unknown platform 'webui'\n  ECHEC\
-    \  vagus-cleanup [delivery_failed] : unknown platform 'webui'\n  ECHEC  hygiene-to"
-- session: 20260929_200140_e055
-  time: 09-29 20:06
-  phrase: '**Statut :** ⚠️  Points d''attention ci-dessus'
-- session: 20260929_233005_05a7
-  time: 09-29 23:30
-  phrase: '- Au moins **un chiffre que tu produis toi-même** (calcul explicite, pas
-    repris des documents) et qui change une décision.'
-- session: 20260930_000005_1de8
-  time: 09-30 00:00
-  phrase: 'Cherche ce que le corpus concurrentiel contient **déjà** sur ce créneau
-    (l''animation d''atelier/conférence) : c''est un créneau que le dossier n''a jamais
-    isolé.'
-- session: 20260930_000005_1de8
-  time: 09-30 00:00
-  phrase: '# PARTIE 2 — LE CHIFFRAGE DE LA « VITESSE 2 »
-
-    JP a posé le 28/09 : *« on ne vend pas des jours ou des heures, ce n''est pas
-    tenable et cela ne permet pas de construire un business qui augmente et peut tourner
-    sans Sandrina »*.'
+    as tu lu le texte complet, c''est Toujours la même chose, j''ai l''impression
+    que ça veut aller trop vite, ça va pas dans la profondeur.'
+- session: e20055b50eec
+  time: 09-30 16:27
+  phrase: 'tu n''as toujours pas compris le message principal:'
+- session: e20055b50eec
+  time: 09-30 16:38
+  phrase: c'est que mon objectif, il est toujours le même, c'est d'aider les personnes
+    à être elles pleinement.
+- session: e20055b50eec
+  time: 09-30 16:38
+  phrase: Toujours en rapport avec le texte initial
+- session: e20055b50eec
+  time: 09-30 17:12
+  phrase: le fond passe, le wouah, on garde et ne coupe pas.
 duplicates:
-- candidate: par contre il faut vérifier une fois par mois les mises à jours de n8n
-    et me faire un brief viia telegram
-  matches: cortex/concepts/deepseek-harness.md
+- candidate: '1: nettoyer
+
+    2: le cron toujours armé, a quoi il sert'
+  matches: memories/USER.md
+  similarity: 0.6
+  action: verifier contexte
+- candidate: '## Ce qu''il faut retenir'
+  matches: cortex/concepts/cas-ecole-question3-heritage.md
+  similarity: 0.67
+  action: verifier doublon / fusionner
+- candidate: Si un souci arrive, je le règle avant même que tu ne le saches.
+  matches: memories/MEMORY.md
+  similarity: 0.5
+  action: verifier contexte
+- candidate: 'tu n''as toujours pas compris le message principal:'
+  matches: cortex/personas/jp.md
+  similarity: 0.6
+  action: verifier contexte
+- candidate: c'est que mon objectif, il est toujours le même, c'est d'aider les personnes
+    à être elles pleinement.
+  matches: cortex/concepts/journal-prediction.md
   similarity: 0.45
   action: verifier contexte
-- candidate: '**Statut :** ⚠️  Points d''attention ci-dessus'
-  matches: cortex/concepts/cas-ecole-question3-heritage.md
+- candidate: Toujours en rapport avec le texte initial
+  matches: cortex/concepts/custos-v2.3.0.md
   similarity: 0.5
+  action: verifier contexte
+- candidate: le fond passe, le wouah, on garde et ne coupe pas.
+  matches: cortex/concepts/deepseek-harness.md
+  similarity: 0.6
   action: verifier contexte
 note: Le script propose, ne modifie rien. Appliquer en session (H2).

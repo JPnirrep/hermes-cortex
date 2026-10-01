@@ -1,0 +1,20 @@
+---
+action: creation journal run-receipts
+actor: argos
+approved: jp
+note: 'PR: valide par JP 01/10/26'
+receipt_id: 95966dfab89c
+session: '-'
+status: ok
+target: hermes-cortex/logs/run-receipts.yaml
+ts: '2026-10-01T13:52:03+02:00'
+---
+action: cron Run-Receipts Watchdog cree
+actor: argos
+approved: jp
+note: 0 */6 * * *, no_agent, deliver telegram
+receipt_id: 12b22648986f
+session: '-'
+status: ok
+target: hermes-cron:026c51ccdf6b
+ts: '2026-10-01T13:55:46+02:00'
