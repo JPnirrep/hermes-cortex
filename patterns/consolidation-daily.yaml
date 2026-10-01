@@ -1,94 +1,62 @@
 meta:
-  generated_at: '2026-09-29T04:00:11.680687'
+  generated_at: '2026-09-30T04:00:11.230259'
   window_hours: 24
-  sessions_scan: 8
-  candidates: 38
+  sessions_scan: 5
+  candidates: 9
   duplicates_found: 2
 candidates:
-- session: 75ee624211b4
-  time: 09-28 12:56
-  phrase: '- **Pièges marché :** Qualiopi obligatoire depuis 2022 (audit initial 600–2
-    500 € HT + surveillance), démarchage CPF interdit depuis la loi 2023/anti-fraude
-    2026 (amende 75 000 € PP) → B2C non finançable sans Qualiopi ; cycle de vente
-    1–3 mois ; saturation réelle de la niche « hypersensible » (≥6 ac'
-- session: 75ee624211b4
-  time: 09-28 12:56
-  phrase: '**Problème factuel signalé (important) :** le brief décrit « UDAMS » comme
-    une **association dirigeants**.'
-- session: 75ee624211b4
-  time: 09-28 12:56
-  phrase: '- **Accessibilité 6** (cycle 6-9 mois, décision collégiale, appel d''offres)
-    · **pouvoir d''achat 10** · **douleur 8** (obligation NAO déc.'
-- session: 75ee624211b4
-  time: 09-28 12:56
-  phrase: '#3 est la plus riche à terme et la plus lente — elle se travaille EN PARALLÈLE,
-    jamais en dépendance.'
-- session: 75ee624211b4
-  time: 09-28 12:56
-  phrase: '*« On ne connaît pas Sandrina localement.'
-- session: 75ee624211b4
-  time: 09-28 12:56
-  phrase: '### Cible #3 — Service RH / QVCT mutuelles
+- session: 20260929_090023_f222
+  time: 09-29 10:00
+  phrase: par contre il faut vérifier une fois par mois les mises à jours de n8n et
+    me faire un brief viia telegram
+- session: 8d3ff26b8b9e
+  time: 09-29 19:54
+  phrase: lance l'audit d'usage des skills (lesquels ne servent jamais) ?
+- session: 8d3ff26b8b9e
+  time: 09-29 19:59
+  phrase: 'archive les 52 skills
 
-    > **« Faire de la prévention un moteur d''engagement mesurable : une intervention
-    qui donne à vos collaborateurs les moyens de tenir dans la durée, sans jamais
-    parler de pathologie.'
-- session: 75ee624211b4
-  time: 09-28 12:56
-  phrase: '**Mise en œuvre :** 2 présences/mois minimum en réseau ; 3 publications
-    LinkedIn/semaine vers dirigeants et DRH ; 5 messages personnalisés/semaine vers
-    des contacts du réseau (jamais de cold messaging) ; Préventica Lyon.'
-- session: 75ee624211b4
-  time: 09-28 12:56
-  phrase: '|
+    corrige les deux crons si ils sont nécessaires et que tu peux les exploiter, si
+    non, supprime les
 
-    | Conversion entretien → devis | devis/entretiens | **< 30 %** | Réviser le script
-    d''entretien et le message (§2) |
+    point 3: je n''arrive pas à me projeter dans les éco,omies que cela peut représenter'
+- session: 20260929_200140_e055
+  time: 09-29 20:05
+  phrase: "\U0001F3AF DÉCISION\n   Action : BUY\n   Raison : Régime haussier — bullish\
+    \ — allocation 80%"
+- session: 20260929_200140_e055
+  time: 09-29 20:06
+  phrase: "ECHEC  custos-purge-rgpd [delivery_failed] : configured thread_id 1710\
+    \ for telegram:6722033496 was not found; delivered without thread_id\n  ECHEC\
+    \  argos-watchman-daily [delivery_failed] : unknown platform 'webui'\n  ECHEC\
+    \  vagus-cleanup [delivery_failed] : unknown platform 'webui'\n  ECHEC  hygiene-to"
+- session: 20260929_200140_e055
+  time: 09-29 20:06
+  phrase: '**Statut :** ⚠️  Points d''attention ci-dessus'
+- session: 20260929_233005_05a7
+  time: 09-29 23:30
+  phrase: '- Au moins **un chiffre que tu produis toi-même** (calcul explicite, pas
+    repris des documents) et qui change une décision.'
+- session: 20260930_000005_1de8
+  time: 09-30 00:00
+  phrase: 'Cherche ce que le corpus concurrentiel contient **déjà** sur ce créneau
+    (l''animation d''atelier/conférence) : c''est un créneau que le dossier n''a jamais
+    isolé.'
+- session: 20260930_000005_1de8
+  time: 09-30 00:00
+  phrase: '# PARTIE 2 — LE CHIFFRAGE DE LA « VITESSE 2 »
 
-    | Conversion devis → signé | signés/devis | **< 40 %** | Revoir prix ou paiement
-    (ne jamais baisser le prix : ajouter un échelon) |
-
-    | CA signé du mois | contrats | **< 1 500 € deux m'
-- session: 75ee624211b4
-  time: 09-28 12:56
-  phrase: '**Règle d''arrêt :** deux mois consécutifs sous 1 500 € ET moins de 2 entretiens/semaine
-    → le canal principal est invalidé, ne pas persévérer.'
-- session: 75ee624211b4
-  time: 09-28 12:56
-  phrase: Tout autre tarif vient d'elle, jamais d'une extrapolation.
-- session: 75ee624211b4
-  time: 09-28 12:56
-  phrase: '| # | Requête (Google classique) | Requête conversationnelle (IA) | Intention
-    | Difficulté | Pourquoi Sandrina peut gagner |
-
-    |---|---|---|---|---|---|
-
-    | 1 | `hypersensible au travail` | « Comment je fais pour ne plus être épuisé
-    au travail quand je suis hypersensible ?'
-- session: 75ee624211b4
-  time: 09-28 12:56
-  phrase: '*Règle commune : H1/H2 formulé comme on pose la question à une IA, réponse
-    directe en ≤ 40 mots juste après, puis le développement.*'
-- session: 75ee624211b4
-  time: 09-28 12:56
-  phrase: '**Format extractible obligatoire** : réponse ≤ 40 mots, H2 = question,
-    listes courtes, tableau, FAQ schema, nom + date en première phrase.'
-- session: 75ee624211b4
-  time: 09-28 12:56
-  phrase: Sa visibilité actuelle repose sur LinkedIn, Amazon (2 ISBN) et des annuaires
-    tiers (`mon-coach.tel`, `consultant.consultants.contact`) — jamais sur son propre
-    domaine.
-- session: 75ee624211b4
-  time: 09-28 12:56
-  phrase: '## CE QU''IL FAUT RETENIR EN 5 LIGNES'
+    JP a posé le 28/09 : *« on ne vend pas des jours ou des heures, ce n''est pas
+    tenable et cela ne permet pas de construire un business qui augmente et peut tourner
+    sans Sandrina »*.'
 duplicates:
-- candidate: '## CE QU''IL FAUT RETENIR EN 5 LIGNES'
-  matches: memories/USER.md
-  similarity: 0.5
+- candidate: par contre il faut vérifier une fois par mois les mises à jours de n8n
+    et me faire un brief viia telegram
+  matches: cortex/concepts/deepseek-harness.md
+  similarity: 0.45
   action: verifier contexte
-- candidate: '**Contre-intuitif et important :** 3 000 € net n''est **pas** un problème
-    de capacité.'
-  matches: cortex/concepts/journal-prediction.md
+- candidate: '**Statut :** ⚠️  Points d''attention ci-dessus'
+  matches: cortex/concepts/cas-ecole-question3-heritage.md
   similarity: 0.5
   action: verifier contexte
 note: Le script propose, ne modifie rien. Appliquer en session (H2).

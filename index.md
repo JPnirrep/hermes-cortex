@@ -18,6 +18,7 @@ Bundle OKF du systeme Hermes / Vagus OS. Connaissance portable, typee, reliee.
 - [Workflow JP](rules/jp-workflow.md)
 - [Citations exactes](rules/citations-exactes.md)
 - [Deny-Rules (policy fail-closed)](rules/deny-rules.yaml) — gate évalué avant chaque action, script `scripts/deny-check.py`
+- [Facturation CometAPI / MiMo](rules/facturation-cometapi-mimo.md) — grille vérifiée sur facturation réelle, piège du champ `usage.cost`, règle de mise à jour des tarifs
 
 ## Identifiants stables (ids)
 Chaque note (concepts, rules, decisions, personas, patterns, playbooks) porte un
