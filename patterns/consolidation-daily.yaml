@@ -1,81 +1,36 @@
 meta:
-  generated_at: '2026-10-02T04:00:11.606312'
+  generated_at: '2026-10-03T04:00:11.855795'
   window_hours: 24
-  sessions_scan: 7
-  candidates: 11
-  duplicates_found: 3
+  sessions_scan: 3
+  candidates: 3
+  duplicates_found: 2
 candidates:
-- session: 20261001_185956_093e
-  time: 10-01 19:02
-  phrase: 'Validation errors:
+- session: be0f9b6b0697
+  time: 10-02 11:56
+  phrase: 'reformule la ligne édito
 
-    - Response is not valid JSON: Invalid control character at: line 1 column 13412
-    (char 13411)'
-- session: 1eaec4f78085
-  time: 10-01 19:04
-  phrase: Le « je » porte le propos ; la liste est une expérience partagée, pas un
-    cadre méthodologique de marque.","citations":["« On pourrait croire que parce
-    que je suis coach, je ne vacille jamais.
-- session: 1eaec4f78085
-  time: 10-01 19:24
-  phrase: '#hypersensible #lacherprise #systemenerveux #livredumoment #affirmationdesoi
-    #neurosciences #sandrinaperrin
+    structure chaque jour avec les 3 hooks par post et plateforme classé par scoring
+    JEV véfié
 
-    🔴 YOUTUBE (Format : Titre de Vidéo + Description)
-
-    Titre de la vidéo : Hypersensible en société : Comment ne plus gâcher tes soirées
-    (21 clés) Ou : Arrête de copier les autres : Sauve ton systè'
-- session: 1eaec4f78085
-  time: 10-01 19:27
-  phrase: pour obtenir des infos et des probalités robustes, il faut le nourrir avec
-    de la data.
-- session: 1eaec4f78085
-  time: 10-01 19:29
-  phrase: pour insta, elle plafonneà 730 abonnés, et les likes ne dépassent jamais
-    de 20.
-- session: 20261001_193003_116d
-  time: 10-01 19:30
-  phrase: Rechercher ce que la RECHERCHE ÉTABLIE dit des structures de phrase et procédés
-    de langage qui captent l'attention et déclenchent la lecture d'un texte court
-    (post de réseau social, accroche, titre).
-- session: 1eaec4f78085
-  time: 10-01 19:35
-  phrase: Affirmer 'il faut plus d'abonnés pour être vu' est donc faux au niveau du
-    mécanisme.","chiffres_precis":"Aucune plateforme ne publie de seuil d'abonnés
-    déclenchant la distribution.
-- session: 1eaec4f78085
-  time: 10-01 19:35
-  phrase: '(status=completed, api_calls=44, 314.78s) ---
-
-    {"trouvailles":[{"point":"YouTube documente officiellement que le titre, la miniature
-    et la description sont les principaux facteurs de décision de clic dans le feed,
-    il ne s''agit pas d''un mythe mais d''une documentation produit.","chiffres_precis":"Aucun'
-- session: 1eaec4f78085
-  time: 10-01 19:35
-  phrase: 'Un hook qui révèle qu''une info existe sans la donner (''le seul mot qui
-    a changé la donne, c''est...'') exploite ce mécanisme.", "chiffres_precis": "Théorie
-    robuste, répliquée 30 ans ; mécanisme causal établi, pas de taille d''effet unique",
-    "url_source": "https://psycnet.apa.org/record/1994-30725-001"}'
-- session: 1eaec4f78085
-  time: 10-01 19:36
-  phrase: Aucune mesure d'attention soutenue, aucune mesure de dispositif narratif,
-    aucune mesure en contexte de lecture de post social.
-- session: 20261001_192936_218a
-  time: 10-01 19:41
-  phrase: jobs delivery_failed toujours en attente de ton go.
+    corrige les textes qui te sembles incohérents'
+- session: be0f9b6b0697
+  time: 10-02 16:10
+  phrase: 'oui, si elle parle du livre, il faut placer : HYPERSENSIBLES LÂCHER-PRISE
+    pour être soi: S’affirmer avec confiance -Guide pratique- 21 jours pour te libérer
+    du regard de l’autre et révéler pleinement qui tu es !'
+- session: 20261002_162257_aa29
+  time: 10-02 19:26
+  phrase: il faut mieux structurer et simplifier pour lui montrer l'essetiel important
+    pour elle
 duplicates:
-- candidate: Le « je » porte le propos ; la liste est une expérience partagée, pas
-    un cadre méthodologique de marque.","citations":["
+- candidate: 'oui, si elle parle du livre, il faut placer : HYPERSENSIBLES LÂCHER-PRISE
+    pour être soi: S’affirmer avec confiance -Guid'
   matches: cortex/personas/sandrina.md
-  similarity: 0.71
+  similarity: 0.55
+  action: verifier contexte
+- candidate: il faut mieux structurer et simplifier pour lui montrer l'essetiel important
+    pour elle
+  matches: cortex/rules/sandrina-format-livrable.md
+  similarity: 0.89
   action: verifier doublon / fusionner
-- candidate: Affirmer 'il faut plus d'abonnés pour être vu' est donc faux au niveau
-    du mécanisme.","chiffres_precis":"Aucune platefor
-  matches: cortex/concepts/sandrina-hooks-2026.md
-  similarity: 0.53
-  action: verifier contexte
-- candidate: jobs delivery_failed toujours en attente de ton go.
-  matches: cortex/concepts/efficience-tokens-pc-vps.md
-  similarity: 0.5
-  action: verifier contexte
 note: Le script propose, ne modifie rien. Appliquer en session (H2).

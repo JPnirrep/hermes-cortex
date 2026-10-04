@@ -18,3 +18,24 @@ session: '-'
 status: ok
 target: hermes-cron:026c51ccdf6b
 ts: '2026-10-01T13:55:46+02:00'
+---
+action: 'cron: reparation 5 delivery_failed + scripts yaml sur venv python'
+actor: argos
+approved: jp
+note: 'GO JP; verifie en base: delivery_outcome=delivered; doctor 0/36'
+receipt_id: 47f36d3f71da
+session: 20261001_192936_218a65
+status: ok
+target: hermes-cron
+ts: '2026-10-03T20:00:40+02:00'
+---
+action: cron job Compteur Efficience supprime
+actor: argos
+approved: jp
+note: 'decision JP: non vital + objet mort (0 appel SLM depuis 25/09, tarif plat);
+  Efficience Gate conserve'
+receipt_id: 61938e214f6a
+session: 20261001_192936_218a65
+status: ok
+target: hermes-cron:d08095ef2eeb
+ts: '2026-10-03T20:00:40+02:00'
