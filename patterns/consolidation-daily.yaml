@@ -1,82 +1,22 @@
 meta:
-  generated_at: '2026-10-04T04:00:12.072546'
+  generated_at: '2026-10-05T04:00:20.897253'
   window_hours: 24
-  sessions_scan: 3
-  candidates: 13
-  duplicates_found: 2
+  sessions_scan: 2
+  candidates: 3
+  duplicates_found: 0
 candidates:
-- session: 1307fc41ebfc
-  time: 10-03 18:43
-  phrase: 'mission: Il faut trouver une alternative soit gratuite, soit pas chère,
-    à buffer pour permettre à Sandrina de pouvoir planifier la publication de ces
-    communications YouTube, Instagram et LinkedIn.'
-- session: 1307fc41ebfc
-  time: 10-03 19:04
-  phrase: il faut que tu fasses quelque chose de robuste et utilisable et faible en
-    consommation de token
-- session: 1307fc41ebfc
-  time: 10-03 19:55
-  phrase: il faut garder postiz (la base existante) et fais ce qu'il faut pour que
-    ce soit robuste et fiable
-- session: 20261003_195545_d666
-  time: 10-03 19:55
-  phrase: Ne prétends jamais qu'une étape est réussie sans en avoir la preuve en sortie
-    de commande.
-- session: 20261001_192936_218a
-  time: 10-03 19:57
-  phrase: si ça ne fonctionne par et que ce n'est pas vital, il faut supprimer
-- session: 1307fc41ebfc
-  time: 10-03 20:25
-  phrase: IL EST INTERDIT DE LA SUPPRIMER OU DE LA RECRÉER.
-- session: 1307fc41ebfc
-  time: 10-03 20:25
-  phrase: 'Démarrer la stack Postiz : `cd /opt/postiz && sudo docker compose -f docker-compose.yaml
-    -f docker-compose.override.yaml up -d` (attention : les fichiers appartiennent
-    à root, utiliser sudo pour docker compose, ou préciser le --project-directory).'
-- session: 1307fc41ebfc
-  time: 10-03 20:25
-  phrase: 'CONTRAINTES STRICTES :
+- session: 267fd56c296a
+  time: 10-04 11:47
+  phrase: Pour les formats, il faut rester sur le format vertical me semble-t-il.
+- session: 267fd56c296a
+  time: 10-04 11:52
+  phrase: 'par contre, je veux une mise en page qui soit trèe claire:
 
-    - NE JAMAIS supprimer/recréer la base postiz-db-local ni les volumes postiz_postiz-config
-    / postiz_postiz-uploads / postiz_postiz-redis-data.'
-- session: 1307fc41ebfc
-  time: 10-03 20:25
-  phrase: 'FORMAT DU RAPPORT FINAL attendu (concis, factuel, en français) :
-
-    - Statut : OK / PARTIEL / ÉCHEC
-
-    - URLs et codes HTTP observés (avec la commande réellement exécutée)
-
-    - Liste des conteneurs en cours avec leur statut
-
-    - Chemin des fichiers créés/modifiés
-
-    - Preuve que jpp180866@gmail.com est toujours pr'
-- session: 1307fc41ebfc
-  time: 10-03 20:25
-  phrase: Postiz est accessible en HTTPS via Traefik sur `https://framedeck.kleia-up.fr`,
-    certificat Let's Encrypt valide, base de données cliente intacte.
-- session: 1307fc41ebfc
-  time: 10-03 20:25
-  phrase: 'Persistance testée : `docker restart traefik` → `/auth` renvoie toujours
-    200.'
-- session: 1307fc41ebfc
-  time: 10-03 20:25
-  phrase: Seuls les volumes **internes Temporal** (`postiz_temporal-postgres-data`,
-    `-elasticsearch-data`) ont été recréés — contiennent uniquement le système Temporal,
-    jamais de donnée cliente.
-- session: 1307fc41ebfc
-  time: 10-03 20:25
-  phrase: '**Temporal auto-setup 1.28.1 défaillant** — échec membership ringpop en
-    boucle → backend Postiz bloquait sans jamais binder le port 3000 (`/api` 502).'
-duplicates:
-- candidate: Ne prétends jamais qu'une étape est réussie sans en avoir la preuve en
-    sortie de commande.
-  matches: cortex/concepts/at-custos.md
-  similarity: 0.5
-  action: verifier contexte
-- candidate: IL EST INTERDIT DE LA SUPPRIMER OU DE LA RECRÉER.
-  matches: cortex/concepts/cas-ecole-question3-heritage.md
-  similarity: 0.75
-  action: verifier doublon / fusionner
+    Donc c''est par jour, chaque jour il faut mettre les trois hook proposés, le texte
+    en dessous et sur une colonne à côté le visuel proposé ou le visuel existant avec
+    le lien cliquable pour aller le chercher sur le K Drive.'
+- session: 20261004_120139_b6ac
+  time: 10-04 12:10
+  phrase: génial, il faut que ce soit interactif.
+duplicates: []
 note: Le script propose, ne modifie rien. Appliquer en session (H2).

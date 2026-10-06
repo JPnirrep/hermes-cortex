@@ -1,47 +1,55 @@
 meta:
-  generated_at: '2026-09-28T04:00:11.250729'
+  generated_at: '2026-10-05T04:00:21.097563'
   window_days: 90
-  skill_count_installed: 181
-  skill_count_used: 65
+  skill_count_installed: 198
+  skill_count_used: 82
 tools_top:
 - - terminal
-  - 2880
-- - read_file
-  - 365
-- - patch
-  - 349
-- - write_file
-  - 311
-- - skill_view
-  - 209
+  - 4508
 - - execute_code
-  - 195
+  - 1188
+- - read_file
+  - 691
+- - patch
+  - 584
+- - write_file
+  - 518
+- - skill_view
+  - 306
 - - search_files
-  - 174
+  - 248
+- - web_search
+  - 247
+- - skill_manage
+  - 134
 - - session_search
   - 132
-- - skill_manage
-  - 89
-- - web_search
-  - 84
-- - web_extract
-  - 48
-- - tool_call
-  - 39
-- - clarify
-  - 35
-- - memory
-  - 35
 - - vision_analyze
-  - 34
+  - 101
+- - browser_navigate
+  - 82
+- - tool_call
+  - 78
+- - web_extract
+  - 75
+- - browser_console
+  - 73
 skills:
+  cost-zero-cron-operations:
+    usage: 17
+    sessions: 13
+    class: CHAUD
   youtube-transcription:
-    usage: 15
-    sessions: 10
+    usage: 17
+    sessions: 12
     class: CHAUD
   benchmark-outillage-externe:
-    usage: 14
-    sessions: 11
+    usage: 15
+    sessions: 12
+    class: CHAUD
+  session-maintenance:
+    usage: 12
+    sessions: 8
     class: CHAUD
   analyse-transactionnelle-custos:
     usage: 12
@@ -51,37 +59,45 @@ skills:
     usage: 11
     sessions: 5
     class: CHAUD
-  cost-zero-cron-operations:
-    usage: 10
-    sessions: 7
+  hermes-agent:
+    usage: 11
+    sessions: 8
     class: CHAUD
   debat-multi-agent-structure:
+    usage: 10
+    sessions: 6
+    class: CHAUD
+  vagus-context-guardian:
+    usage: 10
+    sessions: 4
+    class: CHAUD
+  infomaniak-kdrive:
     usage: 9
-    sessions: 5
+    sessions: 7
     class: CHAUD
   deep-tech-research-analysis:
     usage: 9
     sessions: 6
     class: CHAUD
-  session-maintenance:
-    usage: 8
-    sessions: 5
-    class: CHAUD
-  hermes-agent:
-    usage: 8
+  hooks-social-multiplateforme:
+    usage: 9
     sessions: 6
     class: CHAUD
   redaction-custos:
     usage: 8
     sessions: 4
     class: CHAUD
-  vagus-context-guardian:
-    usage: 8
-    sessions: 3
-    class: CHAUD
   coding-standards-vagus:
     usage: 8
     sessions: 1
+    class: CHAUD
+  kleia-up:
+    usage: 8
+    sessions: 6
+    class: CHAUD
+  visuels-post-social:
+    usage: 8
+    sessions: 4
     class: CHAUD
   session-classifier:
     usage: 7
@@ -107,6 +123,10 @@ skills:
     usage: 6
     sessions: 1
     class: CHAUD
+  html-document-generation:
+    usage: 6
+    sessions: 6
+    class: CHAUD
   custos-analyse-numerique:
     usage: 5
     sessions: 2
@@ -127,6 +147,10 @@ skills:
     usage: 5
     sessions: 3
     class: CHAUD
+  google-workspace:
+    usage: 4
+    sessions: 4
+    class: TIEDE
   custos-theme-production:
     usage: 4
     sessions: 3
@@ -138,6 +162,26 @@ skills:
   co-editing-testimony:
     usage: 4
     sessions: 1
+    class: TIEDE
+  typed-decision-calibration:
+    usage: 4
+    sessions: 2
+    class: TIEDE
+  hermes-config-management:
+    usage: 4
+    sessions: 4
+    class: TIEDE
+  service-decommissioning:
+    usage: 4
+    sessions: 3
+    class: TIEDE
+  session-handoff:
+    usage: 4
+    sessions: 3
+    class: TIEDE
+  provider-cost-forensics:
+    usage: 4
+    sessions: 2
     class: TIEDE
   garde-fous-tokens:
     usage: 3
@@ -155,6 +199,14 @@ skills:
     usage: 3
     sessions: 2
     class: TIEDE
+  daily-briefing-workflow:
+    usage: 3
+    sessions: 2
+    class: TIEDE
+  prism-pipeline-operations:
+    usage: 3
+    sessions: 3
+    class: TIEDE
   video-ocr-extraction:
     usage: 3
     sessions: 1
@@ -162,10 +214,6 @@ skills:
   analyse-strategique-ia:
     usage: 3
     sessions: 1
-    class: TIEDE
-  html-document-generation:
-    usage: 3
-    sessions: 3
     class: TIEDE
   ompa-quality-eval-workflow:
     usage: 3
@@ -175,13 +223,13 @@ skills:
     usage: 3
     sessions: 1
     class: TIEDE
-  kleia-up:
+  jev-typesafe:
     usage: 3
     sessions: 3
     class: TIEDE
-  google-workspace:
-    usage: 2
-    sessions: 2
+  vagus-ui-ux:
+    usage: 3
+    sessions: 3
     class: TIEDE
   kleia-landing-pages:
     usage: 2
@@ -192,14 +240,6 @@ skills:
     sessions: 2
     class: TIEDE
   benchmark-modeles-llm:
-    usage: 2
-    sessions: 2
-    class: TIEDE
-  infomaniak-kdrive:
-    usage: 2
-    sessions: 1
-    class: TIEDE
-  prism-pipeline-operations:
     usage: 2
     sessions: 2
     class: TIEDE
@@ -219,13 +259,37 @@ skills:
     usage: 2
     sessions: 2
     class: TIEDE
-  hermes-config-management:
-    usage: 2
-    sessions: 2
-    class: TIEDE
   tag:je:
     usage: 2
     sessions: 2
+    class: TIEDE
+  seo-geo-content-structure:
+    usage: 2
+    sessions: 2
+    class: TIEDE
+  web-content-seo-geo:
+    usage: 2
+    sessions: 2
+    class: TIEDE
+  knowledge-workspace-architecture:
+    usage: 2
+    sessions: 2
+    class: TIEDE
+  lof-social-publishing:
+    usage: 2
+    sessions: 2
+    class: TIEDE
+  analyse-style-sandrina:
+    usage: 2
+    sessions: 1
+    class: TIEDE
+  run-receipts:
+    usage: 2
+    sessions: 2
+    class: TIEDE
+  llm-model-benchmarking:
+    usage: 2
+    sessions: 1
     class: TIEDE
   theme-verificateur:
     usage: 1
@@ -248,10 +312,6 @@ skills:
     sessions: 1
     class: TIEDE
   analyse-transactionnelle:
-    usage: 1
-    sessions: 1
-    class: TIEDE
-  daily-briefing-workflow:
     usage: 1
     sessions: 1
     class: TIEDE
@@ -279,39 +339,44 @@ skills:
     usage: 1
     sessions: 1
     class: TIEDE
-  typed-decision-calibration:
+  session-cost-reporting:
     usage: 1
     sessions: 1
     class: TIEDE
-  jev-typesafe:
+  hermes-shared-state:
     usage: 1
     sessions: 1
     class: TIEDE
-  seo-geo-content-structure:
+  hermes-kanban-operations:
     usage: 1
     sessions: 1
     class: TIEDE
-  web-content-seo-geo:
+  redaction-post-social-kleia:
+    usage: 1
+    sessions: 1
+    class: TIEDE
+  deny-rules-gateway:
+    usage: 1
+    sessions: 1
+    class: TIEDE
+  docker-traefik-deploy:
     usage: 1
     sessions: 1
     class: TIEDE
 crons:
   baf0e8d3594c:
-    runs: 511
+    runs: 498
     last_status: running
-  ee581b72b5f1:
-    runs: 246
-    last_status: completed
-  34073eda1bec:
-    runs: 63
-    last_status: completed
-  9639d6016313:
-    runs: 21
-    last_status: completed
   8cfedec3ba36:
     runs: 21
     last_status: completed
-  4f94aa326b77:
+  ee581b72b5f1:
+    runs: 240
+    last_status: completed
+  34073eda1bec:
+    runs: 62
+    last_status: completed
+  c37ee43d3236:
     runs: 21
     last_status: completed
   7838695fd220:
@@ -321,22 +386,34 @@ crons:
     runs: 6
     last_status: completed
   a1b2c3d4e5f6:
+    runs: 1
+    last_status: completed
+  288a80044517:
     runs: 6
+    last_status: completed
+  d08095ef2eeb:
+    runs: 8
     last_status: completed
   104c8ad85215:
     runs: 6
-    last_status: running
+    last_status: completed
   4db42924e917:
     runs: 5
     last_status: completed
+  9639d6016313:
+    runs: 20
+    last_status: completed
   31ba67571d44:
-    runs: 5
+    runs: 6
     last_status: completed
   omp_quality_eval:
     runs: 5
     last_status: completed
+  4f94aa326b77:
+    runs: 22
+    last_status: completed
   816459eea541:
-    runs: 5
+    runs: 6
     last_status: completed
   5728c2d37bd5:
     runs: 5
@@ -347,31 +424,49 @@ crons:
   c5da719cf72d:
     runs: 5
     last_status: completed
+  0dbc16047753:
+    runs: 5
+    last_status: completed
+  c8001aa82d81:
+    runs: 5
+    last_status: completed
   37be492898da:
     runs: 5
     last_status: completed
-  0204450ee7e2:
-    runs: 17
+  4d6d477854d1:
+    runs: 6
     last_status: completed
-  d67016cc6ba0:
-    runs: 17
+  41cf92c2f128:
+    runs: 2
     last_status: completed
-  c37ee43d3236:
-    runs: 11
+  e54653202523:
+    runs: 1
+    last_status: completed
+  43240803b830:
+    runs: 1
+    last_status: completed
+  411ded3bcb7c:
+    runs: 1
+    last_status: completed
+  026c51ccdf6b:
+    runs: 15
+    last_status: completed
+  2ee23b6dfbec:
+    runs: 1
+    last_status: completed
+  2f6ba1203141:
+    runs: 1
+    last_status: completed
+  fdbbb3c3ad21:
+    runs: 1
     last_status: completed
   129183e20ce0:
     runs: 1
     last_status: completed
-  d08095ef2eeb:
-    runs: 6
-    last_status: completed
-  41cf92c2f128:
-    runs: 1
-    last_status: completed
-  2c5efbee740a:
-    runs: 1
-    last_status: completed
   42887598d6cd:
+    runs: 1
+    last_status: completed
+  f1fa402fe699:
     runs: 1
     last_status: completed
   fe8686c3158b:
@@ -382,25 +477,26 @@ skills_frozen:
 - ajout-musique-libre-droit
 - analyse-adaptation-hsp
 - analyse-forme-livrables
-- analyse-style-sandrina
 - analyse-tempo-exercices
 - ascii-art
 - astronomical-ephemeris
 - audit-claims-performance-ia
+- audit-usage-service
+- base-connaissance-competences
 - bidirectional-skill-sync
 - blackboard-engine
 - blocked-page-recovery
 - book-cover-design
 - book-cover-project
 - book-launch-audit
-- box
+- canva-mcp-automation
+- challenge-livrable-existant
 - cloud-data-migration
 - cloud-quota-reclaim
 - cloud-storage-inventory
 - coherence-titre-message
 - comfyui
 - commercialisation-agent-ia
-- competitor-news-monitor
 - compilation-retours-beta
 - computer-use
 - connexion-social-token
@@ -409,18 +505,19 @@ skills_frozen:
 - crash-test-vps
 - data-sourcing
 - delegation-fanout-research
-- deny-rules-gateway
 - deterministic-agent-architecture
-- docker-traefik-deploy
 - document-fusion-revision
 - document-knowledge-ingestion
 - document-localization-pipeline
 - document-rag-ingestion
 - document-translation-pipeline
 - docx
+- dossier-retraite-france
+- envoi-mail-verifie
+- espace-validation-publication
 - excalidraw
+- financement-formation-france
 - framedeck-operations
-- github
 - github-auth
 - github-code-review
 - github-issue-to-pr
@@ -430,21 +527,18 @@ skills_frozen:
 - grounded-citations
 - grounded-structured-extraction
 - handoff-sanitization
-- hermes-kanban-operations
-- hermes-shared-state
+- hermes-gateway-host-ops
+- hermes-update-verification
 - hermes-vault-governance
 - huggingface-hub
 - image-layer-decomposition
 - iterative-narrative-production
-- knowledge-workspace-architecture
 - landlock-sandboxing
 - langextract-grounded-extraction
 - livrables-depuis-rapport
 - livre-kdp-production
-- llm-model-benchmarking
 - lof-canva-automation
 - lof-prod-workflow
-- lof-social-publishing
 - marche-francais-benchmark
 - media-recovery
 - merge-reconciler
@@ -460,10 +554,13 @@ skills_frozen:
 - pdf
 - pdf-to-email
 - personal-finance-analysis
+- plan-commercial-chiffre
 - podcast-archiving
 - podcast-rss-recovery
+- port-forward-diagnosis
 - prediction-instrumentation
 - pretext
+- project-decommissioning
 - protocole-ord-qualite
 - provider-model-verification
 - recit-editing-workflow
@@ -472,9 +569,6 @@ skills_frozen:
 - relecture-themes-custos
 - rss-feeds
 - self-hosted-deployment
-- service-decommissioning
-- session-cost-reporting
-- session-handoff
 - session-librarian
 - session-overflow-protocol
 - shell-regression-harnesses
@@ -482,14 +576,15 @@ skills_frozen:
 - sketch
 - skill-catalog-hygiene
 - slm-local-benchmarking
+- sortie-fournisseur-cloud
 - sourced-answer-engine
 - strategic-business-creation
 - touchdesigner-mcp
+- transcription-audio-locale
 - vagus-os-orchestration
 - vagus-pipeline-transcription
 - vagus-quant-system
 - vagus-telegram-gateway-setup
-- vagus-ui-ux
 - vagus-whatsapp-gateway-setup
 - validation-scientifique-sandrina
 - veille-etat-externe
