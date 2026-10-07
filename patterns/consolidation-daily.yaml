@@ -1,22 +1,34 @@
 meta:
-  generated_at: '2026-10-05T04:00:20.897253'
+  generated_at: '2026-10-06T04:00:21.902723'
   window_hours: 24
-  sessions_scan: 2
-  candidates: 3
-  duplicates_found: 0
+  sessions_scan: 3
+  candidates: 4
+  duplicates_found: 2
 candidates:
-- session: 267fd56c296a
-  time: 10-04 11:47
-  phrase: Pour les formats, il faut rester sur le format vertical me semble-t-il.
-- session: 267fd56c296a
-  time: 10-04 11:52
-  phrase: 'par contre, je veux une mise en page qui soit trèe claire:
+- session: d9659fe10373
+  time: 10-05 11:08
+  phrase: '✅
 
-    Donc c''est par jour, chaque jour il faut mettre les trois hook proposés, le texte
-    en dessous et sur une colonne à côté le visuel proposé ou le visuel existant avec
-    le lien cliquable pour aller le chercher sur le K Drive.'
-- session: 20261004_120139_b6ac
-  time: 10-04 12:10
-  phrase: génial, il faut que ce soit interactif.
-duplicates: []
+    > Aval sur les faits « je » : toujours en attente, non abordée dans les audios.'
+- session: 20261005_145944_7b75
+  time: 10-05 15:23
+  phrase: Attention, je ne veux pas que tu crées quoi que ce soit, tu me dis comment
+    tu vois les choses.
+- session: 20261005_161811_cff4
+  time: 10-05 16:26
+  phrase: "oui, il faut ajouter un CTA \nest ce que cela est sur canva?"
+- session: 20261005_161811_cff4
+  time: 10-05 16:37
+  phrase: dernière slide, il faut montrer le livre, tu as la photo
+duplicates:
+- candidate: '✅
+
+    > Aval sur les faits « je » : toujours en attente, non abordée dans les audios.'
+  matches: cortex/personas/sandrina.md
+  similarity: 0.57
+  action: verifier contexte
+- candidate: dernière slide, il faut montrer le livre, tu as la photo
+  matches: memories/MEMORY.md
+  similarity: 0.5
+  action: verifier contexte
 note: Le script propose, ne modifie rien. Appliquer en session (H2).
