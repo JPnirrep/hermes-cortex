@@ -1,34 +1,9 @@
 meta:
-  generated_at: '2026-10-06T04:00:21.902723'
+  generated_at: '2026-10-07T04:00:21.463746'
   window_hours: 24
-  sessions_scan: 3
-  candidates: 4
-  duplicates_found: 2
-candidates:
-- session: d9659fe10373
-  time: 10-05 11:08
-  phrase: '✅
-
-    > Aval sur les faits « je » : toujours en attente, non abordée dans les audios.'
-- session: 20261005_145944_7b75
-  time: 10-05 15:23
-  phrase: Attention, je ne veux pas que tu crées quoi que ce soit, tu me dis comment
-    tu vois les choses.
-- session: 20261005_161811_cff4
-  time: 10-05 16:26
-  phrase: "oui, il faut ajouter un CTA \nest ce que cela est sur canva?"
-- session: 20261005_161811_cff4
-  time: 10-05 16:37
-  phrase: dernière slide, il faut montrer le livre, tu as la photo
-duplicates:
-- candidate: '✅
-
-    > Aval sur les faits « je » : toujours en attente, non abordée dans les audios.'
-  matches: cortex/personas/sandrina.md
-  similarity: 0.57
-  action: verifier contexte
-- candidate: dernière slide, il faut montrer le livre, tu as la photo
-  matches: memories/MEMORY.md
-  similarity: 0.5
-  action: verifier contexte
+  sessions_scan: 0
+  candidates: 0
+  duplicates_found: 0
+candidates: []
+duplicates: []
 note: Le script propose, ne modifie rien. Appliquer en session (H2).
