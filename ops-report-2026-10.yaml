@@ -1,0 +1,16 @@
+# Ops Report Mensuel — généré automatiquement (no_agent, coût 0)
+month: 2026-10
+generated_at: 2026-10-08T12:35:05+02:00
+crons:
+  actifs: 33
+  en_echec: "Watchdog crons (muets ou en echec) (1); Run-Receipts Watchdog (4)"
+executions_mois:
+  total: 1001
+  echecs: 7
+  livraisons_ratees: 0
+ressources:
+  disque_racine: 82%
+  memoire: 65%
+  load1: 0.99
+incidents_hermes_mois: 1011
+couts_30j: "  TOTAL consolidé (mesuré + recalculé)  : $8.5710   EXPOSITION NON TARIFÉE (tokens)       : 70 lignes, 54.7M cache + 3.65M entrée — provider(s) sans grille sourcée : ?, cometapi, custom, openrouter, zai "
