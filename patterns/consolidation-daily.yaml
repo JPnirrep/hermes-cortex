@@ -1,21 +1,40 @@
 meta:
-  generated_at: '2026-10-08T04:00:25.158971'
+  generated_at: '2026-10-09T04:00:24.879700'
   window_hours: 24
-  sessions_scan: 1
-  candidates: 3
-  duplicates_found: 0
+  sessions_scan: 3
+  candidates: 6
+  duplicates_found: 2
 candidates:
-- session: 74a0b613cdd0
-  time: 10-07 10:21
-  phrase: 'supprime de la liste les domains morts - corrige le google.c avec .com
+- session: 8882c043a358
+  time: 10-08 08:54
+  phrase: Il faut que ce soit disponible pour Sandrina (son profil hermes) également
+- session: ab7fc8ad1e45
+  time: 10-08 10:46
+  phrase: 'https://youtu.be/nPrOlRR_PR0
 
-    montre moi les 13 suspects'
-- session: 74a0b613cdd0
-  time: 10-07 10:29
-  phrase: il faut aussi réaliser un corps demail qui soit beau, agréable à lire..
-- session: 74a0b613cdd0
-  time: 10-07 10:35
-  phrase: d'ailleurs il faut me remettre dans la liste, cela me permet de savoir si
-    tout fonctionne bien.
-duplicates: []
+    cette vidéo youtube est une masterclass sur comment augmenter le nombre de followers
+    sur la plateforme X toutefois il y a dedans beaucoup de tips qu''il faut pomper
+    qu''il faut étudier en profondeur pour pouvoir les réutiliser sur d''autres plateformes
+    me semble-t-il donc t'
+- session: ab7fc8ad1e45
+  time: 10-08 11:12
+  phrase: il faut créer une machine à lead à partir de cela.
+- session: ab7fc8ad1e45
+  time: 10-08 11:17
+  phrase: pour X, il faut tout créer pour sandrina/kleia-up.
+- session: 4cd773104a51
+  time: 10-08 12:33
+  phrase: attention, il ya dejà bcp de cron.
+- session: 4cd773104a51
+  time: 10-08 13:10
+  phrase: corrige la dette
+duplicates:
+- candidate: pour X, il faut tout créer pour sandrina/kleia-up.
+  matches: memories/MEMORY.md
+  similarity: 0.6
+  action: verifier contexte
+- candidate: corrige la dette
+  matches: cortex/concepts/custos-grille-orientation.md
+  similarity: 0.5
+  action: verifier contexte
 note: Le script propose, ne modifie rien. Appliquer en session (H2).

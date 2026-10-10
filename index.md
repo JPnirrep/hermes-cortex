@@ -40,6 +40,7 @@ Le RAG est réindexé automatiquement dès qu'un fichier de connaissance change 
   moment (`rm rag-index.db && python3 rag-env/rag_index.py`).
 
 ## Concepts metier
+- [Dashboard des sujets (Notebook Hermes)](sujets/DASHBOARD.md) — carte globale des sujets travaillés, générée par `sujets/sujets.py` ; règle : `sujets.py check "<titre>"` AVANT de créer un sujet (anti-doublon)
 - [Custos Pricing](concepts/custos-pricing.md)
 - [Custos Doctrine](concepts/custos-doctrine.md)
 - [Custos Style Auteur](concepts/custos-style-auteur.md)
