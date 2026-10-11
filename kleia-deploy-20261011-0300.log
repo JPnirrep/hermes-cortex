@@ -1,0 +1,10 @@
+=== Deploiement retrait Google — 2026-10-11 03:00:23 ===
+--- verif bundle ---
+[OK] aucune reference Google/Fontshare dans dist/
+[INFO] polices copiees dans dist/fonts : 6
+--- redemarrage des conteneurs ---
+time="2026-10-11T03:00:23+02:00" level=warning msg="/home/debian/workspace/kleia-workspace/deploy/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+--- verif services ---
+kleia-backend : 
+kleia-frontend : 
+=== STATUT FINAL : ECHEC_CONTENEUR_kleia-frontend ===

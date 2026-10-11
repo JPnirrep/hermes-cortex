@@ -1,40 +1,29 @@
 meta:
-  generated_at: '2026-10-09T04:00:24.879700'
+  generated_at: '2026-10-10T04:00:24.963637'
   window_hours: 24
-  sessions_scan: 3
-  candidates: 6
-  duplicates_found: 2
+  sessions_scan: 2
+  candidates: 3
+  duplicates_found: 1
 candidates:
-- session: 8882c043a358
-  time: 10-08 08:54
-  phrase: Il faut que ce soit disponible pour Sandrina (son profil hermes) également
-- session: ab7fc8ad1e45
-  time: 10-08 10:46
-  phrase: 'https://youtu.be/nPrOlRR_PR0
-
-    cette vidéo youtube est une masterclass sur comment augmenter le nombre de followers
-    sur la plateforme X toutefois il y a dedans beaucoup de tips qu''il faut pomper
-    qu''il faut étudier en profondeur pour pouvoir les réutiliser sur d''autres plateformes
-    me semble-t-il donc t'
-- session: ab7fc8ad1e45
-  time: 10-08 11:12
-  phrase: il faut créer une machine à lead à partir de cela.
-- session: ab7fc8ad1e45
-  time: 10-08 11:17
-  phrase: pour X, il faut tout créer pour sandrina/kleia-up.
-- session: 4cd773104a51
-  time: 10-08 12:33
-  phrase: attention, il ya dejà bcp de cron.
-- session: 4cd773104a51
-  time: 10-08 13:10
-  phrase: corrige la dette
+- session: a34c4c4eccae
+  time: 10-09 10:51
+  phrase: 'Vérifications après reindex watcher : dashboard redescendu à 3 questions
+    ouvertes, règle « Plafond : 15 » présente dans le RAG (retrievable en session),
+    watcher stable.'
+- session: 19dbb0d40d1b
+  time: 10-09 17:37
+  phrase: C'est toujours la même chose, c'est que j'ai aussi dit Sans qui m'envoie
+    des documents, des infos, des audio, des...
+- session: 19dbb0d40d1b
+  time: 10-09 17:42
+  phrase: Est-ce que tu peux reprendre toute cette réflexion et la challenger, la
+    contredire, et voir où sont les zones d'ombre que l'on ne verrait pas, et mettre
+    cela en commun dans un collège agentique, d'experts, notamment en planification
+    de production pour les réseaux sociaux, de community manager, de ma
 duplicates:
-- candidate: pour X, il faut tout créer pour sandrina/kleia-up.
-  matches: memories/MEMORY.md
-  similarity: 0.6
-  action: verifier contexte
-- candidate: corrige la dette
-  matches: cortex/concepts/custos-grille-orientation.md
-  similarity: 0.5
+- candidate: C'est toujours la même chose, c'est que j'ai aussi dit Sans qui m'envoie
+    des documents, des infos, des audio, des...
+  matches: cortex/personas/sandrina.md
+  similarity: 0.55
   action: verifier contexte
 note: Le script propose, ne modifie rien. Appliquer en session (H2).
