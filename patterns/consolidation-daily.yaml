@@ -1,29 +1,9 @@
 meta:
-  generated_at: '2026-10-10T04:00:24.963637'
+  generated_at: '2026-10-11T04:00:24.130943'
   window_hours: 24
-  sessions_scan: 2
-  candidates: 3
-  duplicates_found: 1
-candidates:
-- session: a34c4c4eccae
-  time: 10-09 10:51
-  phrase: 'Vérifications après reindex watcher : dashboard redescendu à 3 questions
-    ouvertes, règle « Plafond : 15 » présente dans le RAG (retrievable en session),
-    watcher stable.'
-- session: 19dbb0d40d1b
-  time: 10-09 17:37
-  phrase: C'est toujours la même chose, c'est que j'ai aussi dit Sans qui m'envoie
-    des documents, des infos, des audio, des...
-- session: 19dbb0d40d1b
-  time: 10-09 17:42
-  phrase: Est-ce que tu peux reprendre toute cette réflexion et la challenger, la
-    contredire, et voir où sont les zones d'ombre que l'on ne verrait pas, et mettre
-    cela en commun dans un collège agentique, d'experts, notamment en planification
-    de production pour les réseaux sociaux, de community manager, de ma
-duplicates:
-- candidate: C'est toujours la même chose, c'est que j'ai aussi dit Sans qui m'envoie
-    des documents, des infos, des audio, des...
-  matches: cortex/personas/sandrina.md
-  similarity: 0.55
-  action: verifier contexte
+  sessions_scan: 0
+  candidates: 0
+  duplicates_found: 0
+candidates: []
+duplicates: []
 note: Le script propose, ne modifie rien. Appliquer en session (H2).
