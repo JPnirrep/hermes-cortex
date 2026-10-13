@@ -1,0 +1,346 @@
+generated_at: "2026-10-12T08:00:14"
+window_days: 7
+totals:
+  n: 21
+  in: 4784405
+  out: 806453
+  cache: 100717888
+  cwrite: 0
+  cost: 0.6609574500000001
+  replay_in: 898156
+  replay_out: 534547
+  drift_in_pct: -81.2
+  calib: 5.33
+seuils:
+  ratio_asst_user: 15
+  stale_h: 4
+  input_palier: 1000000
+  cost_paliers:
+    - 2.0
+    - 5.0
+    - 10.0
+  tool_terminal_pct: 50.0
+per_session:
+  - id: "b3fb67da3e30"
+    source: "webui"
+    model: "mimo-v2.6-flash"
+    started_at: "2026-10-05T14:24:28.608601"
+    messages: "(6, 57, 109)"
+    ratio_asst_user: 9.5
+    input: 618661
+    output: 87223
+    cache_read: 4518752
+    cost_usd: 0.131
+    replay_in: 74317
+    replay_out: 30064
+    terminal_pct: 75.2
+    flags:
+      - "terminal>50%%"
+  - id: "20261005_155859_de776c"
+    source: "webui"
+    model: "deepseek-flash"
+    started_at: "2026-10-05T15:58:59.515941"
+    messages: "(6, 76, 90)"
+    ratio_asst_user: 12.7
+    input: 268365
+    output: 58688
+    cache_read: 6980992
+    cost_usd: 0.0964
+    replay_in: 64006
+    replay_out: 30439
+    terminal_pct: 58.9
+    flags:
+      - "terminal>50%%"
+  - id: "20261005_161811_cff4df"
+    source: "webui"
+    model: "deepseek-flash"
+    started_at: "2026-10-05T16:18:11.144668"
+    messages: "(6, 87, 105)"
+    ratio_asst_user: 14.5
+    input: 190421
+    output: 64092
+    cache_read: 7102592
+    cost_usd: 0.0883
+    replay_in: 46234
+    replay_out: 40333
+    terminal_pct: 57.1
+    flags:
+      - "terminal>50%%"
+  - id: "bd37fa7bc0e5"
+    source: "webui"
+    model: "glm-5.3-flashx"
+    started_at: "2026-10-06T10:53:38.692640"
+    messages: "(7, 108, 113)"
+    ratio_asst_user: 15.4
+    input: 485768
+    output: 72996
+    cache_read: 10567616
+    cost_usd: 0.0804
+    replay_in: 60913
+    replay_out: 33636
+    terminal_pct: 3.5
+    flags:
+      - "ratio_asst_user>15"
+  - id: "20261005_145944_7b75a8"
+    source: "webui"
+    model: "deepseek-flash"
+    started_at: "2026-10-05T14:59:44.026088"
+    messages: "(9, 68, 85)"
+    ratio_asst_user: 7.6
+    input: 197281
+    output: 48178
+    cache_read: 5531776
+    cost_usd: 0.0751
+    replay_in: 54996
+    replay_out: 32157
+    terminal_pct: 61.2
+    flags:
+      - "terminal>50%%"
+  - id: "20261006_123112_527824"
+    source: "webui"
+    model: "deepseek-flash"
+    started_at: "2026-10-06T12:31:12.322247"
+    messages: "(19, 120, 108)"
+    ratio_asst_user: 6.3
+    input: 487188
+    output: 45444
+    cache_read: 6594112
+    cost_usd: 0.0724
+    replay_in: 30529
+    replay_out: 38521
+    terminal_pct: 4.6
+    flags:
+      - "stale>4h"
+  - id: "19dbb0d40d1b"
+    source: "webui"
+    model: "deepseek-flash"
+    started_at: "2026-10-09T17:28:16.502643"
+    messages: "(4, 44, 47)"
+    ratio_asst_user: 11.0
+    input: 86253
+    output: 54213
+    cache_read: 3430272
+    cost_usd: 0.0558
+    replay_in: 48599
+    replay_out: 21237
+    terminal_pct: 48.9
+    flags:
+      - "stale>4h"
+  - id: "20261005_165507_f210ef"
+    source: "webui"
+    model: "deepseek-flash"
+    started_at: "2026-10-05T16:55:07.785988"
+    messages: "(2, 57, 69)"
+    ratio_asst_user: 28.5
+    input: 66001
+    output: 37363
+    cache_read: 2657280
+    cost_usd: 0.0403
+    replay_in: 24578
+    replay_out: 27108
+    terminal_pct: 58.0
+    flags:
+      - "ratio_asst_user>15"
+      - "stale>4h"
+      - "terminal>50%%"
+  - id: "59b8aa274b68"
+    source: "webui"
+    model: "glm-5.3-flashx"
+    started_at: "2026-10-08T09:49:50.811622"
+    messages: "(7, 42, 40)"
+    ratio_asst_user: 6.0
+    input: 374719
+    output: 11310
+    cache_read: 1174336
+    cost_usd: 0.0123
+    replay_in: 22125
+    replay_out: 10669
+    terminal_pct: 35.0
+    flags:
+      - "stale>4h"
+  - id: "a34c4c4eccae"
+    source: "webui"
+    model: "glm-5.3-flash"
+    started_at: "2026-10-09T10:05:03.678308"
+    messages: "(13, 103, 106)"
+    ratio_asst_user: 7.9
+    input: 228739
+    output: 82851
+    cache_read: 10373184
+    cost_usd: 0.0089
+    replay_in: 54957
+    replay_out: 44335
+    terminal_pct: 16.0
+    flags: []
+  - id: "d9659fe10373"
+    source: "webui"
+    model: "mimo-v2.6-flash"
+    started_at: "2026-10-05T10:52:23.551752"
+    messages: "(4, 73, 107)"
+    ratio_asst_user: 18.2
+    input: 424722
+    output: 51021
+    cache_read: 7781568
+    cost_usd: 0
+    replay_in: 72839
+    replay_out: 28649
+    terminal_pct: 31.8
+    flags:
+      - "ratio_asst_user>15"
+  - id: "20261005_115423_b75f8c"
+    source: "webui"
+    model: "mimo-v2.6-flash"
+    started_at: "2026-10-05T11:54:23.592201"
+    messages: "(3, 54, 75)"
+    ratio_asst_user: 18.0
+    input: 227663
+    output: 6528
+    cache_read: 1004960
+    cost_usd: 0
+    replay_in: 17485
+    replay_out: 26247
+    terminal_pct: 16.0
+    flags:
+      - "ratio_asst_user>15"
+      - "stale>4h"
+  - id: "dee45f009707"
+    source: "webui"
+    model: "mimo-v2.6-flash"
+    started_at: "2026-10-06T09:04:52.428475"
+    messages: "(3, 65, 76)"
+    ratio_asst_user: 21.7
+    input: 174059
+    output: 60853
+    cache_read: 6684800
+    cost_usd: 0
+    replay_in: 71045
+    replay_out: 29691
+    terminal_pct: 13.2
+    flags:
+      - "ratio_asst_user>15"
+  - id: "20261006_100545_cb19cd"
+    source: "webui"
+    model: "mimo-v2.6-flash"
+    started_at: "2026-10-06T10:05:45.730726"
+    messages: "(2, 32, 40)"
+    ratio_asst_user: 16.0
+    input: 71137
+    output: 7199
+    cache_read: 453440
+    cost_usd: 0
+    replay_in: 15331
+    replay_out: 20270
+    terminal_pct: 12.5
+    flags:
+      - "ratio_asst_user>15"
+      - "stale>4h"
+  - id: "74a0b613cdd0"
+    source: "webui"
+    model: "glm-5.3-flashx"
+    started_at: "2026-10-07T10:16:36.090285"
+    messages: "(12, 100, 94)"
+    ratio_asst_user: 8.3
+    input: 176443
+    output: 33698
+    cache_read: 9345152
+    cost_usd: 0
+    replay_in: 77309
+    replay_out: 31946
+    terminal_pct: 0.0
+    flags:
+      - "stale>4h"
+  - id: "8882c043a358"
+    source: "webui"
+    model: "glm-5.3-flashx"
+    started_at: "2026-10-08T08:35:32.218814"
+    messages: "(8, 80, 74)"
+    ratio_asst_user: 10.0
+    input: 104256
+    output: 20630
+    cache_read: 4088384
+    cost_usd: 0
+    replay_in: 28975
+    replay_out: 18753
+    terminal_pct: 58.1
+    flags:
+      - "stale>4h"
+      - "terminal>50%%"
+  - id: "ab7fc8ad1e45"
+    source: "webui"
+    model: "glm-5.3-flashx"
+    started_at: "2026-10-08T10:46:22.017088"
+    messages: "(5, 83, 94)"
+    ratio_asst_user: 16.6
+    input: 237663
+    output: 19055
+    cache_read: 4626880
+    cost_usd: 0
+    replay_in: 63066
+    replay_out: 20212
+    terminal_pct: 51.1
+    flags:
+      - "ratio_asst_user>15"
+      - "stale>4h"
+      - "terminal>50%%"
+  - id: "4cd773104a51"
+    source: "webui"
+    model: "glm-5.3-flashx"
+    started_at: "2026-10-08T11:57:18.953704"
+    messages: "(13, 71, 62)"
+    ratio_asst_user: 5.5
+    input: 183140
+    output: 21163
+    cache_read: 5009344
+    cost_usd: 0
+    replay_in: 47713
+    replay_out: 18290
+    terminal_pct: 0.0
+    flags:
+      - "stale>4h"
+  - id: "20261008_224956_e7ee41c7"
+    source: "telegram"
+    model: "None"
+    started_at: "2026-10-08T22:49:56.473847"
+    messages: "(1, 1, 0)"
+    ratio_asst_user: 1.0
+    input: 0
+    output: 0
+    cache_read: 0
+    cost_usd: 0
+    replay_in: 27
+    replay_out: 25
+    terminal_pct: 0.0
+    flags:
+      - "stale>4h"
+  - id: "20261008_225534_6b06726b"
+    source: "telegram"
+    model: "None"
+    started_at: "2026-10-08T22:55:34.053256"
+    messages: "(1, 1, 0)"
+    ratio_asst_user: 1.0
+    input: 0
+    output: 0
+    cache_read: 0
+    cost_usd: 0
+    replay_in: 240
+    replay_out: 25
+    terminal_pct: 0.0
+    flags:
+      - "stale>4h"
+  - id: "20261009_114710_2b1403"
+    source: "webui"
+    model: "mimo-v2.6-flash"
+    started_at: "2026-10-09T11:47:10.474577"
+    messages: "(4, 65, 67)"
+    ratio_asst_user: 16.2
+    input: 181926
+    output: 23948
+    cache_read: 2792448
+    cost_usd: 0
+    replay_in: 22872
+    replay_out: 31940
+    terminal_pct: 0.0
+    flags:
+      - "ratio_asst_user>15"
+      - "stale>4h"
+flagged_count: 20

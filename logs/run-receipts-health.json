@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-10-12T00:00:23+02:00",
+  "generated_at": "2026-10-13T00:00:13+02:00",
   "receipts_total": 5,
   "last_receipt_at": "2026-10-05T15:09:12+02:00",
-  "hours_since_last_receipt": 152.9,
-  "active_sessions_48h": 0,
+  "hours_since_last_receipt": 176.9,
+  "active_sessions_48h": 1,
   "status": "ok",
   "alerts": []
 }

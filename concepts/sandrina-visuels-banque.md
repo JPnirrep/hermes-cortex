@@ -1,5 +1,6 @@
 ---
 type: concept
+id: c108bca0e08c
 timestamp: 2026-10-02
 tags: [sandrina, visuels, kdrive, banque-images, ia-genere, droits-image, linktree]
 links: [sandrina-ligne-editoriale-20261005, sandrina-livre-hsp]

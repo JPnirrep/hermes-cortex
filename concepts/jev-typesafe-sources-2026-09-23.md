@@ -1,3 +1,12 @@
+---
+type: Concept
+id: bddccb0555fe
+title: Sources analyse Jev/TypeSafe — 23/09/2026
+timestamp: 2026-09-23
+tags: [jev, typesafe, sources, veille, sdk, system-one, pricing]
+links: [concepts/jev-titulaire-poste-decision-2026-09-28.md]
+---
+
 # Sources analyse Jev/TypeSafe — 23/09/2026
 - Vidéo: https://www.youtube.com/watch?v=pmnq5e5Xp4s (Real Python, publiée 22/09/2026, 9.8k vues)
 - Titre réel YT: "Jev + OpenRouter in Python: Classify Inputs in Seconds"
