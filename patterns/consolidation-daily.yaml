@@ -1,9 +1,33 @@
 meta:
-  generated_at: '2026-10-13T04:00:14.401646'
+  generated_at: '2026-10-14T04:00:55.237491'
   window_hours: 24
-  sessions_scan: 0
-  candidates: 0
-  duplicates_found: 0
-candidates: []
-duplicates: []
+  sessions_scan: 1
+  candidates: 5
+  duplicates_found: 1
+candidates:
+- session: 92644ab89eda
+  time: 10-13 09:47
+  phrase: Donc il faut un calendrier normal avec jour, semaine, mois, année, dans
+    lequel Sandrina peut gérer son emploi du temps avec des blocs de couleurs et des
+    rappels dessus.
+- session: 92644ab89eda
+  time: 10-13 09:51
+  phrase: Il faut créer un agenda pour Sandrina qui soit en même temps disponible
+    sur iPhone et sur son PC.
+- session: 92644ab89eda
+  time: 10-13 09:55
+  phrase: Donc il faut bien que tu enregistres ça quelque part.
+- session: 92644ab89eda
+  time: 10-13 11:17
+  phrase: je n'ai accès au vps que par toi, donc il faut que tu me l'envoie par telegram
+    (c'est sécurisé)
+- session: 92644ab89eda
+  time: 10-13 13:31
+  phrase: Il faut passer par hostinger, mais garder la possibilité de les consulter
+    sur infomaniak.
+duplicates:
+- candidate: Donc il faut bien que tu enregistres ça quelque part.
+  matches: cortex/concepts/efficience-tokens-pc-vps.md
+  similarity: 0.5
+  action: verifier contexte
 note: Le script propose, ne modifie rien. Appliquer en session (H2).
