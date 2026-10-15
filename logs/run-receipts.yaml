@@ -50,3 +50,85 @@ session: 20261005_145944_7b75a8
 status: ok
 target: pc-jp:C:/Users/JP/Downloads/mercredi-07-photos.zip
 ts: '2026-10-05T15:09:12+02:00'
+---
+action: audit du parc de cron (34 jobs) + tableau de lecture
+actor: argos
+approved: jp
+note: '20 garder / 6 corriger / 4 re-cibler / 1 arbitrer / 3 supprimer. Livrable:
+  workspace/audit-crons-20261015.md'
+receipt_id: 8bce6f65876f
+session: 20261015_092613_f0f934
+status: ok
+target: vps:hermes-cron
+ts: '2026-10-15T09:44:18+02:00'
+---
+action: suppression de 3 jobs cron (vestige + 2 Mercury interdit)
+actor: opencode
+approved: jp
+note: 288a80044517 (deploiement retrait Google, chemin retire), 3fbba6096a7b + 4f978f70c143
+  (Mercury2 interdits). Absence prouvee dans jobs.json (34 -> 31).
+receipt_id: dd2cd18a7b35
+session: 20261015_092613_f0f934
+status: ok
+target: vps:hermes-cron
+ts: '2026-10-15T09:44:18+02:00'
+---
+action: re-ciblage de 4 jobs vers Telegram (alertes invisibles)
+actor: opencode
+approved: jp
+note: '8cfedec3ba36 healthcheck, 37be492898da rapport quotidien, fe8686c3158b path-watcher,
+  cb71b11d0e85 vagus-pulse : deliver local -> telegram:6722033496'
+receipt_id: 445fd8fbe6d5
+session: 20261015_092613_f0f934
+status: ok
+target: vps:hermes-cron
+ts: '2026-10-15T09:44:18+02:00'
+---
+action: correction de 3 scripts de vigie (fausses alertes / mesure morte)
+actor: opencode
+approved: jp
+note: 'healthcheck.sh: tests prod 135.125.53.215:3000/8000 (deploiement retire + port
+  localhost) remplaces par site public HTTP 200 + API 127.0.0.1:8000 -> silencieux
+  verifie; n8n-update-check.sh: max semver au lieu de results[0] -> 2.44.2 detecte;
+  omp-eval.sh: deepseek-v4-flash (modele inexistant) -> deepseek-flash, appel API
+  verifie'
+receipt_id: 43f3eb1b36e7
+session: 20261015_092613_f0f934
+status: ok
+target: vps:profiles/vagus/scripts
+ts: '2026-10-15T09:44:18+02:00'
+---
+action: transcripts-pulse en pause + fetch-audio en quotidien
+actor: opencode
+approved: jp
+note: 'Pulse: hote ''ton-pc.local'' inexistant, PC jamais online, 96 tirs/jour pour
+  rien (1,6 Mo de log). Pipeline a reparer (22 audios fetched en attente de transcription)
+  -> projet, pas correctif cron.'
+receipt_id: 9d954c184a98
+session: 20261015_092613_f0f934
+status: partial
+target: vps:hermes-cron
+ts: '2026-10-15T09:44:18+02:00'
+---
+action: analyse video Dots (OpenAI) + comparatif Vagus OS
+actor: argos
+approved: auto
+note: Transcription mot-pour-mot depuis 16:00 (2950 mots), map Excalidraw reconstituee
+  (8 branches), rapport de comparaison. Livrable remis a JP.
+receipt_id: a01452cae6cf
+session: 20261015_092613_f0f934
+status: ok
+target: vps:workspace/dots-analyse
+ts: '2026-10-15T09:44:18+02:00'
+---
+action: correctif vagus-pulse (interpreteur epingle au venv projet)
+actor: opencode
+approved: jp
+note: 'ModuleNotFoundError yaml (python3 nu selon PATH -> venv sans system-site-packages).
+  Decouvert par la preuve E2E du re-ciblage, pas par l''audit. Preuve apres correctif:
+  status=completed + delivery_outcome=delivered, rapport Quant recu.'
+receipt_id: 348c345687c5
+session: 20261015_092613_f0f934
+status: ok
+target: vps:projets/investissement/vagus_quant
+ts: '2026-10-15T09:48:44+02:00'
