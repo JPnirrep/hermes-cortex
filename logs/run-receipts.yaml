@@ -132,3 +132,19 @@ session: 20261015_092613_f0f934
 status: ok
 target: vps:projets/investissement/vagus_quant
 ts: '2026-10-15T09:48:44+02:00'
+---
+action: audit des taches planifiees hors Hermes (crontab OS 16 + cron.d 3)
+actor: argos
+approved: auto
+note: '9 garder / 6 corriger / 2 supprimer. Defauts: /var/mail/debian 2738 mails jamais
+  lus (2592 auto-sync + 97 git + 47 echecs RAG ''source: not found'' -> le fallback
+  RAG de 05:00 n''a JAMAIS indexe, sauve par le watcher inotify non persistant); fetch-audio
+  en double divergent (le job Hermes execute la copie perimee); backup-brightbean
+  mort depuis juillet (service decommissionne); envoi_rapport.py one-shot du 22/09
+  perime; r4-bench ABANDON (modele Qwen3 absent); backup-custos ecrase chaque semaine
+  le meme fichier (date codee en dur). Livrable: workspace/audit-20261015-os.md'
+receipt_id: 7a44cc030a56
+session: 20261015_092613_f0f934
+status: ok
+target: vps:crontab
+ts: '2026-10-15T10:03:28+02:00'
