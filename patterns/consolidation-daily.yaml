@@ -1,9 +1,33 @@
 meta:
-  generated_at: '2026-10-15T04:00:55.658911'
+  generated_at: '2026-10-16T04:02:49.756005'
   window_hours: 24
-  sessions_scan: 0
-  candidates: 0
-  duplicates_found: 0
-candidates: []
-duplicates: []
+  sessions_scan: 2
+  candidates: 3
+  duplicates_found: 1
+candidates:
+- session: 93b0e825400e
+  time: 10-15 12:01
+  phrase: '[Workspace::v1: /home/debian/workspace]
+
+    il faut qu''en un regard, sandrina sache ou elle en est dans son objectif et ses
+    sous objectifs'
+- session: 93b0e825400e
+  time: 10-15 12:01
+  phrase: '**Contexte 1:**
+
+    <!-- hermes-selected-context -->
+
+    > l''état complet toujours visible dès l''ouverture'
+- session: 20261015_123102_fff5
+  time: 10-15 12:27
+  phrase: '[Workspace::v1: /home/debian/workspace]
+
+    [IMPORTANT: Background process proc_36257c8563c7 completed (exit_code=-15).'
+duplicates:
+- candidate: '[Workspace::v1: /home/debian/workspace]
+
+    il faut qu''en un regard, sandrina sache ou elle en est dans son objectif et ses '
+  matches: cortex/concepts/sandrina-ligne-editoriale-20261005.md
+  similarity: 0.54
+  action: verifier contexte
 note: Le script propose, ne modifie rien. Appliquer en session (H2).
