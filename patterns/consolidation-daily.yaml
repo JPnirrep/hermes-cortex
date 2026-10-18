@@ -1,33 +1,35 @@
 meta:
-  generated_at: '2026-10-16T04:02:49.756005'
+  generated_at: '2026-10-17T04:00:52.014672'
   window_hours: 24
-  sessions_scan: 2
-  candidates: 3
-  duplicates_found: 1
+  sessions_scan: 3
+  candidates: 5
+  duplicates_found: 0
 candidates:
-- session: 93b0e825400e
-  time: 10-15 12:01
-  phrase: '[Workspace::v1: /home/debian/workspace]
+- session: 5cb79d4c1f5d
+  time: 10-16 11:57
+  phrase: '**Pertinence pour ton écosystème** : bon candidat « binaire statique, léger,
+    pas cher » — Go+SQLite sans dépendance obligatoire, et il se branche sur ton lecteur
+    RSS existant plutôt que de le remplacer.'
+- session: 5cb79d4c1f5d
+  time: 10-16 11:57
+  phrase: '**Limites d''auto-hébergement** (pertinent vu ton profil « léger »)
 
-    il faut qu''en un regard, sandrina sache ou elle en est dans son objectif et ses
-    sous objectifs'
-- session: 93b0e825400e
-  time: 10-15 12:01
-  phrase: '**Contexte 1:**
+    - Pas un binaire statique : **4 conteneurs** (Next.js + PostgreSQL + Redis + SearXNG)
+    — empreinte plus lourde qu''une stack Go/Rust type SearXNG-like minimal
 
-    <!-- hermes-selected-context -->
-
-    > l''état complet toujours visible dès l''ouverture'
+    - Next.js sur Node = RAM non négligeable sur petit VPS ; SearXNG est la part'
+- session: 5cb79d4c1f5d
+  time: 10-16 11:57
+  phrase: Non vérifiable au-delà du site (entreprise quasi anonyme — attention, type
+    site vitrine générique, parfois généré).
 - session: 20261015_123102_fff5
-  time: 10-15 12:27
-  phrase: '[Workspace::v1: /home/debian/workspace]
+  time: 10-16 12:34
+  phrase: corrige et intègre aussi la poosibilité pour l'utilisateur d'avoir la possibilité
+    de créer deux versions du même post pour comparer.
+- session: 20261015_123102_fff5
+  time: 10-16 12:46
+  phrase: 'v2 pas valide car pas parlant
 
-    [IMPORTANT: Background process proc_36257c8563c7 completed (exit_code=-15).'
-duplicates:
-- candidate: '[Workspace::v1: /home/debian/workspace]
-
-    il faut qu''en un regard, sandrina sache ou elle en est dans son objectif et ses '
-  matches: cortex/concepts/sandrina-ligne-editoriale-20261005.md
-  similarity: 0.54
-  action: verifier contexte
+    maquette mieux'
+duplicates: []
 note: Le script propose, ne modifie rien. Appliquer en session (H2).
