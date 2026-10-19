@@ -1,35 +1,9 @@
 meta:
-  generated_at: '2026-10-17T04:00:52.014672'
+  generated_at: '2026-10-18T04:01:51.627853'
   window_hours: 24
-  sessions_scan: 3
-  candidates: 5
+  sessions_scan: 0
+  candidates: 0
   duplicates_found: 0
-candidates:
-- session: 5cb79d4c1f5d
-  time: 10-16 11:57
-  phrase: '**Pertinence pour ton écosystème** : bon candidat « binaire statique, léger,
-    pas cher » — Go+SQLite sans dépendance obligatoire, et il se branche sur ton lecteur
-    RSS existant plutôt que de le remplacer.'
-- session: 5cb79d4c1f5d
-  time: 10-16 11:57
-  phrase: '**Limites d''auto-hébergement** (pertinent vu ton profil « léger »)
-
-    - Pas un binaire statique : **4 conteneurs** (Next.js + PostgreSQL + Redis + SearXNG)
-    — empreinte plus lourde qu''une stack Go/Rust type SearXNG-like minimal
-
-    - Next.js sur Node = RAM non négligeable sur petit VPS ; SearXNG est la part'
-- session: 5cb79d4c1f5d
-  time: 10-16 11:57
-  phrase: Non vérifiable au-delà du site (entreprise quasi anonyme — attention, type
-    site vitrine générique, parfois généré).
-- session: 20261015_123102_fff5
-  time: 10-16 12:34
-  phrase: corrige et intègre aussi la poosibilité pour l'utilisateur d'avoir la possibilité
-    de créer deux versions du même post pour comparer.
-- session: 20261015_123102_fff5
-  time: 10-16 12:46
-  phrase: 'v2 pas valide car pas parlant
-
-    maquette mieux'
+candidates: []
 duplicates: []
 note: Le script propose, ne modifie rien. Appliquer en session (H2).
