@@ -42,6 +42,8 @@ Le RAG est réindexé automatiquement dès qu'un fichier de connaissance change 
 ## Concepts metier
 - [Dashboard des sujets (Notebook Hermes)](sujets/DASHBOARD.md) — carte globale des sujets travaillés, générée par `sujets/sujets.py` ; règle : `sujets.py check "<titre>"` AVANT de créer un sujet (anti-doublon)
 - [Custos Pricing](concepts/custos-pricing.md)
+- [Kleia-up — marque & positionnement](concepts/kleia-brand.md) — identité, 3 principes, ton, 5 piliers du Leadership Organique
+- [Kit agent de développement (ex-antigravity)](concepts/agent-kit-developpement.md) — framework d'ingénierie logicielle de référence (opencode/cursor/codex)
 - [Custos Doctrine](concepts/custos-doctrine.md)
 - [Custos Style Auteur](concepts/custos-style-auteur.md)
 - [AT × CUSTOS](concepts/at-custos.md) — couche laïque d'interprétation (22 valeurs → comportements AT)
