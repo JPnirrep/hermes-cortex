@@ -1,55 +1,55 @@
 meta:
-  generated_at: '2026-10-12T04:00:13.786732'
+  generated_at: '2026-10-19T04:00:14.519738'
   window_days: 90
-  skill_count_installed: 217
-  skill_count_used: 97
+  skill_count_installed: 223
+  skill_count_used: 100
 tools_top:
 - - terminal
-  - 4893
+  - 5336
 - - execute_code
-  - 1613
+  - 1785
 - - patch
-  - 711
+  - 829
 - - read_file
-  - 683
+  - 718
 - - write_file
-  - 543
+  - 584
 - - skill_view
-  - 374
-- - search_files
-  - 249
+  - 402
 - - vision_analyze
-  - 239
+  - 286
+- - search_files
+  - 254
 - - web_search
-  - 173
+  - 212
+- - browser_exec
+  - 175
 - - skill_manage
-  - 157
+  - 166
 - - session_search
   - 132
-- - browser_exec
-  - 96
 - - tool_call
-  - 90
+  - 108
 - - web_extract
-  - 76
-- - browser_navigate
-  - 62
+  - 86
+- - memory
+  - 65
 skills:
+  youtube-transcription:
+    usage: 22
+    sessions: 17
+    class: CHAUD
   cost-zero-cron-operations:
     usage: 18
     sessions: 14
     class: CHAUD
-  youtube-transcription:
-    usage: 18
-    sessions: 13
-    class: CHAUD
   hermes-agent:
-    usage: 16
-    sessions: 12
+    usage: 18
+    sessions: 14
     class: CHAUD
   benchmark-outillage-externe:
-    usage: 15
-    sessions: 12
+    usage: 16
+    sessions: 13
     class: CHAUD
   visuels-post-social:
     usage: 15
@@ -75,6 +75,10 @@ skills:
     usage: 11
     sessions: 7
     class: CHAUD
+  session-handoff:
+    usage: 11
+    sessions: 10
+    class: CHAUD
   vagus-context-guardian:
     usage: 10
     sessions: 4
@@ -87,9 +91,9 @@ skills:
     usage: 9
     sessions: 6
     class: CHAUD
-  session-handoff:
+  hermes-cron-ops:
     usage: 9
-    sessions: 8
+    sessions: 7
     class: CHAUD
   hooks-social-multiplateforme:
     usage: 9
@@ -131,9 +135,9 @@ skills:
     usage: 6
     sessions: 6
     class: CHAUD
-  hermes-cron-ops:
+  vagus-ui-ux:
     usage: 6
-    sessions: 4
+    sessions: 6
     class: CHAUD
   custos-analyse-numerique:
     usage: 5
@@ -151,15 +155,27 @@ skills:
     usage: 5
     sessions: 2
     class: CHAUD
+  multi-sources-research:
+    usage: 5
+    sessions: 4
+    class: CHAUD
+  hermes-config-management:
+    usage: 5
+    sessions: 5
+    class: CHAUD
+  run-receipts:
+    usage: 5
+    sessions: 5
+    class: CHAUD
+  transcription-audio-locale:
+    usage: 5
+    sessions: 4
+    class: CHAUD
   google-workspace:
     usage: 4
     sessions: 4
     class: TIEDE
   custos-theme-production:
-    usage: 4
-    sessions: 3
-    class: TIEDE
-  multi-sources-research:
     usage: 4
     sessions: 3
     class: TIEDE
@@ -170,10 +186,6 @@ skills:
   typed-decision-calibration:
     usage: 4
     sessions: 2
-    class: TIEDE
-  hermes-config-management:
-    usage: 4
-    sessions: 4
     class: TIEDE
   service-decommissioning:
     usage: 4
@@ -186,10 +198,6 @@ skills:
   provider-cost-forensics:
     usage: 4
     sessions: 2
-    class: TIEDE
-  transcription-audio-locale:
-    usage: 4
-    sessions: 3
     class: TIEDE
   windows-ssh-tunnel:
     usage: 4
@@ -210,6 +218,10 @@ skills:
   persona-modeling:
     usage: 3
     sessions: 1
+    class: TIEDE
+  protocole-brief-avant-prod:
+    usage: 3
+    sessions: 3
     class: TIEDE
   agent-plugin-delivery:
     usage: 3
@@ -247,11 +259,11 @@ skills:
     usage: 3
     sessions: 3
     class: TIEDE
-  vagus-ui-ux:
+  hermes-shared-state:
     usage: 3
     sessions: 3
     class: TIEDE
-  run-receipts:
+  vagus-pipeline-transcription:
     usage: 3
     sessions: 3
     class: TIEDE
@@ -299,10 +311,6 @@ skills:
     usage: 2
     sessions: 2
     class: TIEDE
-  hermes-shared-state:
-    usage: 2
-    sessions: 2
-    class: TIEDE
   knowledge-workspace-architecture:
     usage: 2
     sessions: 2
@@ -343,10 +351,6 @@ skills:
     usage: 2
     sessions: 1
     class: TIEDE
-  vagus-pipeline-transcription:
-    usage: 2
-    sessions: 2
-    class: TIEDE
   vagus-os:document-knowledge-ingestion:
     usage: 2
     sessions: 2
@@ -358,6 +362,10 @@ skills:
   delegation-fanout-research:
     usage: 2
     sessions: 1
+    class: TIEDE
+  cloture-session-livrables:
+    usage: 2
+    sessions: 2
     class: TIEDE
   theme-verificateur:
     usage: 1
@@ -372,10 +380,6 @@ skills:
     sessions: 1
     class: TIEDE
   theme-correcteur:
-    usage: 1
-    sessions: 1
-    class: TIEDE
-  protocole-brief-avant-prod:
     usage: 1
     sessions: 1
     class: TIEDE
@@ -423,84 +427,95 @@ skills:
     usage: 1
     sessions: 1
     class: TIEDE
+  handoff-sanitization:
+    usage: 1
+    sessions: 1
+    class: TIEDE
+  reverse-engineer-anything:
+    usage: 1
+    sessions: 1
+    class: TIEDE
 crons:
   baf0e8d3594c:
-    runs: 508
-    last_status: running
+    runs: 362
+    last_status: completed
   ee581b72b5f1:
-    runs: 245
+    runs: 345
     last_status: completed
   34073eda1bec:
-    runs: 63
+    runs: 48
     last_status: completed
   9639d6016313:
-    runs: 21
+    runs: 30
     last_status: completed
   4f94aa326b77:
-    runs: 21
+    runs: 19
     last_status: completed
   026c51ccdf6b:
-    runs: 21
-    last_status: completed
+    runs: 31
+    last_status: failed
   8cfedec3ba36:
-    runs: 21
-    last_status: completed
-  7838695fd220:
-    runs: 6
-    last_status: completed
-  410854cf3e18:
-    runs: 6
+    runs: 30
     last_status: completed
   c37ee43d3236:
-    runs: 21
+    runs: 30
+    last_status: completed
+  7838695fd220:
+    runs: 8
+    last_status: completed
+  410854cf3e18:
+    runs: 8
     last_status: completed
   288a80044517:
-    runs: 6
+    runs: 4
     last_status: completed
+  fe8686c3158b:
+    runs: 2
+    last_status: running
   104c8ad85215:
-    runs: 6
+    runs: 8
     last_status: running
   4db42924e917:
-    runs: 5
+    runs: 7
+    last_status: failed
+  2ee23b6dfbec:
+    runs: 1
     last_status: completed
   31ba67571d44:
-    runs: 5
+    runs: 7
     last_status: completed
   omp_quality_eval:
-    runs: 5
+    runs: 7
     last_status: completed
   816459eea541:
-    runs: 5
+    runs: 7
     last_status: completed
   5728c2d37bd5:
-    runs: 5
-    last_status: completed
+    runs: 7
+    last_status: failed
   fa0e667fb879:
-    runs: 5
+    runs: 7
     last_status: completed
   c5da719cf72d:
-    runs: 5
-    last_status: completed
-  0dbc16047753:
-    runs: 1
-    last_status: failed
-  c8001aa82d81:
-    runs: 1
+    runs: 7
     last_status: completed
   37be492898da:
-    runs: 5
+    runs: 7
+    last_status: completed
+  2f6ba1203141:
+    runs: 1
     last_status: completed
   4d6d477854d1:
-    runs: 5
+    runs: 8
     last_status: failed
   f1fa402fe699:
-    runs: 5
+    runs: 3
+    last_status: completed
+  cb71b11d0e85:
+    runs: 3
     last_status: completed
   41cf92c2f128:
-    runs: 2
-    last_status: completed
-  35451464e20b:
-    runs: 1
+    runs: 3
     last_status: completed
   129183e20ce0:
     runs: 1
@@ -508,9 +523,6 @@ crons:
   42887598d6cd:
     runs: 1
     last_status: completed
-  fe8686c3158b:
-    runs: 1
-    last_status: running
 skills_frozen:
 - acquisition-web-zero-cout
 - agenda-copilot
@@ -522,6 +534,7 @@ skills_frozen:
 - ascii-art
 - assemblage-rushes-master-shorts
 - astronomical-ephemeris
+- audit-application-source
 - audit-claims-performance-ia
 - audit-coherence-lot-livrables
 - audit-performance-reseaux-sociaux
@@ -534,7 +547,6 @@ skills_frozen:
 - carrousel-social
 - cgv-conformite-consommation-france
 - challenge-livrable-existant
-- cloture-session-livrables
 - cloud-data-migration
 - cloud-quota-reclaim
 - cloud-storage-inventory
@@ -568,10 +580,10 @@ skills_frozen:
 - github-repo-management
 - grounded-citations
 - grounded-structured-extraction
-- handoff-sanitization
 - hermes-gateway-host-ops
 - hermes-update-verification
 - hermes-vault-governance
+- hostinger-reach-api
 - huggingface-hub
 - image-layer-decomposition
 - iterative-narrative-production
@@ -588,6 +600,7 @@ skills_frozen:
 - merge-reconciler
 - mermaid-diagram-rendering
 - montage-video-rs
+- moteur-creneaux-anti-collision
 - narration-imagee-themes
 - narration-theme-personnages
 - narrative-document-production
@@ -595,6 +608,7 @@ skills_frozen:
 - ocr-and-documents
 - offre-conferenciere
 - omp-cli-orchestration
+- open-notebook-pilotage
 - openhue
 - page-vente-offre-service
 - passation-projet
@@ -611,6 +625,7 @@ skills_frozen:
 - protocole-ord-qualite
 - provider-model-verification
 - publication-rs-sandrina
+- rea-chasse-au-gaspi
 - recit-editing-workflow
 - redaction-theme-8-regles
 - reddit-reading

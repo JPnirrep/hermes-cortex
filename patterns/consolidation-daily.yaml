@@ -1,9 +1,15 @@
 meta:
-  generated_at: '2026-10-18T04:01:51.627853'
+  generated_at: '2026-10-19T04:00:14.434658'
   window_hours: 24
-  sessions_scan: 0
-  candidates: 0
+  sessions_scan: 1
+  candidates: 1
   duplicates_found: 0
-candidates: []
+candidates:
+- session: 20261018_225950_a20d
+  time: 10-18 22:59
+  phrase: "Paralléliser les flux au lieu de chaîner séquentiellement\nLa principale\
+    \ leçon de ces architectures est qu'il faut éliminer les boucles d'attente linéaire\
+    \ :\n * Exécution en arrière-plan (/bg) : Lancez des sous-tâches en tâche de fond\
+    \ avec /bg pour ne pas bloquer votre interface pendant que l'agent in"
 duplicates: []
 note: Le script propose, ne modifie rien. Appliquer en session (H2).
