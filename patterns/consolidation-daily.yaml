@@ -1,15 +1,30 @@
 meta:
-  generated_at: '2026-10-19T04:00:14.434658'
+  generated_at: '2026-10-20T04:00:42.589729'
   window_hours: 24
-  sessions_scan: 1
-  candidates: 1
-  duplicates_found: 0
+  sessions_scan: 7
+  candidates: 3
+  duplicates_found: 1
 candidates:
-- session: 20261018_225950_a20d
-  time: 10-18 22:59
-  phrase: "Paralléliser les flux au lieu de chaîner séquentiellement\nLa principale\
-    \ leçon de ces architectures est qu'il faut éliminer les boucles d'attente linéaire\
-    \ :\n * Exécution en arrière-plan (/bg) : Lancez des sous-tâches en tâche de fond\
-    \ avec /bg pour ne pas bloquer votre interface pendant que l'agent in"
-duplicates: []
+- session: 20261019_174201_1b64
+  time: 10-19 17:51
+  phrase: 'c''est une pro + toutes les informations pour la médiation pro à intégrer
+
+    tu gardes absolument le tarif que sandrina à donner dans ce doc
+
+    et propose un nouveau devis mis à jour'
+- session: 20261019_181137_c74e
+  time: 10-19 18:12
+  phrase: il faut que tu les télécharges sur mon pc
+- session: 20261019_181137_c74e
+  time: 10-19 18:26
+  phrase: 'erreur dans l''adresse de Sandrina Perrin, c''est 85440 Poiroux == fais
+    la correction
+
+    tu n''est pas obligé de mentionné "particulier" et contrat conclus avec un consommateur,
+    c''est un devis.'
+duplicates:
+- candidate: il faut que tu les télécharges sur mon pc
+  matches: cortex/personas/sandrina.md
+  similarity: 0.67
+  action: verifier doublon / fusionner
 note: Le script propose, ne modifie rien. Appliquer en session (H2).
