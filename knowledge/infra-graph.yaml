@@ -3,74 +3,89 @@
 # Test de validité : python3 build-infra-graph.py --impact <nœud>
 
 meta:
-  generated_at: '2026-09-25T12:07:25+02:00'
+  generated_at: '2026-10-21T08:57:23+02:00'
   generator: build-infra-graph.py
   source: inférence locale (cron/systemd/scripts/docker/ports/crontab)
-  node_count: 254
-  edge_count: 153
+  node_count: 298
+  edge_count: 203
   vault_scan: false
   kinds:
-    script: 91
-    file: 8
-    dir: 18
-    port: 19
-    secret: 11
-    cron: 29
+    script: 108
+    file: 18
+    dir: 22
+    secret: 15
+    port: 26
+    cron: 31
     channel: 2
-    service: 42
-    container: 16
-    cron_sys: 18
+    service: 46
+    container: 14
+    cron_sys: 16
   relations:
     file:/home/debian/.hermes/profiles/vagus/cron/jobs.json: 2
     dir:/home/debian/PDCA/cron_logs: 3
+    file:/home/debian/.hermes/profiles/vagus/state.db: 9
+    file:/home/debian/.hermes/profiles/vagus/cache/scratch/bench-mimo.json: 1
+    file:/home/debian/.hermes/profiles/vagus/.env: 9
+    secret:DEEPSEEK_API_KEY: 4
+    secret:COMETAPI_API_KEY: 2
+    file:/home/debian/.hermes-cortex/brief-jp.py: 1
     dir:/home/debian/workspace/hermes-vault: 2
-    port:11434: 7
+    port:11434: 9
+    file:/home/debian/r4-bench/results/compteur_efficience.json: 1
+    file:/home/debian/.hermes/profiles/vagus/skills/.usage.json: 1
+    file:/home/debian/.hermes/profiles/vagus/cache/scratch/croisement-claude.json: 1
+    dir:/home/debian/.hermes/profiles/vagus: 3
     dir:/home/debian/workspace/custos: 1
     dir:/home/debian/.hermes/profiles/vagus/sessions/: 1
-    file:/home/debian/.hermes/profiles/vagus/state.db: 6
-    secret:SMTP_USER: 3
+    dir:/home/debian/.hermes/profiles: 1
+    secret:OPENROUTER_API_KEY: 5
+    port:8650: 4
     secret:GMAIL_USER: 2
-    secret:GMAIL_APP_PASSWORD: 2
     secret:EMAIL_JP: 3
     secret:SMTP_PASS: 3
-    file:/home/debian/transcripts/queues/numerologie.yaml: 3
-    file:/home/debian/transcripts/youtube_cookies.txt: 1
+    secret:SMTP_USER: 3
+    secret:GMAIL_APP_PASSWORD: 2
     dir:/home/debian/transcripts/output: 2
+    file:/home/debian/transcripts/youtube_cookies.txt: 1
     dir:/home/debian/transcripts/raw: 2
-    secret:DEEPSEEK_API_KEY: 3
+    file:/home/debian/transcripts/queues/numerologie.yaml: 3
     port:8789: 2
     file:/home/debian/.hermes/profiles/vagus/agent-hooks/session-digest.sh: 1
-    dir:/home/debian/laya-env/lib/python3.11/site-packages: 1
-    dir:/home/debian/.hermes/profiles/vagus: 3
-    dir:/home/debian/laya_models: 1
-    dir:/home/debian/workspace/LOF: 1
-    file:/home/debian/.hermes/profiles/vagus/.env: 3
-    secret:PROMPT_USER: 1
+    file:/home/debian/.hermes/profiles/vagus/cache/scratch/jev-decision-resultat.json: 1
+    dir:/home/debian/.hermes/profiles/vagus/cache/scratch/jev-venv/lib/python3.11/site-packages: 1
+    file:/home/debian/.hermes/profiles/vagus/cache/scratch/jev-scenarios.json: 2
+    file:/home/debian/.hermes/profiles/vagus/cache/scratch/jev-openrouter.json: 1
+    dir:/home/debian/hermes-cortex/kleia-deploy-: 1
+    dir:/home/debian/workspace/kleia-workspace/frontend: 1
+    dir:/home/debian/workspace/kleia-workspace/deploy: 1
+    port:8000: 1
     secret:INCEPTION_API_KEY: 2
+    secret:PROMPT_USER: 1
     file:/home/debian/workspace/hermes-vault/state_meta.json: 3
+    file:/home/debian/workspace/n8n/docker-compose.yml: 1
+    dir:/home/debian/.hermes/profiles/vagus/cron/output/n8n-update-check: 1
+    secret:N8N_ENCRYPTION_KEY: 1
     dir:/home/debian/omp-optimization: 1
     file:/home/debian/omp-optimization/gen_answers_b_all.sh: 1
     dir:/home/debian/hermes-cortex: 1
     dir:/home/debian/workspace/hermes-vault/sandboxes/quarantine: 1
+    secret:HERMES_SESSION_ID: 1
+    file:/home/debian/workspace/sandrina-strategie/semaine-41-travail/verifier.py: 1
     dir:/home/debian/transcripts/raw/N005/: 1
     dir:/home/debian/transcripts/raw/: 1
     secret:MISTRAL_API_KEY: 2
     secret:SSH_KEY: 1
     secret:SSH_USER: 1
     dir:/home/debian/projets/investissement/vagus_quant: 1
-    port:8650: 2
-    dir:/home/debian/.hermes/kanban/boards/: 1
     dir:/home/debian/hermes-shared: 3
+    dir:/home/debian/.hermes/kanban/boards/: 1
     port:18080: 2
     script:healthcheck.sh: 1
+    channel:telegram: 15
     script:daily-report.sh: 1
     script:backup-notification.sh: 1
-    script:kleia_backup.sh: 1
-    script:synthese-hebdo.sh: 1
-    script:taste-smart.sh: 1
     script:db-maintenance.sh: 1
     script:custos-purge-rgpd.sh: 1
-    channel:origin: 9
     script:argos-watchman.sh: 1
     script:omp-eval.sh: 1
     script:vagus-cleanup.sh: 1
@@ -82,33 +97,38 @@ meta:
     script:quarantine-mediator.sh: 1
     script:maintain_sessions.sh: 1
     script:kleia-newsletter-reminder.sh: 1
-    channel:telegram: 1
     script:path-watcher.py: 1
     script:consolidation-daily.py: 1
     script:hygiene-hebdo.sh: 1
     script:watch-slmlocal.sh: 1
+    channel:origin: 4
     script:verify-greffier.py: 1
     script:vigie-wikiskill.py: 1
     script:predict-cron-check.py: 1
-    script:laya-shadow-gate.py: 1
+    script:efficience-gate.py: 1
+    script:pr122333-veille.sh: 1
+    script:n8n-update-check.sh: 1
+    script:cron-watchdog.py: 1
+    script:run_receipt_check.py: 1
+    script:ops-report-mensuel.sh: 1
     script:watch_cortex.sh: 1
     script:headroom-fallback-proxy.py: 1
     port:9119: 1
-    script:bootstrap.py: 1
+    script:webui_launch.sh: 1
     script:cockpit_api.py: 1
-    script:notify_email.py: 1
+    dir:/home/debian/workspace/linkedin-sandrina/workflow: 1
     script:mcp_gateway.py: 1
     port:8644: 1
-    script:server.py: 1
+    script:server.py: 2
     port:8099: 1
     port:8123: 1
     script:orchestrator.py: 1
-    port:5678: 1
+    port:18081: 1
     port:80: 1
     port:443: 1
+    port:5678: 1
     port:14322: 1
     port:5001: 1
-    script:batch_buffer.py: 1
     script:auto-sync.sh: 1
     script:backup-brightbean.sh: 1
     script:transcribe-cron.sh: 1
@@ -135,36 +155,16 @@ nodes:
   name: agent-vault
   image: infisical/agent-vault:latest
   ports: 127.0.0.1:14321->14321/tcp, 0.0.0.0:14322->14322/tcp, [::]:14322->14322/tcp
-- id: container:brightbean-studio-worker-1
+- id: container:ea-test-app
   kind: container
-  name: brightbean-studio-worker-1
-  image: brightbean-studio-worker
-  ports: 8000/tcp
-- id: container:deploy-nginx-1
+  name: ea-test-app
+  image: alextselegidis/easyappointments:1.6.0
+  ports: 0.0.0.0:18081->80/tcp, [::]:18081->80/tcp
+- id: container:ea-test-db
   kind: container
-  name: deploy-nginx-1
-  image: nginx:alpine
-  ports: 0.0.0.0:80->80/tcp, [::]:80->80/tcp, 0.0.0.0:443->443/tcp, [::]:443->443/tcp
-- id: container:kleia-backend
-  kind: container
-  name: kleia-backend
-  image: deploy-backend
-  ports: 8000/tcp
-- id: container:kleia-cache
-  kind: container
-  name: kleia-cache
-  image: redis:7-alpine
-  ports: 6379/tcp
-- id: container:kleia-db
-  kind: container
-  name: kleia-db
-  image: postgres:15-alpine
-  ports: 5432/tcp
-- id: container:kleia-frontend
-  kind: container
-  name: kleia-frontend
-  image: deploy-frontend
-  ports: 80/tcp, 3000/tcp
+  name: ea-test-db
+  image: mysql:8.0
+  ports: 3306/tcp, 33060/tcp
 - id: container:lof-app
   kind: container
   name: lof-app
@@ -173,13 +173,23 @@ nodes:
 - id: container:n8n
   kind: container
   name: n8n
-  image: n8nio/n8n:latest
+  image: n8nio/n8n:2.42.0
   ports: 0.0.0.0:5678->5678/tcp, [::]:5678->5678/tcp
+- id: container:nextcloud
+  kind: container
+  name: nextcloud
+  image: nextcloud:stable-apache
+  ports: 127.0.0.1:8100->80/tcp
 - id: container:shared-postgres
   kind: container
   name: shared-postgres
   image: postgres:16-alpine
   ports: 127.0.0.1:5433->5432/tcp
+- id: container:traefik
+  kind: container
+  name: traefik
+  image: traefik:v3.3
+  ports: 0.0.0.0:80->80/tcp, [::]:80->80/tcp, 0.0.0.0:443->443/tcp, [::]:443->443/tcp
 - id: container:transparence-citoyenne-api-1
   kind: container
   name: transparence-citoyenne-api-1
@@ -217,18 +227,18 @@ nodes:
   no_agent: true
   deliver: local
   last_status: ok
-  last_run_at: '2026-09-25T02:00:07.394576+02:00'
+  last_run_at: '2026-10-21T02:00:14.238899+02:00'
   failure_streak: 0
-- id: cron:Backup PostgreSQL Kleia
+- id: cron:Brief mensuel n8n
   kind: cron
-  name: Backup PostgreSQL Kleia
-  job_id: a1b2c3d4e5f6
-  schedule: 0 3 * * *
+  name: Brief mensuel n8n
+  job_id: 411ded3bcb7c
+  schedule: 0 9 1 * *
   enabled: true
   no_agent: true
-  deliver: local
+  deliver: telegram:6722033496:5593
   last_status: ok
-  last_run_at: '2026-09-25T03:00:07.248938+02:00'
+  last_run_at: '2026-10-01T09:00:13.649478+02:00'
   failure_streak: 0
 - id: cron:CCC Meta-Learning
   kind: cron
@@ -239,18 +249,18 @@ nodes:
   no_agent: true
   deliver: local
   last_status: ok
-  last_run_at: '2026-09-01T04:00:36.679792+02:00'
+  last_run_at: '2026-10-01T04:00:11.169180+02:00'
   failure_streak: 0
 - id: cron:Collision Detector
   kind: cron
   name: Collision Detector
   job_id: 34073eda1bec
-  schedule: every 120m
+  schedule: 0 7 * * *
   enabled: true
   no_agent: true
   deliver: local
   last_status: ok
-  last_run_at: '2026-09-25T11:44:07.080555+02:00'
+  last_run_at: '2026-10-21T07:00:14.551618+02:00'
   failure_streak: 0
   role: audit
 - id: cron:DB Maintenance Vagus
@@ -262,7 +272,18 @@ nodes:
   no_agent: true
   deliver: local
   last_status: ok
-  last_run_at: '2026-09-20T05:00:50.742197+02:00'
+  last_run_at: '2026-10-18T05:02:50.636965+02:00'
+  failure_streak: 0
+- id: cron:Efficience Gate
+  kind: cron
+  name: Efficience Gate
+  job_id: c37ee43d3236
+  schedule: every 360m
+  enabled: true
+  no_agent: true
+  deliver: telegram:6722033496:4684
+  last_status: ok
+  last_run_at: '2026-10-21T03:29:15.906469+02:00'
   failure_streak: 0
 - id: cron:Healthcheck VPS
   kind: cron
@@ -271,22 +292,11 @@ nodes:
   schedule: every 360m
   enabled: true
   no_agent: true
-  deliver: local
+  deliver: telegram:6722033496
   last_status: ok
-  last_run_at: '2026-09-25T11:59:07.026975+02:00'
+  last_run_at: '2026-10-21T07:56:14.337922+02:00'
   failure_streak: 0
   role: audit
-- id: cron:Laya Shadow Gate
-  kind: cron
-  name: Laya Shadow Gate
-  job_id: 0204450ee7e2
-  schedule: every 240m
-  enabled: true
-  no_agent: true
-  deliver: local
-  last_status: ok
-  last_run_at: '2026-09-25T11:56:15.172426+02:00'
-  failure_streak: 0
 - id: cron:Newsletter Kleia-up - Rappel vendredi
   kind: cron
   name: Newsletter Kleia-up - Rappel vendredi
@@ -295,10 +305,9 @@ nodes:
   enabled: true
   no_agent: true
   deliver: telegram
-  last_status: delivery_failed
-  last_run_at: '2026-09-18T14:00:54.677622+02:00'
+  last_status: ok
+  last_run_at: '2026-10-16T14:05:50.966180+02:00'
   failure_streak: 0
-  delivery_error: no delivery target resolved for deliver=telegram
 - id: cron:OMP Quality Eval — A/B quotidien (auto-génération B si manquant)
   kind: cron
   name: OMP Quality Eval — A/B quotidien (auto-génération B si manquant)
@@ -308,7 +317,18 @@ nodes:
   no_agent: true
   deliver: None
   last_status: ok
-  last_run_at: '2026-09-25T06:00:09.057439+02:00'
+  last_run_at: '2026-10-21T06:00:58.107959+02:00'
+  failure_streak: 0
+- id: cron:Ops Report Mensuel
+  kind: cron
+  name: Ops Report Mensuel
+  job_id: 35451464e20b
+  schedule: 30 9 1 * *
+  enabled: true
+  no_agent: true
+  deliver: telegram:6722033496
+  last_status: ok
+  last_run_at: '2026-10-08T12:35:07.030374+02:00'
   failure_streak: 0
 - id: cron:Quarantine Mediator
   kind: cron
@@ -319,7 +339,7 @@ nodes:
   no_agent: true
   deliver: local
   last_status: ok
-  last_run_at: '2026-09-25T06:00:07.188424+02:00'
+  last_run_at: '2026-10-21T06:00:14.541903+02:00'
   failure_streak: 0
 - id: cron:Rapport Quotidien
   kind: cron
@@ -328,36 +348,43 @@ nodes:
   schedule: 0 8 * * *
   enabled: true
   no_agent: true
-  deliver: local
+  deliver: telegram:6722033496
   last_status: ok
-  last_run_at: '2026-09-25T08:00:07.088483+02:00'
+  last_run_at: '2026-10-21T08:00:17.401798+02:00'
   failure_streak: 0
-- id: cron:Synthese Hebdo (Mercury2)
+- id: cron:Run-Receipts Watchdog
   kind: cron
-  name: Synthese Hebdo (Mercury2)
-  job_id: 3fbba6096a7b
-  schedule: 0 7 * * 1
+  name: Run-Receipts Watchdog
+  job_id: 026c51ccdf6b
+  schedule: 0 */6 * * *
   enabled: true
   no_agent: true
-  deliver: local
-  last_status: ok
-  last_run_at: '2026-09-21T07:00:07.815200+02:00'
-  model: mercury-2
-  provider: inception
-  failure_streak: 0
-- id: cron:Vagus Taste Smart (Mercury2)
+  deliver: telegram:6722033496
+  last_status: error
+  last_run_at: '2026-10-21T06:00:17.349152+02:00'
+  failure_streak: 16
+- id: cron:Veille PR amont 122333 (fix gateway Windows)
   kind: cron
-  name: Vagus Taste Smart (Mercury2)
-  job_id: 4f978f70c143
-  schedule: 30 6 * * 1
+  name: Veille PR amont 122333 (fix gateway Windows)
+  job_id: 41cf92c2f128
+  schedule: 0 9 * * 1,3,5
   enabled: true
   no_agent: true
-  deliver: local
+  deliver: telegram:6722033496
   last_status: ok
-  last_run_at: '2026-09-21T06:30:07.978365+02:00'
-  model: mercury-2
-  provider: inception
+  last_run_at: '2026-10-19T09:00:14.127941+02:00'
   failure_streak: 0
+- id: cron:Watchdog crons (muets ou en echec)
+  kind: cron
+  name: Watchdog crons (muets ou en echec)
+  job_id: 4d6d477854d1
+  schedule: 0 8 * * *
+  enabled: true
+  no_agent: true
+  deliver: telegram:6722033496:5758
+  last_status: error
+  last_run_at: '2026-10-21T08:00:16.261721+02:00'
+  failure_streak: 6
 - id: cron:argos-watchman-daily
   kind: cron
   name: argos-watchman-daily
@@ -365,11 +392,10 @@ nodes:
   schedule: 0 6 * * *
   enabled: true
   no_agent: true
-  deliver: origin
-  last_status: delivery_failed
-  last_run_at: '2026-09-25T06:00:08.398198+02:00'
+  deliver: telegram:6722033496
+  last_status: ok
+  last_run_at: '2026-10-21T06:00:18.475951+02:00'
   failure_streak: 0
-  delivery_error: unknown platform 'webui'
   role: audit
 - id: cron:custos-purge-rgpd
   kind: cron
@@ -378,11 +404,10 @@ nodes:
   schedule: 0 6 * * 1
   enabled: true
   no_agent: true
-  deliver: origin
-  last_status: delivery_failed
-  last_run_at: '2026-09-21T06:00:09.291639+02:00'
+  deliver: telegram:6722033496
+  last_status: ok
+  last_run_at: '2026-10-19T06:00:16.489591+02:00'
   failure_streak: 0
-  delivery_error: configured thread_id 1710 for telegram:6722033496 was not found; delivered without thread_id
 - id: cron:dogma-breaker
   kind: cron
   name: dogma-breaker
@@ -392,7 +417,7 @@ nodes:
   no_agent: false
   deliver: local
   last_status: ok
-  last_run_at: '2026-09-25T05:00:07.166779+02:00'
+  last_run_at: '2026-10-21T05:00:14.477927+02:00'
   model: deepseek-flash
   provider: deepseek
   failure_streak: 0
@@ -403,11 +428,10 @@ nodes:
   schedule: 0 8 * * 1
   enabled: true
   no_agent: true
-  deliver: origin
-  last_status: delivery_failed
-  last_run_at: '2026-09-21T08:00:09.998396+02:00'
+  deliver: telegram:6722033496
+  last_status: ok
+  last_run_at: '2026-10-19T08:00:17.334472+02:00'
   failure_streak: 0
-  delivery_error: unknown platform 'webui'
 - id: cron:memory-consolidator-daily
   kind: cron
   name: memory-consolidator-daily
@@ -417,7 +441,7 @@ nodes:
   no_agent: true
   deliver: local
   last_status: ok
-  last_run_at: '2026-09-25T04:00:07.152391+02:00'
+  last_run_at: '2026-10-21T04:00:16.141625+02:00'
   failure_streak: 0
 - id: cron:path-watcher-hebdo
   kind: cron
@@ -426,9 +450,9 @@ nodes:
   schedule: 0 4 * * 1
   enabled: true
   no_agent: true
-  deliver: local
+  deliver: telegram:6722033496
   last_status: ok
-  last_run_at: '2026-09-21T04:00:08.089070+02:00'
+  last_run_at: '2026-10-19T04:00:16.304656+02:00'
   failure_streak: 0
 - id: cron:predict-journal-check
   kind: cron
@@ -439,7 +463,7 @@ nodes:
   no_agent: true
   deliver: origin
   last_status: ok
-  last_run_at: '2026-09-25T07:00:08.198949+02:00'
+  last_run_at: '2026-10-21T07:00:15.676672+02:00'
   failure_streak: 0
 - id: cron:session-maintenance-daily
   kind: cron
@@ -448,31 +472,31 @@ nodes:
   schedule: 0 2 * * *
   enabled: true
   no_agent: true
-  deliver: origin
+  deliver: local
   last_status: ok
-  last_run_at: '2026-09-25T02:00:07.206709+02:00'
+  last_run_at: '2026-10-21T02:00:14.126810+02:00'
   failure_streak: 0
 - id: cron:transcripts-fetch-audio
   kind: cron
   name: transcripts-fetch-audio
   job_id: 4f94aa326b77
-  schedule: 0 */6 * * *
+  schedule: 0 3 * * *
   enabled: true
   no_agent: true
   deliver: local
   last_status: ok
-  last_run_at: '2026-09-25T12:00:07.225038+02:00'
+  last_run_at: '2026-10-21T03:00:14.152136+02:00'
   failure_streak: 0
 - id: cron:transcripts-pulse
   kind: cron
   name: transcripts-pulse
   job_id: baf0e8d3594c
   schedule: '*/15 * * * *'
-  enabled: true
+  enabled: false
   no_agent: true
   deliver: local
   last_status: ok
-  last_run_at: '2026-09-25T12:00:12.076423+02:00'
+  last_run_at: '2026-10-15T09:31:53.774665+02:00'
   failure_streak: 0
 - id: cron:twinvault-contradictor
   kind: cron
@@ -483,7 +507,7 @@ nodes:
   no_agent: false
   deliver: local
   last_status: ok
-  last_run_at: '2026-09-25T06:30:07.068273+02:00'
+  last_run_at: '2026-10-21T06:30:15.202292+02:00'
   model: deepseek-flash
   provider: deepseek
   failure_streak: 0
@@ -494,11 +518,10 @@ nodes:
   schedule: every 28800m
   enabled: true
   no_agent: true
-  deliver: origin
-  last_status: delivery_failed
-  last_run_at: '2026-09-12T12:08:34.205762+02:00'
+  deliver: telegram:6722033496
+  last_status: ok
+  last_run_at: '2026-10-01T19:47:50.941490+02:00'
   failure_streak: 0
-  delivery_error: unknown platform 'webui'
 - id: cron:vagus-pulse-hebdo
   kind: cron
   name: vagus-pulse-hebdo
@@ -506,9 +529,9 @@ nodes:
   schedule: 0 9 * * 1
   enabled: true
   no_agent: true
-  deliver: local
+  deliver: telegram:6722033496
   last_status: ok
-  last_run_at: '2026-09-21T09:00:12.085124+02:00'
+  last_run_at: '2026-10-19T09:00:15.974321+02:00'
   failure_streak: 0
 - id: cron:verify-greffier
   kind: cron
@@ -519,7 +542,7 @@ nodes:
   no_agent: true
   deliver: origin
   last_status: ok
-  last_run_at: '2026-09-25T10:47:07.113998+02:00'
+  last_run_at: '2026-10-21T06:34:14.287030+02:00'
   failure_streak: 0
   role: audit
 - id: cron:vigie-wikiskill-derive
@@ -531,7 +554,7 @@ nodes:
   no_agent: true
   deliver: origin
   last_status: ok
-  last_run_at: '2026-09-25T07:00:07.756478+02:00'
+  last_run_at: '2026-10-21T07:00:14.973279+02:00'
   failure_streak: 0
 - id: cron:watch-slmlocal
   kind: cron
@@ -542,7 +565,7 @@ nodes:
   no_agent: true
   deliver: origin
   last_status: ok
-  last_run_at: '2026-09-25T11:58:07.122875+02:00'
+  last_run_at: '2026-10-21T08:32:14.369127+02:00'
   failure_streak: 0
 - id: cron_sys:/home/debian/.hermes/profiles/sandrina/work/digest_cron.sh
   kind: cron_sys
@@ -609,11 +632,6 @@ nodes:
   name: /home/debian/workspace/kabbalah-numerology/auto-sync.sh
   schedule: 0 * * * *
   command: /home/debian/workspace/kabbalah-numerology/auto-sync.sh
-- id: cron_sys:batch_buffer.py
-  kind: cron_sys
-  name: batch_buffer.py
-  schedule: 55 15 * * 6
-  command: cd /home/debian/workspace/LOF && python3 batch_buffer.py >> logs/batch_buffer.log 2>&1
 - id: cron_sys:bench_noul.py
   kind: cron_sys
   name: bench_noul.py
@@ -629,19 +647,26 @@ nodes:
   name: rag-env/rag_index.py
   schedule: 0 5 * * *
   command: cd /home/debian/hermes-cortex && source rag-env/bin/activate && python3 rag-env/rag_index.py >> /home/debian/.local/state/cortex-watch.log 2>&1
-- id: cron_sys:rm -rf /home/debian/backups/d3-skills-20
-  kind: cron_sys
-  name: rm -rf /home/debian/backups/d3-skills-20
-  schedule: 05 19 25 09 *
-  command: rm -rf /home/debian/backups/d3-skills-20260923 && crontab -l | grep -v d3-skills-20260923 | crontab -
 - id: dir:/home/debian/.hermes/kanban/boards/
   kind: dir
   name: /home/debian/.hermes/kanban/boards/
   path: /home/debian/.hermes/kanban/boards/
+- id: dir:/home/debian/.hermes/profiles
+  kind: dir
+  name: /home/debian/.hermes/profiles
+  path: /home/debian/.hermes/profiles
 - id: dir:/home/debian/.hermes/profiles/vagus
   kind: dir
   name: /home/debian/.hermes/profiles/vagus
   path: /home/debian/.hermes/profiles/vagus
+- id: dir:/home/debian/.hermes/profiles/vagus/cache/scratch/jev-venv/lib/python3.11/site-packages
+  kind: dir
+  name: /home/debian/.hermes/profiles/vagus/cache/scratch/jev-venv/lib/python3.11/site-packages
+  path: /home/debian/.hermes/profiles/vagus/cache/scratch/jev-venv/lib/python3.11/site-packages
+- id: dir:/home/debian/.hermes/profiles/vagus/cron/output/n8n-update-check
+  kind: dir
+  name: /home/debian/.hermes/profiles/vagus/cron/output/n8n-update-check
+  path: /home/debian/.hermes/profiles/vagus/cron/output/n8n-update-check
 - id: dir:/home/debian/.hermes/profiles/vagus/sessions/
   kind: dir
   name: /home/debian/.hermes/profiles/vagus/sessions/
@@ -654,18 +679,14 @@ nodes:
   kind: dir
   name: /home/debian/hermes-cortex
   path: /home/debian/hermes-cortex
+- id: dir:/home/debian/hermes-cortex/kleia-deploy-
+  kind: dir
+  name: /home/debian/hermes-cortex/kleia-deploy-
+  path: /home/debian/hermes-cortex/kleia-deploy-
 - id: dir:/home/debian/hermes-shared
   kind: dir
   name: /home/debian/hermes-shared
   path: /home/debian/hermes-shared
-- id: dir:/home/debian/laya-env/lib/python3.11/site-packages
-  kind: dir
-  name: /home/debian/laya-env/lib/python3.11/site-packages
-  path: /home/debian/laya-env/lib/python3.11/site-packages
-- id: dir:/home/debian/laya_models
-  kind: dir
-  name: /home/debian/laya_models
-  path: /home/debian/laya_models
 - id: dir:/home/debian/omp-optimization
   kind: dir
   name: /home/debian/omp-optimization
@@ -690,10 +711,6 @@ nodes:
   kind: dir
   name: /home/debian/transcripts/raw/N005/
   path: /home/debian/transcripts/raw/N005/
-- id: dir:/home/debian/workspace/LOF
-  kind: dir
-  name: /home/debian/workspace/LOF
-  path: /home/debian/workspace/LOF
 - id: dir:/home/debian/workspace/custos
   kind: dir
   name: /home/debian/workspace/custos
@@ -706,6 +723,22 @@ nodes:
   kind: dir
   name: /home/debian/workspace/hermes-vault/sandboxes/quarantine
   path: /home/debian/workspace/hermes-vault/sandboxes/quarantine
+- id: dir:/home/debian/workspace/kleia-workspace/deploy
+  kind: dir
+  name: /home/debian/workspace/kleia-workspace/deploy
+  path: /home/debian/workspace/kleia-workspace/deploy
+- id: dir:/home/debian/workspace/kleia-workspace/frontend
+  kind: dir
+  name: /home/debian/workspace/kleia-workspace/frontend
+  path: /home/debian/workspace/kleia-workspace/frontend
+- id: dir:/home/debian/workspace/linkedin-sandrina/workflow
+  kind: dir
+  name: /home/debian/workspace/linkedin-sandrina/workflow
+  path: /home/debian/workspace/linkedin-sandrina/workflow
+- id: file:/home/debian/.hermes-cortex/brief-jp.py
+  kind: file
+  name: /home/debian/.hermes-cortex/brief-jp.py
+  path: /home/debian/.hermes-cortex/brief-jp.py
 - id: file:/home/debian/.hermes/profiles/vagus/.env
   kind: file
   name: /home/debian/.hermes/profiles/vagus/.env
@@ -715,10 +748,34 @@ nodes:
   kind: file
   name: /home/debian/.hermes/profiles/vagus/agent-hooks/session-digest.sh
   path: /home/debian/.hermes/profiles/vagus/agent-hooks/session-digest.sh
+- id: file:/home/debian/.hermes/profiles/vagus/cache/scratch/bench-mimo.json
+  kind: file
+  name: /home/debian/.hermes/profiles/vagus/cache/scratch/bench-mimo.json
+  path: /home/debian/.hermes/profiles/vagus/cache/scratch/bench-mimo.json
+- id: file:/home/debian/.hermes/profiles/vagus/cache/scratch/croisement-claude.json
+  kind: file
+  name: /home/debian/.hermes/profiles/vagus/cache/scratch/croisement-claude.json
+  path: /home/debian/.hermes/profiles/vagus/cache/scratch/croisement-claude.json
+- id: file:/home/debian/.hermes/profiles/vagus/cache/scratch/jev-decision-resultat.json
+  kind: file
+  name: /home/debian/.hermes/profiles/vagus/cache/scratch/jev-decision-resultat.json
+  path: /home/debian/.hermes/profiles/vagus/cache/scratch/jev-decision-resultat.json
+- id: file:/home/debian/.hermes/profiles/vagus/cache/scratch/jev-openrouter.json
+  kind: file
+  name: /home/debian/.hermes/profiles/vagus/cache/scratch/jev-openrouter.json
+  path: /home/debian/.hermes/profiles/vagus/cache/scratch/jev-openrouter.json
+- id: file:/home/debian/.hermes/profiles/vagus/cache/scratch/jev-scenarios.json
+  kind: file
+  name: /home/debian/.hermes/profiles/vagus/cache/scratch/jev-scenarios.json
+  path: /home/debian/.hermes/profiles/vagus/cache/scratch/jev-scenarios.json
 - id: file:/home/debian/.hermes/profiles/vagus/cron/jobs.json
   kind: file
   name: /home/debian/.hermes/profiles/vagus/cron/jobs.json
   path: /home/debian/.hermes/profiles/vagus/cron/jobs.json
+- id: file:/home/debian/.hermes/profiles/vagus/skills/.usage.json
+  kind: file
+  name: /home/debian/.hermes/profiles/vagus/skills/.usage.json
+  path: /home/debian/.hermes/profiles/vagus/skills/.usage.json
 - id: file:/home/debian/.hermes/profiles/vagus/state.db
   kind: file
   name: /home/debian/.hermes/profiles/vagus/state.db
@@ -727,6 +784,10 @@ nodes:
   kind: file
   name: /home/debian/omp-optimization/gen_answers_b_all.sh
   path: /home/debian/omp-optimization/gen_answers_b_all.sh
+- id: file:/home/debian/r4-bench/results/compteur_efficience.json
+  kind: file
+  name: /home/debian/r4-bench/results/compteur_efficience.json
+  path: /home/debian/r4-bench/results/compteur_efficience.json
 - id: file:/home/debian/transcripts/queues/numerologie.yaml
   kind: file
   name: /home/debian/transcripts/queues/numerologie.yaml
@@ -739,6 +800,14 @@ nodes:
   kind: file
   name: /home/debian/workspace/hermes-vault/state_meta.json
   path: /home/debian/workspace/hermes-vault/state_meta.json
+- id: file:/home/debian/workspace/n8n/docker-compose.yml
+  kind: file
+  name: /home/debian/workspace/n8n/docker-compose.yml
+  path: /home/debian/workspace/n8n/docker-compose.yml
+- id: file:/home/debian/workspace/sandrina-strategie/semaine-41-travail/verifier.py
+  kind: file
+  name: /home/debian/workspace/sandrina-strategie/semaine-41-travail/verifier.py
+  path: /home/debian/workspace/sandrina-strategie/semaine-41-travail/verifier.py
 - id: port:11434
   kind: port
   name: '11434'
@@ -751,6 +820,18 @@ nodes:
   kind: port
   name: '18080'
   address: 127.0.0.1:18080
+- id: port:18081
+  kind: port
+  name: '18081'
+  address: 0.0.0.0:18081
+- id: port:42365
+  kind: port
+  name: '42365'
+  address: 127.0.0.1:42365
+- id: port:43829
+  kind: port
+  name: '43829'
+  address: 127.0.0.1:43829
 - id: port:443
   kind: port
   name: '443'
@@ -767,10 +848,14 @@ nodes:
   kind: port
   name: '80'
   address: 0.0.0.0:80
-- id: port:8080
+- id: port:8000
   kind: port
-  name: '8080'
-  address: 0.0.0.0:8080
+  name: '8000'
+  address: 127.0.0.1:8000
+- id: port:8093
+  kind: port
+  name: '8093'
+  address: 0.0.0.0:8093
 - id: port:8099
   kind: port
   name: '8099'
@@ -779,14 +864,22 @@ nodes:
   kind: port
   name: '8123'
   address: 127.0.0.1:8123
-- id: port:8181
+- id: port:8151
   kind: port
-  name: '8181'
-  address: 127.0.0.1:8181
+  name: '8151'
+  address: 0.0.0.0:8151
+- id: port:8481
+  kind: port
+  name: '8481'
+  address: 0.0.0.0:8481
 - id: port:8642
   kind: port
   name: '8642'
   address: 127.0.0.1:8642
+- id: port:8643
+  kind: port
+  name: '8643'
+  address: 0.0.0.0:8643
 - id: port:8644
   kind: port
   name: '8644'
@@ -803,6 +896,10 @@ nodes:
   kind: port
   name: '8787'
   address: 127.0.0.1:8787
+- id: port:8788
+  kind: port
+  name: '8788'
+  address: 172.17.0.1:8788
 - id: port:8789
   kind: port
   name: '8789'
@@ -820,7 +917,7 @@ nodes:
   name: argos-watchman.sh
   path: /home/debian/.hermes/profiles/vagus/scripts/argos-watchman.sh
   executable: true
-  size: 2442
+  size: 3058
   derived: false
 - id: script:auto-sync.sh
   kind: script
@@ -848,16 +945,30 @@ nodes:
   executable: true
   size: 2600
   derived: false
-- id: script:batch_buffer.py
+- id: script:bascule-modele.py
   kind: script
-  name: batch_buffer.py
+  name: bascule-modele.py
+  path: /home/debian/.hermes/profiles/vagus/scripts/bascule-modele.py
+  executable: false
+  size: 7908
+  derived: false
+- id: script:bench-mimo-vs-deepseek.py
+  kind: script
+  name: bench-mimo-vs-deepseek.py
+  path: /home/debian/.hermes/profiles/vagus/scripts/bench-mimo-vs-deepseek.py
+  executable: false
+  size: 7337
+  derived: false
 - id: script:bench_noul.py
   kind: script
   name: bench_noul.py
-- id: script:bootstrap.py
+- id: script:brief-jp-matin.sh
   kind: script
-  name: bootstrap.py
-  path: /home/debian/hermes-webui/bootstrap.py
+  name: brief-jp-matin.sh
+  path: /home/debian/.hermes/profiles/vagus/scripts/brief-jp-matin.sh
+  executable: true
+  size: 767
+  derived: false
 - id: script:ccc-meta-learning.py
   kind: script
   name: ccc-meta-learning.py
@@ -890,6 +1001,13 @@ nodes:
   executable: false
   size: 9094
   derived: false
+- id: script:compteur-efficience.py
+  kind: script
+  name: compteur-efficience.py
+  path: /home/debian/.hermes/profiles/vagus/scripts/compteur-efficience.py
+  executable: true
+  size: 11859
+  derived: false
 - id: script:consolidation-daily.py
   kind: script
   name: consolidation-daily.py
@@ -897,12 +1015,33 @@ nodes:
   executable: false
   size: 6030
   derived: false
+- id: script:context-cost-alert.py
+  kind: script
+  name: context-cost-alert.py
+  path: /home/debian/.hermes/profiles/vagus/scripts/context-cost-alert.py
+  executable: false
+  size: 10293
+  derived: false
 - id: script:cost-report.py
   kind: script
   name: cost-report.py
   path: /home/debian/.hermes/profiles/vagus/scripts/cost-report.py
   executable: true
   size: 9595
+  derived: false
+- id: script:croisement-claude.py
+  kind: script
+  name: croisement-claude.py
+  path: /home/debian/.hermes/profiles/vagus/scripts/croisement-claude.py
+  executable: false
+  size: 7259
+  derived: false
+- id: script:cron-watchdog.py
+  kind: script
+  name: cron-watchdog.py
+  path: /home/debian/.hermes/profiles/vagus/scripts/cron-watchdog.py
+  executable: false
+  size: 9282
   derived: false
 - id: script:custos-purge-rgpd.sh
   kind: script
@@ -943,6 +1082,13 @@ nodes:
   kind: script
   name: digest_cron.sh
   path: /home/debian/.hermes/profiles/sandrina/work/digest_cron.sh
+- id: script:efficience-gate.py
+  kind: script
+  name: efficience-gate.py
+  path: /home/debian/.hermes/profiles/vagus/scripts/efficience-gate.py
+  executable: true
+  size: 9530
+  derived: false
 - id: script:envoi_rapport.py
   kind: script
   name: envoi_rapport.py
@@ -1015,7 +1161,7 @@ nodes:
   name: fetch-audio.sh
   path: /home/debian/transcripts/fetch-audio.sh
   executable: true
-  size: 3724
+  size: 3785
   derived: false
 - id: script:headroom-fallback-proxy.py
   kind: script
@@ -1029,7 +1175,7 @@ nodes:
   name: healthcheck.sh
   path: /home/debian/.hermes/profiles/vagus/scripts/healthcheck.sh
   executable: true
-  size: 2400
+  size: 3348
   derived: false
 - id: script:hook-approve.py
   kind: script
@@ -1045,12 +1191,40 @@ nodes:
   executable: true
   size: 593
   derived: false
+- id: script:jev-decision-contexte.py
+  kind: script
+  name: jev-decision-contexte.py
+  path: /home/debian/.hermes/profiles/vagus/scripts/jev-decision-contexte.py
+  executable: false
+  size: 7205
+  derived: false
+- id: script:jev-scenarios-contexte.py
+  kind: script
+  name: jev-scenarios-contexte.py
+  path: /home/debian/.hermes/profiles/vagus/scripts/jev-scenarios-contexte.py
+  executable: false
+  size: 4466
+  derived: false
+- id: script:jev-via-openrouter.py
+  kind: script
+  name: jev-via-openrouter.py
+  path: /home/debian/.hermes/profiles/vagus/scripts/jev-via-openrouter.py
+  executable: false
+  size: 4255
+  derived: false
 - id: script:kanban-snapshot.py
   kind: script
   name: kanban-snapshot.py
   path: /home/debian/.hermes/profiles/vagus/scripts/kanban-snapshot.py
   executable: true
   size: 8851
+  derived: false
+- id: script:kleia-deploy-google-removal.sh
+  kind: script
+  name: kleia-deploy-google-removal.sh
+  path: /home/debian/.hermes/profiles/vagus/scripts/kleia-deploy-google-removal.sh
+  executable: true
+  size: 2736
   derived: false
 - id: script:kleia-newsletter-reminder.sh
   kind: script
@@ -1065,20 +1239,6 @@ nodes:
   path: /home/debian/.hermes/profiles/vagus/scripts/kleia_backup.sh
   executable: true
   size: 90
-  derived: false
-- id: script:laya-shadow-gate.py
-  kind: script
-  name: laya-shadow-gate.py
-  path: /home/debian/.hermes/profiles/vagus/scripts/laya-shadow-gate.py
-  executable: true
-  size: 8442
-  derived: false
-- id: script:lof-pipeline.sh
-  kind: script
-  name: lof-pipeline.sh
-  path: /home/debian/.hermes/profiles/vagus/scripts/lof-pipeline.sh
-  executable: true
-  size: 82
   derived: false
 - id: script:log-reconstruct.py
   kind: script
@@ -1117,7 +1277,7 @@ nodes:
   name: model-arbitrage.sh
   path: /home/debian/.hermes/profiles/vagus/scripts/model-arbitrage.sh
   executable: true
-  size: 4911
+  size: 5676
   derived: false
 - id: script:monitor_dogmabreaker.py
   kind: script
@@ -1133,16 +1293,26 @@ nodes:
   executable: false
   size: 1396
   derived: false
-- id: script:notify_email.py
+- id: script:n8n-update-check.sh
   kind: script
-  name: notify_email.py
-  path: /home/debian/workspace/LOF/notify_email.py
+  name: n8n-update-check.sh
+  path: /home/debian/.hermes/profiles/vagus/scripts/n8n-update-check.sh
+  executable: true
+  size: 3098
+  derived: false
 - id: script:omp-eval.sh
   kind: script
   name: omp-eval.sh
   path: /home/debian/.hermes/profiles/vagus/scripts/omp-eval.sh
   executable: true
-  size: 6382
+  size: 6379
+  derived: false
+- id: script:ops-report-mensuel.sh
+  kind: script
+  name: ops-report-mensuel.sh
+  path: /home/debian/.hermes/profiles/vagus/scripts/ops-report-mensuel.sh
+  executable: false
+  size: 3368
   derived: false
 - id: script:orchestrator.py
   kind: script
@@ -1154,6 +1324,13 @@ nodes:
   path: /home/debian/.hermes/profiles/vagus/scripts/path-watcher.py
   executable: false
   size: 5566
+  derived: false
+- id: script:pr122333-veille.sh
+  kind: script
+  name: pr122333-veille.sh
+  path: /home/debian/.hermes/profiles/vagus/scripts/pr122333-veille.sh
+  executable: true
+  size: 2441
   derived: false
 - id: script:predict-cron-check.py
   kind: script
@@ -1167,7 +1344,7 @@ nodes:
   name: pricing.json
   path: /home/debian/.hermes/profiles/vagus/scripts/pricing.json
   executable: false
-  size: 2667
+  size: 5966
   derived: false
 - id: script:qc-livrable.py
   kind: script
@@ -1211,6 +1388,27 @@ nodes:
   executable: false
   size: 2239
   derived: false
+- id: script:routeur-delegation.py
+  kind: script
+  name: routeur-delegation.py
+  path: /home/debian/.hermes/profiles/vagus/scripts/routeur-delegation.py
+  executable: true
+  size: 7660
+  derived: false
+- id: script:run_receipt.py
+  kind: script
+  name: run_receipt.py
+  path: /home/debian/.hermes/profiles/vagus/scripts/run_receipt.py
+  executable: false
+  size: 7516
+  derived: false
+- id: script:run_receipt_check.py
+  kind: script
+  name: run_receipt_check.py
+  path: /home/debian/.hermes/profiles/vagus/scripts/run_receipt_check.py
+  executable: false
+  size: 5091
+  derived: false
 - id: script:sandbox-run.py
   kind: script
   name: sandbox-run.py
@@ -1218,10 +1416,24 @@ nodes:
   executable: false
   size: 5295
   derived: false
+- id: script:semaine41-verifier.sh
+  kind: script
+  name: semaine41-verifier.sh
+  path: /home/debian/.hermes/profiles/vagus/scripts/semaine41-verifier.sh
+  executable: true
+  size: 433
+  derived: false
 - id: script:server.py
   kind: script
   name: server.py
-  path: /home/debian/.hermes/prism/server.py
+  path: /home/debian/workspace/sandrina-strategie/semaine-41-travail/server.py
+- id: script:session-context-report.py
+  kind: script
+  name: session-context-report.py
+  path: /home/debian/.hermes/profiles/vagus/scripts/session-context-report.py
+  executable: false
+  size: 6052
+  derived: false
 - id: script:session-digest.py
   kind: script
   name: session-digest.py
@@ -1229,12 +1441,19 @@ nodes:
   executable: true
   size: 7391
   derived: false
+- id: script:session-receipt.py
+  kind: script
+  name: session-receipt.py
+  path: /home/debian/.hermes/profiles/vagus/scripts/session-receipt.py
+  executable: false
+  size: 6597
+  derived: false
 - id: script:slm_local.py
   kind: script
   name: slm_local.py
   path: /home/debian/.hermes/profiles/vagus/scripts/slm_local.py
   executable: false
-  size: 3416
+  size: 4171
   derived: false
 - id: script:sync-shared.sh
   kind: script
@@ -1266,7 +1485,7 @@ nodes:
   name: tags-local.py
   path: /home/debian/.hermes/profiles/vagus/scripts/tags-local.py
   executable: false
-  size: 1163
+  size: 1245
   derived: false
 - id: script:taste-smart-mercury.sh
   kind: script
@@ -1326,7 +1545,7 @@ nodes:
   name: transcripts-pulse.sh
   path: /home/debian/.hermes/profiles/vagus/scripts/transcripts-pulse.sh
   executable: true
-  size: 3860
+  size: 3903
   derived: false
 - id: script:tunnel-watchdog.sh
   kind: script
@@ -1344,7 +1563,7 @@ nodes:
   name: vagus-pulse.sh
   path: /home/debian/.hermes/profiles/vagus/scripts/vagus-pulse.sh
   executable: true
-  size: 632
+  size: 964
   derived: false
 - id: script:verify-greffier.py
   kind: script
@@ -1392,6 +1611,15 @@ nodes:
   kind: script
   name: watch_cortex.sh
   path: /home/debian/hermes-cortex/rag-env/watch_cortex.sh
+- id: script:webui_launch.sh
+  kind: script
+  name: webui_launch.sh
+  path: /home/debian/.hermes/scripts/webui_launch.sh
+- id: secret:COMETAPI_API_KEY
+  kind: secret
+  name: COMETAPI_API_KEY
+  storage: .env / Agent Vault
+  present_in_env: true
 - id: secret:DEEPSEEK_API_KEY
   kind: secret
   name: DEEPSEEK_API_KEY
@@ -1412,6 +1640,10 @@ nodes:
   name: GMAIL_USER
   storage: .env / Agent Vault
   present_in_env: true
+- id: secret:HERMES_SESSION_ID
+  kind: secret
+  name: HERMES_SESSION_ID
+  storage: .env / Agent Vault
 - id: secret:INCEPTION_API_KEY
   kind: secret
   name: INCEPTION_API_KEY
@@ -1420,6 +1652,15 @@ nodes:
 - id: secret:MISTRAL_API_KEY
   kind: secret
   name: MISTRAL_API_KEY
+  storage: .env / Agent Vault
+  present_in_env: true
+- id: secret:N8N_ENCRYPTION_KEY
+  kind: secret
+  name: N8N_ENCRYPTION_KEY
+  storage: .env / Agent Vault
+- id: secret:OPENROUTER_API_KEY
+  kind: secret
+  name: OPENROUTER_API_KEY
   storage: .env / Agent Vault
   present_in_env: true
 - id: secret:PROMPT_USER
@@ -1479,6 +1720,11 @@ nodes:
   name: dbus
   unit: dbus.service
   scope: system
+- id: service:demo-sandrina
+  kind: service
+  name: demo-sandrina
+  unit: demo-sandrina.service
+  scope: system
 - id: service:docker
   kind: service
   name: docker
@@ -1509,6 +1755,11 @@ nodes:
   name: hermes-dashboard
   unit: hermes-dashboard.service
   scope: user
+- id: service:hermes-gateway-sandrina
+  kind: service
+  name: hermes-gateway-sandrina
+  unit: hermes-gateway-sandrina.service
+  scope: user
 - id: service:hermes-gateway-vagus
   kind: service
   name: hermes-gateway-vagus
@@ -1518,6 +1769,11 @@ nodes:
   kind: service
   name: hermes-webui
   unit: hermes-webui.service
+  scope: user
+- id: service:hermes-webui-bridge
+  kind: service
+  name: hermes-webui-bridge
+  unit: hermes-webui-bridge.service
   scope: user
 - id: service:linkedin-sandrina
   kind: service
@@ -1539,10 +1795,10 @@ nodes:
   name: llama-embed
   unit: llama-embed.service
   scope: system
-- id: service:lof-notify
+- id: service:nginx
   kind: service
-  name: lof-notify
-  unit: lof-notify.service
+  name: nginx
+  unit: nginx.service
   scope: system
 - id: service:omp-mcp-gateway
   kind: service
@@ -1573,6 +1829,11 @@ nodes:
   kind: service
   name: recursivemas-mcp
   unit: recursivemas-mcp.service
+  scope: system
+- id: service:semaine41
+  kind: service
+  name: semaine41
+  unit: semaine41.service
   scope: system
 - id: service:serial-getty@ttyS0
   kind: service
@@ -1658,24 +1919,30 @@ edges:
 - from: container:agent-vault
   rel: listens_on
   to: port:14322
-- from: container:deploy-nginx-1
+- from: container:ea-test-app
   rel: listens_on
-  to: port:443
-- from: container:deploy-nginx-1
-  rel: listens_on
-  to: port:80
+  to: port:18081
 - from: container:lof-app
   rel: listens_on
   to: port:5001
 - from: container:n8n
   rel: listens_on
   to: port:5678
+- from: container:traefik
+  rel: listens_on
+  to: port:443
+- from: container:traefik
+  rel: listens_on
+  to: port:80
 - from: cron:Backup Notification
   rel: depends_on
   to: script:backup-notification.sh
-- from: cron:Backup PostgreSQL Kleia
+- from: cron:Brief mensuel n8n
+  rel: delivers_to
+  to: channel:telegram
+- from: cron:Brief mensuel n8n
   rel: depends_on
-  to: script:kleia_backup.sh
+  to: script:n8n-update-check.sh
 - from: cron:CCC Meta-Learning
   rel: depends_on
   to: script:ccc-meta-learning.py
@@ -1685,12 +1952,18 @@ edges:
 - from: cron:DB Maintenance Vagus
   rel: depends_on
   to: script:db-maintenance.sh
+- from: cron:Efficience Gate
+  rel: delivers_to
+  to: channel:telegram
+- from: cron:Efficience Gate
+  rel: depends_on
+  to: script:efficience-gate.py
+- from: cron:Healthcheck VPS
+  rel: delivers_to
+  to: channel:telegram
 - from: cron:Healthcheck VPS
   rel: depends_on
   to: script:healthcheck.sh
-- from: cron:Laya Shadow Gate
-  rel: depends_on
-  to: script:laya-shadow-gate.py
 - from: cron:Newsletter Kleia-up - Rappel vendredi
   rel: delivers_to
   to: channel:telegram
@@ -1700,27 +1973,48 @@ edges:
 - from: cron:OMP Quality Eval — A/B quotidien (auto-génération B si manquant)
   rel: depends_on
   to: script:omp-eval.sh
+- from: cron:Ops Report Mensuel
+  rel: delivers_to
+  to: channel:telegram
+- from: cron:Ops Report Mensuel
+  rel: depends_on
+  to: script:ops-report-mensuel.sh
 - from: cron:Quarantine Mediator
   rel: depends_on
   to: script:quarantine-mediator.sh
 - from: cron:Rapport Quotidien
+  rel: delivers_to
+  to: channel:telegram
+- from: cron:Rapport Quotidien
   rel: depends_on
   to: script:daily-report.sh
-- from: cron:Synthese Hebdo (Mercury2)
+- from: cron:Run-Receipts Watchdog
+  rel: delivers_to
+  to: channel:telegram
+- from: cron:Run-Receipts Watchdog
   rel: depends_on
-  to: script:synthese-hebdo.sh
-- from: cron:Vagus Taste Smart (Mercury2)
+  to: script:run_receipt_check.py
+- from: cron:Veille PR amont 122333 (fix gateway Windows)
+  rel: delivers_to
+  to: channel:telegram
+- from: cron:Veille PR amont 122333 (fix gateway Windows)
   rel: depends_on
-  to: script:taste-smart.sh
+  to: script:pr122333-veille.sh
+- from: cron:Watchdog crons (muets ou en echec)
+  rel: delivers_to
+  to: channel:telegram
+- from: cron:Watchdog crons (muets ou en echec)
+  rel: depends_on
+  to: script:cron-watchdog.py
 - from: cron:argos-watchman-daily
   rel: delivers_to
-  to: channel:origin
+  to: channel:telegram
 - from: cron:argos-watchman-daily
   rel: depends_on
   to: script:argos-watchman.sh
 - from: cron:custos-purge-rgpd
   rel: delivers_to
-  to: channel:origin
+  to: channel:telegram
 - from: cron:custos-purge-rgpd
   rel: depends_on
   to: script:custos-purge-rgpd.sh
@@ -1730,13 +2024,16 @@ edges:
   implicit: true
 - from: cron:hygiene-token-log-hebdo
   rel: delivers_to
-  to: channel:origin
+  to: channel:telegram
 - from: cron:hygiene-token-log-hebdo
   rel: depends_on
   to: script:hygiene-hebdo.sh
 - from: cron:memory-consolidator-daily
   rel: depends_on
   to: script:consolidation-daily.py
+- from: cron:path-watcher-hebdo
+  rel: delivers_to
+  to: channel:telegram
 - from: cron:path-watcher-hebdo
   rel: depends_on
   to: script:path-watcher.py
@@ -1746,9 +2043,6 @@ edges:
 - from: cron:predict-journal-check
   rel: depends_on
   to: script:predict-cron-check.py
-- from: cron:session-maintenance-daily
-  rel: delivers_to
-  to: channel:origin
 - from: cron:session-maintenance-daily
   rel: depends_on
   to: script:maintain_sessions.sh
@@ -1764,10 +2058,13 @@ edges:
   implicit: true
 - from: cron:vagus-cleanup
   rel: delivers_to
-  to: channel:origin
+  to: channel:telegram
 - from: cron:vagus-cleanup
   rel: depends_on
   to: script:vagus-cleanup.sh
+- from: cron:vagus-pulse-hebdo
+  rel: delivers_to
+  to: channel:telegram
 - from: cron:vagus-pulse-hebdo
   rel: depends_on
   to: script:vagus-pulse.sh
@@ -1828,9 +2125,6 @@ edges:
 - from: cron_sys:/home/debian/workspace/kabbalah-numerology/auto-sync.sh
   rel: depends_on
   to: script:auto-sync.sh
-- from: cron_sys:batch_buffer.py
-  rel: depends_on
-  to: script:batch_buffer.py
 - from: cron_sys:bench_noul.py
   rel: depends_on
   to: script:bench_noul.py
@@ -1843,6 +2137,24 @@ edges:
 - from: script:backup_notification.sh
   rel: consumes
   to: dir:/home/debian/PDCA/cron_logs
+- from: script:bascule-modele.py
+  rel: consumes
+  to: file:/home/debian/.hermes/profiles/vagus/state.db
+- from: script:bench-mimo-vs-deepseek.py
+  rel: consumes
+  to: file:/home/debian/.hermes/profiles/vagus/.env
+- from: script:bench-mimo-vs-deepseek.py
+  rel: consumes
+  to: file:/home/debian/.hermes/profiles/vagus/cache/scratch/bench-mimo.json
+- from: script:bench-mimo-vs-deepseek.py
+  rel: requires_secret
+  to: secret:COMETAPI_API_KEY
+- from: script:bench-mimo-vs-deepseek.py
+  rel: requires_secret
+  to: secret:DEEPSEEK_API_KEY
+- from: script:brief-jp-matin.sh
+  rel: consumes
+  to: file:/home/debian/.hermes-cortex/brief-jp.py
 - from: script:ccc-meta-learning.py
   rel: consumes
   to: dir:/home/debian/workspace/hermes-vault
@@ -1852,6 +2164,27 @@ edges:
 - from: script:collision-detector.py
   rel: consumes
   to: dir:/home/debian/workspace/hermes-vault
+- from: script:compteur-efficience.py
+  rel: consumes
+  to: file:/home/debian/r4-bench/results/compteur_efficience.json
+- from: script:context-cost-alert.py
+  rel: consumes
+  to: file:/home/debian/.hermes/profiles/vagus/skills/.usage.json
+- from: script:context-cost-alert.py
+  rel: consumes
+  to: file:/home/debian/.hermes/profiles/vagus/state.db
+- from: script:croisement-claude.py
+  rel: consumes
+  to: file:/home/debian/.hermes/profiles/vagus/.env
+- from: script:croisement-claude.py
+  rel: consumes
+  to: file:/home/debian/.hermes/profiles/vagus/cache/scratch/croisement-claude.json
+- from: script:croisement-claude.py
+  rel: requires_secret
+  to: secret:COMETAPI_API_KEY
+- from: script:cron-watchdog.py
+  rel: consumes
+  to: dir:/home/debian/.hermes/profiles/vagus
 - from: script:custos-purge-rgpd.sh
   rel: consumes
   to: dir:/home/debian/workspace/custos
@@ -1867,6 +2200,18 @@ edges:
 - from: script:db-maintenance.sh
   rel: consumes
   to: file:/home/debian/.hermes/profiles/vagus/state.db
+- from: script:efficience-gate.py
+  rel: consumes
+  to: dir:/home/debian/.hermes/profiles
+- from: script:efficience-gate.py
+  rel: consumes
+  to: port:11434
+- from: script:efficience-gate.py
+  rel: consumes
+  to: port:8650
+- from: script:efficience-gate.py
+  rel: requires_secret
+  to: secret:OPENROUTER_API_KEY
 - from: script:envoyer-rapport-etat.py
   rel: requires_secret
   to: secret:EMAIL_JP
@@ -1927,18 +2272,51 @@ edges:
 - from: script:hook-approve.py
   rel: consumes
   to: file:/home/debian/.hermes/profiles/vagus/agent-hooks/session-digest.sh
-- from: script:laya-shadow-gate.py
+- from: script:jev-decision-contexte.py
   rel: consumes
-  to: dir:/home/debian/.hermes/profiles/vagus
-- from: script:laya-shadow-gate.py
+  to: file:/home/debian/.hermes/profiles/vagus/.env
+- from: script:jev-decision-contexte.py
   rel: consumes
-  to: dir:/home/debian/laya-env/lib/python3.11/site-packages
-- from: script:laya-shadow-gate.py
+  to: file:/home/debian/.hermes/profiles/vagus/cache/scratch/jev-decision-resultat.json
+- from: script:jev-decision-contexte.py
+  rel: requires_secret
+  to: secret:OPENROUTER_API_KEY
+- from: script:jev-scenarios-contexte.py
   rel: consumes
-  to: dir:/home/debian/laya_models
-- from: script:lof-pipeline.sh
+  to: dir:/home/debian/.hermes/profiles/vagus/cache/scratch/jev-venv/lib/python3.11/site-packages
+- from: script:jev-scenarios-contexte.py
   rel: consumes
-  to: dir:/home/debian/workspace/LOF
+  to: file:/home/debian/.hermes/profiles/vagus/.env
+- from: script:jev-scenarios-contexte.py
+  rel: consumes
+  to: file:/home/debian/.hermes/profiles/vagus/cache/scratch/jev-scenarios.json
+- from: script:jev-scenarios-contexte.py
+  rel: requires_secret
+  to: secret:OPENROUTER_API_KEY
+- from: script:jev-via-openrouter.py
+  rel: consumes
+  to: file:/home/debian/.hermes/profiles/vagus/.env
+- from: script:jev-via-openrouter.py
+  rel: consumes
+  to: file:/home/debian/.hermes/profiles/vagus/cache/scratch/jev-openrouter.json
+- from: script:jev-via-openrouter.py
+  rel: consumes
+  to: file:/home/debian/.hermes/profiles/vagus/cache/scratch/jev-scenarios.json
+- from: script:jev-via-openrouter.py
+  rel: requires_secret
+  to: secret:OPENROUTER_API_KEY
+- from: script:kleia-deploy-google-removal.sh
+  rel: consumes
+  to: dir:/home/debian/hermes-cortex/kleia-deploy-
+- from: script:kleia-deploy-google-removal.sh
+  rel: consumes
+  to: dir:/home/debian/workspace/kleia-workspace/deploy
+- from: script:kleia-deploy-google-removal.sh
+  rel: consumes
+  to: dir:/home/debian/workspace/kleia-workspace/frontend
+- from: script:kleia-deploy-google-removal.sh
+  rel: consumes
+  to: port:8000
 - from: script:maintain_sessions.sh
   rel: consumes
   to: file:/home/debian/.hermes/profiles/vagus/state.db
@@ -1957,6 +2335,15 @@ edges:
 - from: script:monitor_twinvault.py
   rel: consumes
   to: file:/home/debian/workspace/hermes-vault/state_meta.json
+- from: script:n8n-update-check.sh
+  rel: consumes
+  to: dir:/home/debian/.hermes/profiles/vagus/cron/output/n8n-update-check
+- from: script:n8n-update-check.sh
+  rel: consumes
+  to: file:/home/debian/workspace/n8n/docker-compose.yml
+- from: script:n8n-update-check.sh
+  rel: requires_secret
+  to: secret:N8N_ENCRYPTION_KEY
 - from: script:omp-eval.sh
   rel: consumes
   to: dir:/home/debian/omp-optimization
@@ -1987,6 +2374,27 @@ edges:
 - from: script:resume-local.py
   rel: consumes
   to: port:11434
+- from: script:routeur-delegation.py
+  rel: consumes
+  to: file:/home/debian/.hermes/profiles/vagus/.env
+- from: script:routeur-delegation.py
+  rel: consumes
+  to: port:11434
+- from: script:routeur-delegation.py
+  rel: consumes
+  to: port:8650
+- from: script:routeur-delegation.py
+  rel: requires_secret
+  to: secret:OPENROUTER_API_KEY
+- from: script:run_receipt.py
+  rel: requires_secret
+  to: secret:HERMES_SESSION_ID
+- from: script:semaine41-verifier.sh
+  rel: consumes
+  to: file:/home/debian/workspace/sandrina-strategie/semaine-41-travail/verifier.py
+- from: script:session-context-report.py
+  rel: consumes
+  to: file:/home/debian/.hermes/profiles/vagus/state.db
 - from: script:slm_local.py
   rel: consumes
   to: port:11434
@@ -2077,6 +2485,9 @@ edges:
 - from: service:cortex-watcher
   rel: depends_on
   to: script:watch_cortex.sh
+- from: service:demo-sandrina
+  rel: part_of
+  to: dir:/home/debian/workspace/linkedin-sandrina/workflow
 - from: service:headroom
   rel: listens_on
   to: port:8789
@@ -2088,16 +2499,13 @@ edges:
   to: port:9119
 - from: service:hermes-webui
   rel: depends_on
-  to: script:bootstrap.py
+  to: script:webui_launch.sh
 - from: service:llama-draft
   rel: listens_on
   to: port:11434
 - from: service:llama-embed
   rel: listens_on
   to: port:18080
-- from: service:lof-notify
-  rel: depends_on
-  to: script:notify_email.py
 - from: service:omp-mcp-gateway
   rel: depends_on
   to: script:mcp_gateway.py
@@ -2110,6 +2518,9 @@ edges:
 - from: service:rag-at
   rel: listens_on
   to: port:8099
+- from: service:semaine41
+  rel: depends_on
+  to: script:server.py
 - from: service:vagus-ai
   rel: listens_on
   to: port:8123

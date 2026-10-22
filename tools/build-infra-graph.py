@@ -54,6 +54,8 @@ NOISE_PATHS = re.compile(
 )
 # Fichiers de données volumineux / artefacts dérivés : consommés mais non structurels.
 DERIVED = re.compile(r"\.(log|db|sqlite|sqlite3|-wal|-shm|lock|pyc|bak)$|/sessions/|/cron/output/")
+# Sauvegardes .bak-* / .bak.* : artefacts de versionnage, jamais des nœuds.
+BAK_PAT = re.compile(r"\.bak[-.]")
 
 SECRET_RE = re.compile(r"\b([A-Z][A-Z0-9_]{2,}(?:_(?:API_)?(?:KEY|TOKEN|PASS|PASSWORD|SECRET|USER|ID)))\b|"
                        r"\b(EMAIL_JP|VAULT_TOKEN|LINKEDIN_[A-Z_]+)\b")
@@ -108,6 +110,8 @@ class Graph:
         for f in sorted(os.listdir(sdir)):
             p = os.path.join(sdir, f)
             if not os.path.isfile(p) or f.startswith("."):
+                continue
+            if BAK_PAT.search(f):
                 continue
             try:
                 txt = open(p, errors="ignore").read()

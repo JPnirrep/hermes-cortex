@@ -1,30 +1,37 @@
 meta:
-  generated_at: '2026-10-20T04:00:42.589729'
+  generated_at: '2026-10-21T04:00:16.078889'
   window_hours: 24
-  sessions_scan: 7
-  candidates: 3
-  duplicates_found: 1
+  sessions_scan: 9
+  candidates: 5
+  duplicates_found: 2
 candidates:
-- session: 20261019_174201_1b64
-  time: 10-19 17:51
-  phrase: 'c''est une pro + toutes les informations pour la médiation pro à intégrer
-
-    tu gardes absolument le tarif que sandrina à donner dans ce doc
-
-    et propose un nouveau devis mis à jour'
-- session: 20261019_181137_c74e
-  time: 10-19 18:12
-  phrase: il faut que tu les télécharges sur mon pc
-- session: 20261019_181137_c74e
-  time: 10-19 18:26
-  phrase: 'erreur dans l''adresse de Sandrina Perrin, c''est 85440 Poiroux == fais
-    la correction
-
-    tu n''est pas obligé de mentionné "particulier" et contrat conclus avec un consommateur,
-    c''est un devis.'
+- session: '20261020_100359_9993'
+  time: 10-20 10:10
+  phrase: le dev ne jamais me couter autant
+- session: 8848a3d75c08
+  time: 10-20 10:20
+  phrase: attention car je pilote via omp le vps et hermes cli est connecté à toi
+    aussi.
+- session: 8848a3d75c08
+  time: 10-20 10:45
+  phrase: rotation du jeu A ok, si omp et hermes cli sur mon pc seront toujours connectés
+- session: beeba904381f
+  time: 10-20 18:07
+  phrase: 'Conformité: API officielle seule, scraping interdit (Platform Terms §3).'
+- session: beeba904381f
+  time: 10-20 18:07
+  phrase: 'Livrable : /home/debian/workspace/benchmark-rs-zero-abonnement/02-youtube-data-api.md
+    (questions/valeurs/unités/années/URLs/citations/confiance + ''Ce qu''il faut coder''
+    + ''Trous'').", "trous": ["Service account : aucune page officielle confirmée
+    sur upload YouTube via service account (flux décrit = se'
 duplicates:
-- candidate: il faut que tu les télécharges sur mon pc
-  matches: cortex/personas/sandrina.md
-  similarity: 0.67
-  action: verifier doublon / fusionner
+- candidate: le dev ne jamais me couter autant
+  matches: cortex/concepts/agent-kit-developpement.md
+  similarity: 0.5
+  action: verifier contexte
+- candidate: attention car je pilote via omp le vps et hermes cli est connecté à toi
+    aussi.
+  matches: cortex/concepts/windows-ssh-tunnel.md
+  similarity: 0.5
+  action: verifier contexte
 note: Le script propose, ne modifie rien. Appliquer en session (H2).
