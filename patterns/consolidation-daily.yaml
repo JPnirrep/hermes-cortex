@@ -1,37 +1,16 @@
 meta:
-  generated_at: '2026-10-21T04:00:16.078889'
+  generated_at: '2026-10-22T04:00:43.906581'
   window_hours: 24
-  sessions_scan: 9
-  candidates: 5
-  duplicates_found: 2
+  sessions_scan: 2
+  candidates: 2
+  duplicates_found: 0
 candidates:
-- session: '20261020_100359_9993'
-  time: 10-20 10:10
-  phrase: le dev ne jamais me couter autant
-- session: 8848a3d75c08
-  time: 10-20 10:20
-  phrase: attention car je pilote via omp le vps et hermes cli est connecté à toi
-    aussi.
-- session: 8848a3d75c08
-  time: 10-20 10:45
-  phrase: rotation du jeu A ok, si omp et hermes cli sur mon pc seront toujours connectés
-- session: beeba904381f
-  time: 10-20 18:07
-  phrase: 'Conformité: API officielle seule, scraping interdit (Platform Terms §3).'
-- session: beeba904381f
-  time: 10-20 18:07
-  phrase: 'Livrable : /home/debian/workspace/benchmark-rs-zero-abonnement/02-youtube-data-api.md
-    (questions/valeurs/unités/années/URLs/citations/confiance + ''Ce qu''il faut coder''
-    + ''Trous'').", "trous": ["Service account : aucune page officielle confirmée
-    sur upload YouTube via service account (flux décrit = se'
-duplicates:
-- candidate: le dev ne jamais me couter autant
-  matches: cortex/concepts/agent-kit-developpement.md
-  similarity: 0.5
-  action: verifier contexte
-- candidate: attention car je pilote via omp le vps et hermes cli est connecté à toi
-    aussi.
-  matches: cortex/concepts/windows-ssh-tunnel.md
-  similarity: 0.5
-  action: verifier contexte
+- session: 20261021_081616_cdb4
+  time: 10-21 08:16
+  phrase: Corrige les problèmes détectés et lance le tool build infra pour corriger
+    l'obsolescence du graph.
+- session: '20261021_225820_5527'
+  time: 10-21 22:58
+  phrase: Il faut absolument étudier cela pour notre systeme
+duplicates: []
 note: Le script propose, ne modifie rien. Appliquer en session (H2).
