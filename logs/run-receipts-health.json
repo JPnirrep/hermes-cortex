@@ -1,9 +1,11 @@
 {
-  "generated_at": "2026-10-23T00:00:29+02:00",
+  "generated_at": "2026-10-24T00:00:21+02:00",
   "receipts_total": 14,
   "last_receipt_at": "2026-10-21T08:20:35+02:00",
-  "hours_since_last_receipt": 39.7,
-  "active_sessions_48h": 18,
-  "status": "ok",
-  "alerts": []
+  "hours_since_last_receipt": 63.7,
+  "active_sessions_48h": 10,
+  "status": "anomaly",
+  "alerts": [
+    "[CADENCE] 10 sessions outillées sur 48h mais 0 receipt sur la fenêtre (dernier : 2026-10-21 08:20:35+02:00)"
+  ]
 }

@@ -1,16 +1,12 @@
 meta:
-  generated_at: '2026-10-22T04:00:43.906581'
+  generated_at: '2026-10-23T04:00:30.476297'
   window_hours: 24
-  sessions_scan: 2
-  candidates: 2
+  sessions_scan: 1
+  candidates: 1
   duplicates_found: 0
 candidates:
-- session: 20261021_081616_cdb4
-  time: 10-21 08:16
-  phrase: Corrige les problèmes détectés et lance le tool build infra pour corriger
-    l'obsolescence du graph.
-- session: '20261021_225820_5527'
-  time: 10-21 22:58
-  phrase: Il faut absolument étudier cela pour notre systeme
+- session: 20261022_230212_f178
+  time: 10-22 23:02
+  phrase: Pourquoi la connections avec mon ggogle drive cassé toujours pour toi
 duplicates: []
 note: Le script propose, ne modifie rien. Appliquer en session (H2).
