@@ -1,14 +1,20 @@
 meta:
-  generated_at: '2026-10-24T04:00:23.247783'
+  generated_at: '2026-10-25T04:00:23.209860'
   window_hours: 24
-  sessions_scan: 1
-  candidates: 1
+  sessions_scan: 2
+  candidates: 2
   duplicates_found: 0
 candidates:
-- session: 20261023_100606_7ba9
-  time: 10-23 10:06
-  phrase: il faut que tu me fasse un feedback pour savoir si tu peux créer ce qu'il
-    faut pour reproduire éxactement ce type de doc notamment quand ce sera sandrina
-    qui te le demandera
+- session: 20261024_233152_bde9
+  time: 10-24 23:53
+  phrase: Aucun `http`/`<script>` dans les 3 HTML ; palette par groupe sémantique
+    (pierre=avant, sauge=après, lilas=collecte, ambre=planification, terracotta=décision,
+    ocre=contrôle).
+- session: 20261024_233152_bde9
+  time: 10-24 23:53
+  phrase: '- **flow** — titre corrigé de « Quatre » à « Trois sources » (3 cartes
+    réelles) ; pastille « lance le lot » remontée dans la zone Décision (elle débordait
+    de 3 px) ; sous-ligne du poller reformulée (« repère ce qui est neuf ») pour couper
+    la lecture erronée avec « signe une URL » ; boucle pointillée'
 duplicates: []
 note: Le script propose, ne modifie rien. Appliquer en session (H2).
