@@ -1,27 +1,27 @@
 meta:
-  generated_at: '2026-10-19T04:00:14.519738'
+  generated_at: '2026-10-26T04:00:05.383477'
   window_days: 90
-  skill_count_installed: 223
-  skill_count_used: 100
+  skill_count_installed: 230
+  skill_count_used: 106
 tools_top:
 - - terminal
-  - 5336
+  - 6529
 - - execute_code
-  - 1785
+  - 3314
 - - patch
-  - 829
+  - 1090
 - - read_file
-  - 718
+  - 954
 - - write_file
-  - 584
-- - skill_view
-  - 402
+  - 723
 - - vision_analyze
-  - 286
+  - 644
+- - skill_view
+  - 457
 - - search_files
-  - 254
+  - 289
 - - web_search
-  - 212
+  - 240
 - - browser_exec
   - 175
 - - skill_manage
@@ -29,19 +29,19 @@ tools_top:
 - - session_search
   - 132
 - - tool_call
-  - 108
+  - 117
 - - web_extract
-  - 86
+  - 99
 - - memory
-  - 65
+  - 69
 skills:
-  youtube-transcription:
-    usage: 22
-    sessions: 17
-    class: CHAUD
   cost-zero-cron-operations:
-    usage: 18
-    sessions: 14
+    usage: 28
+    sessions: 24
+    class: CHAUD
+  youtube-transcription:
+    usage: 24
+    sessions: 19
     class: CHAUD
   hermes-agent:
     usage: 18
@@ -49,6 +49,10 @@ skills:
     class: CHAUD
   benchmark-outillage-externe:
     usage: 16
+    sessions: 13
+    class: CHAUD
+  infomaniak-kdrive:
+    usage: 15
     sessions: 13
     class: CHAUD
   visuels-post-social:
@@ -59,13 +63,13 @@ skills:
     usage: 12
     sessions: 8
     class: CHAUD
-  infomaniak-kdrive:
-    usage: 12
-    sessions: 10
-    class: CHAUD
   analyse-transactionnelle-custos:
     usage: 12
     sessions: 3
+    class: CHAUD
+  hermes-config-management:
+    usage: 12
+    sessions: 12
     class: CHAUD
   custos-kabbalistique:
     usage: 11
@@ -107,6 +111,10 @@ skills:
     usage: 8
     sessions: 1
     class: CHAUD
+  envoi-mail-verifie:
+    usage: 8
+    sessions: 8
+    class: CHAUD
   session-classifier:
     usage: 7
     sessions: 6
@@ -115,6 +123,10 @@ skills:
     usage: 7
     sessions: 4
     class: CHAUD
+  publication-rs-sandrina:
+    usage: 7
+    sessions: 7
+    class: CHAUD
   custos-orientation-professionnelle:
     usage: 6
     sessions: 2
@@ -122,6 +134,10 @@ skills:
   custos-data-discipline:
     usage: 6
     sessions: 3
+    class: CHAUD
+  multi-sources-research:
+    usage: 6
+    sessions: 5
     class: CHAUD
   merge-guard-dual-sync:
     usage: 6
@@ -139,9 +155,17 @@ skills:
     usage: 6
     sessions: 6
     class: CHAUD
+  windows-ssh-tunnel:
+    usage: 6
+    sessions: 5
+    class: CHAUD
   custos-analyse-numerique:
     usage: 5
     sessions: 2
+    class: CHAUD
+  google-workspace:
+    usage: 5
+    sessions: 5
     class: CHAUD
   web-research-workflow:
     usage: 5
@@ -155,14 +179,6 @@ skills:
     usage: 5
     sessions: 2
     class: CHAUD
-  multi-sources-research:
-    usage: 5
-    sessions: 4
-    class: CHAUD
-  hermes-config-management:
-    usage: 5
-    sessions: 5
-    class: CHAUD
   run-receipts:
     usage: 5
     sessions: 5
@@ -171,10 +187,10 @@ skills:
     usage: 5
     sessions: 4
     class: CHAUD
-  google-workspace:
-    usage: 4
-    sessions: 4
-    class: TIEDE
+  connexion-social-token:
+    usage: 5
+    sessions: 5
+    class: CHAUD
   custos-theme-production:
     usage: 4
     sessions: 3
@@ -198,10 +214,6 @@ skills:
   provider-cost-forensics:
     usage: 4
     sessions: 2
-    class: TIEDE
-  windows-ssh-tunnel:
-    usage: 4
-    sessions: 4
     class: TIEDE
   canva-mcp-automation:
     usage: 4
@@ -251,6 +263,10 @@ skills:
     usage: 3
     sessions: 1
     class: TIEDE
+  retrouver-artefact-session:
+    usage: 3
+    sessions: 3
+    class: TIEDE
   audio-transcription-cr:
     usage: 3
     sessions: 3
@@ -266,6 +282,10 @@ skills:
   vagus-pipeline-transcription:
     usage: 3
     sessions: 3
+    class: TIEDE
+  delegation-fanout-research:
+    usage: 3
+    sessions: 2
     class: TIEDE
   kleia-landing-pages:
     usage: 2
@@ -359,11 +379,19 @@ skills:
     usage: 2
     sessions: 2
     class: TIEDE
-  delegation-fanout-research:
+  cloture-session-livrables:
+    usage: 2
+    sessions: 2
+    class: TIEDE
+  hermes-update-verification:
+    usage: 2
+    sessions: 2
+    class: TIEDE
+  hermes-gateway-host-ops:
     usage: 2
     sessions: 1
     class: TIEDE
-  cloture-session-livrables:
+  diagram-design:
     usage: 2
     sessions: 2
     class: TIEDE
@@ -399,23 +427,11 @@ skills:
     usage: 1
     sessions: 1
     class: TIEDE
-  retrouver-artefact-session:
-    usage: 1
-    sessions: 1
-    class: TIEDE
   deny-rules-gateway:
     usage: 1
     sessions: 1
     class: TIEDE
-  envoi-mail-verifie:
-    usage: 1
-    sessions: 1
-    class: TIEDE
   email-list-validation:
-    usage: 1
-    sessions: 1
-    class: TIEDE
-  connexion-social-token:
     usage: 1
     sessions: 1
     class: TIEDE
@@ -435,94 +451,105 @@ skills:
     usage: 1
     sessions: 1
     class: TIEDE
+  cgv-conformite-consommation-france:
+    usage: 1
+    sessions: 1
+    class: TIEDE
+  claude-seo:
+    usage: 1
+    sessions: 1
+    class: TIEDE
 crons:
   baf0e8d3594c:
-    runs: 362
+    runs: 86
     last_status: completed
   ee581b72b5f1:
-    runs: 345
+    runs: 538
+    last_status: completed
+  8cfedec3ba36:
+    runs: 47
     last_status: completed
   34073eda1bec:
-    runs: 48
-    last_status: completed
-  9639d6016313:
-    runs: 30
-    last_status: completed
-  4f94aa326b77:
-    runs: 19
-    last_status: completed
-  026c51ccdf6b:
-    runs: 31
-    last_status: failed
-  8cfedec3ba36:
-    runs: 30
+    runs: 21
     last_status: completed
   c37ee43d3236:
-    runs: 30
+    runs: 47
+    last_status: completed
+  4f94aa326b77:
+    runs: 14
+    last_status: completed
+  026c51ccdf6b:
+    runs: 47
+    last_status: failed
+  9639d6016313:
+    runs: 46
     last_status: completed
   7838695fd220:
-    runs: 8
+    runs: 12
     last_status: completed
   410854cf3e18:
-    runs: 8
+    runs: 12
     last_status: completed
   288a80044517:
-    runs: 4
-    last_status: completed
-  fe8686c3158b:
-    runs: 2
-    last_status: running
-  104c8ad85215:
-    runs: 8
-    last_status: running
-  4db42924e917:
-    runs: 7
-    last_status: failed
-  2ee23b6dfbec:
     runs: 1
+    last_status: completed
+  104c8ad85215:
+    runs: 12
+    last_status: completed
+  4db42924e917:
+    runs: 11
     last_status: completed
   31ba67571d44:
-    runs: 7
+    runs: 11
     last_status: completed
   omp_quality_eval:
-    runs: 7
+    runs: 11
     last_status: completed
   816459eea541:
-    runs: 7
+    runs: 11
     last_status: completed
   5728c2d37bd5:
-    runs: 7
-    last_status: failed
+    runs: 11
+    last_status: completed
   fa0e667fb879:
-    runs: 7
+    runs: 11
     last_status: completed
   c5da719cf72d:
-    runs: 7
+    runs: 11
     last_status: completed
   37be492898da:
-    runs: 7
-    last_status: completed
-  2f6ba1203141:
-    runs: 1
+    runs: 11
     last_status: completed
   4d6d477854d1:
-    runs: 8
-    last_status: failed
-  f1fa402fe699:
-    runs: 3
+    runs: 12
     last_status: completed
   cb71b11d0e85:
     runs: 3
     last_status: completed
   41cf92c2f128:
-    runs: 3
+    runs: 4
     last_status: completed
   129183e20ce0:
-    runs: 1
+    runs: 2
     last_status: completed
   42887598d6cd:
+    runs: 2
+    last_status: completed
+  fe8686c3158b:
+    runs: 2
+    last_status: running
+  2ee23b6dfbec:
     runs: 1
     last_status: completed
+  2f6ba1203141:
+    runs: 1
+    last_status: completed
+  fdbbb3c3ad21:
+    runs: 1
+    last_status: completed
+  9882d7194c22:
+    runs: 2
+    last_status: failed
 skills_frozen:
 - acquisition-web-zero-cout
 - agenda-copilot
@@ -545,7 +572,6 @@ skills_frozen:
 - book-cover-design
 - book-launch-audit
 - carrousel-social
-- cgv-conformite-consommation-france
 - challenge-livrable-existant
 - cloud-data-migration
 - cloud-quota-reclaim
@@ -559,6 +585,7 @@ skills_frozen:
 - crash-test-pc
 - crash-test-vps
 - data-sourcing
+- decider-contenus-video
 - deterministic-agent-architecture
 - docker-traefik-deploy
 - document-fusion-revision
@@ -568,9 +595,11 @@ skills_frozen:
 - document-translation-pipeline
 - docx
 - dossier-retraite-france
+- email-inbox-triage
 - emailing-campagne
 - espace-validation-publication
 - excalidraw
+- fiabilite-execution-arbitrage
 - financement-formation-france
 - github-auth
 - github-code-review
@@ -580,8 +609,7 @@ skills_frozen:
 - github-repo-management
 - grounded-citations
 - grounded-structured-extraction
-- hermes-gateway-host-ops
-- hermes-update-verification
+- hermes-devis-production
 - hermes-vault-governance
 - hostinger-reach-api
 - huggingface-hub
@@ -592,6 +620,7 @@ skills_frozen:
 - livrables-depuis-rapport
 - livraison-livrables-client
 - livre-kdp-production
+- local-resource-inventory
 - lof-canva-automation
 - lof-prod-workflow
 - machine-a-lead-multiplateforme
@@ -624,7 +653,6 @@ skills_frozen:
 - project-decommissioning
 - protocole-ord-qualite
 - provider-model-verification
-- publication-rs-sandrina
 - rea-chasse-au-gaspi
 - recit-editing-workflow
 - redaction-theme-8-regles

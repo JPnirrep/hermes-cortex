@@ -1,20 +1,45 @@
 meta:
-  generated_at: '2026-10-25T04:00:23.209860'
+  generated_at: '2026-10-26T04:00:05.175542'
   window_hours: 24
-  sessions_scan: 2
-  candidates: 2
-  duplicates_found: 0
+  sessions_scan: 11
+  candidates: 6
+  duplicates_found: 2
 candidates:
-- session: 20261024_233152_bde9
-  time: 10-24 23:53
-  phrase: Aucun `http`/`<script>` dans les 3 HTML ; palette par groupe sémantique
-    (pierre=avant, sauge=après, lilas=collecte, ambre=planification, terracotta=décision,
-    ocre=contrôle).
-- session: 20261024_233152_bde9
-  time: 10-24 23:53
-  phrase: '- **flow** — titre corrigé de « Quatre » à « Trois sources » (3 cartes
-    réelles) ; pastille « lance le lot » remontée dans la zone Décision (elle débordait
-    de 3 px) ; sous-ligne du poller reformulée (« repère ce qui est neuf ») pour couper
-    la lecture erronée avec « signe une URL » ; boucle pointillée'
-duplicates: []
+- session: 20261025_115712_1c5a
+  time: 10-25 11:57
+  phrase: Je valide les diagrammes
+- session: 20261025_191602_f9df
+  time: 10-25 19:28
+  phrase: Le routage des 32 sous-commandes est fait par le modèle via un tableau,
+    sans validation ni `--help`.
+- session: 20261025_191602_f9df
+  time: 10-25 19:28
+  phrase: 18 skills sont utilisables à 100 % gratuitement ; le dépôt est « free-first
+    » avec un garde-fou de coût obligatoire (`dataforseo_costs.py check/log`) sur
+    chaque appel payant.
+- session: 20261025_191602_f9df
+  time: 10-25 19:28
+  phrase: '- `crux_history`, `lcp_subparts` → 403 « unregistered callers », clé Google
+    obligatoire.'
+- session: 20261025_191602_f9df
+  time: 10-25 19:28
+  phrase: '- **Le checkout local est inutilisable** : HEAD `3473b5c` n''a **aucun
+    ancêtre commun** avec `main` (historique réécrit, racines différentes) — il faut
+    re-cloner.'
+- session: 20261025_191602_f9df
+  time: 10-25 19:28
+  phrase: '**Corrections automatisables sans risque** (branche + PR, jamais `main`)
+    : régénération sitemap + `lastmod` depuis git ; `llms.txt` (domaine www, compteur
+    35→32, FAQ 10→8) ; OG/Twitter manquants sur pages techniques ; width/height des
+    images ; conversion WebP des 5 PNG lourdes (sans supprimer l''orig'
+duplicates:
+- candidate: Je valide les diagrammes
+  matches: cortex/concepts/custos-6-methodes.md
+  similarity: 0.5
+  action: verifier contexte
+- candidate: Le routage des 32 sous-commandes est fait par le modèle via un tableau,
+    sans validation ni `--help`.
+  matches: cortex/concepts/deepseek-harness.md
+  similarity: 0.67
+  action: verifier doublon / fusionner
 note: Le script propose, ne modifie rien. Appliquer en session (H2).
